@@ -110,13 +110,15 @@ let store = {
             ],
         }
     },
-
     _callSubscriber() {
         console.log(this._state);
     },
 
     getState() {
         return this._state;
+    },
+    subscribe(observer) {
+        this._callSubscriber = observer; //observer
     },
 
     addPost() {
@@ -132,7 +134,6 @@ let store = {
         this._state.profilePage.newPostText = '';
         this._callSubscriber(this._state);
     },
-
     sendMessageOut() {
         let newMessageOut = {
             id: this._state.dialogsPage.messagesOut.length + 1,
@@ -148,15 +149,12 @@ let store = {
         this._state.profilePage.newPostText = newText;
         this._callSubscriber(this._state);
     },
-
     updateNewMessageOut(newText) {
         this._state.dialogsPage.newMessageText = newText;
         this._callSubscriber(this._state);
     },
 
-    subscribe(observer) {
-        this._callSubscriber = observer; //observer
-    },
+    dispatch(){},
 };
 
 export default store;
