@@ -111,12 +111,12 @@ let store = {
         }
     },
 
-    getState() {
-        return this._state;
-    },
-
     _callSubscriber() {
         console.log(this._state);
+    },
+
+    getState() {
+        return this._state;
     },
 
     addPost() {
