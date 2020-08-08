@@ -8,6 +8,7 @@ import Dialogs from "./components/Dialogs/Dialogs";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
+import Friends from "./components/Friends/Friends";
 
 const App = (props) => {
 
@@ -40,6 +41,10 @@ const App = (props) => {
                 </div>
                 <div className={appCSS.settings_wrapper}>
                     <Route path='/settings' component={Settings}/>
+                </div>
+                <div className={appCSS.friends_wrapper}>
+                    <Route path='/friends'
+                           render={() => <Friends dialogsPage={props.state.dialogsPage}/>}/>
                 </div>
             </div>
         </div>

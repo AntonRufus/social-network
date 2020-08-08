@@ -60,7 +60,10 @@ const NavBar = (props) => {
             </div>
             <br/>
             <div className={navCSS.friends}>
+                <NavLink to='/friends'
+                         activeClassName={navCSS.activeLink}>
                 <h3>FRIENDS</h3>
+                </NavLink>
             </div>
             <div className={navCSS.avatars_top}>
                 {avatarsElements[3]}

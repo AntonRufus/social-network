@@ -49,3 +49,8 @@ body {
     grid-area: c;
     background: #303030;
 }
+
+.friends_wrapper{
+    grid-area: c;
+    background: #303030;
+}
