@@ -121,6 +121,7 @@ let store = {
         this._callSubscriber = observer; //observer
     },
 
+    /* moved to dispatch(){addPost, sendMessageOut, updateNewPostText, updateNewMessageOut}
     addPost() {
         let newPost = {
             id: this._state.profilePage.posts.length + 1,
@@ -152,9 +153,37 @@ let store = {
     updateNewMessageOut(newText) {
         this._state.dialogsPage.newMessageText = newText;
         this._callSubscriber(this._state);
+    },*/
+
+    dispatch(action) {
+        if (action.type === 'ADD-POST') {
+            let newPost = {
+                id: this._state.profilePage.posts.length + 1,
+                message: this._state.profilePage.newPostText,
+                likesCount: this._state.profilePage.likesCountDefault,
+                dislikesCount: this._state.profilePage.dislikesCountDefault,
+                url: this._state.profilePage.urlDefault,
+            };
+            this._state.profilePage.posts.push(newPost);
+            this._state.profilePage.newPostText = '';
+            this._callSubscriber(this._state);
+        } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
+            this._state.profilePage.newPostText = action.newPostText;
+            this._callSubscriber(this._state);
+        }
+        if (action.type === 'SEND-MESSAGE-OUT') {
+            let newMessageOut = {
+                id: this._state.dialogsPage.messagesOut.length + 1,
+                message: this._state.dialogsPage.newMessageText,
+            };
+            this._state.dialogsPage.newMessageText = '';
+            this._state.dialogsPage.messagesOut.push(newMessageOut);
+            this._callSubscriber(this._state);
+        } else if (action.type === 'UPDATE-NEW-MESSAGE-OUT') {
+            this._state.dialogsPage.newMessageText = action.newMessageText;
+            this._callSubscriber(this._state);
+        }
     },
 
-    dispatch(){},
-};
-
+}
 export default store;
