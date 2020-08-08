@@ -22,13 +22,18 @@ const Dialogs = (props) => {
     let newMessageElement = React.createRef();
 
     let sendMessage = () => {
-        props.sendMessageOut();
+        // props.sendMessageOut();
+        props.dispatch({type: 'SEND-MESSAGE-OUT'});
         console.log(props.dialogsPage.messagesOut)
     }
 
     function onMessageChange() {
         let messageUpdatedValue = newMessageElement.current.value;
-        props.updateNewMessageOut(messageUpdatedValue);
+        // props.updateNewMessageOut(messageUpdatedValue);
+        props.dispatch({
+            type: 'UPDATE-NEW-MESSAGE-OUT',
+            newMessageText: messageUpdatedValue
+        });
     }
 
     return (

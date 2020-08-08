@@ -167,7 +167,8 @@ let store = {
             this._state.profilePage.posts.push(newPost);
             this._state.profilePage.newPostText = '';
             this._callSubscriber(this._state);
-        } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
+        }
+        else if (action.type === 'UPDATE-NEW-POST-TEXT') {
             this._state.profilePage.newPostText = action.newPostText;
             this._callSubscriber(this._state);
         }
@@ -179,7 +180,8 @@ let store = {
             this._state.dialogsPage.newMessageText = '';
             this._state.dialogsPage.messagesOut.push(newMessageOut);
             this._callSubscriber(this._state);
-        } else if (action.type === 'UPDATE-NEW-MESSAGE-OUT') {
+        }
+        else if (action.type === 'UPDATE-NEW-MESSAGE-OUT') {
             this._state.dialogsPage.newMessageText = action.newMessageText;
             this._callSubscriber(this._state);
         }
