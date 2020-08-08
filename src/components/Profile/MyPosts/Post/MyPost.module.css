@@ -1,0 +1,12 @@
+.item img {
+    width: 50px;
+}
+
+.item {
+    color: whitesmoke;;
+    padding: 5px;
+}
+
+.item:hover {
+    color: gold;
+}

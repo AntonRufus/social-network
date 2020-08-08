@@ -1,0 +1,51 @@
+body {
+    background-color: black;
+}
+
+.app_wrapper {
+    background-color: black;
+    display: grid;
+    grid-template-areas: 'h h' 'n c';
+    grid-template-rows: 78px 1fr;
+    grid-template-columns: 2fr 10fr;
+    grid-gap: 10px;
+}
+
+.app_wrapper_content {
+    background-color: #404040;
+}
+
+.header {
+    grid-area: h;
+    background-color: #191a28;
+}
+
+.nav {
+    grid-area: n;
+    background-color: #211d22;
+}
+
+.profile_wrapper {
+    grid-area: c;
+    background: #303030;
+}
+
+.dialogs_wrapper {
+    grid-area: c;
+    background: #303030;
+}
+
+.news_wrapper {
+    grid-area: c;
+    background: #303030;
+}
+
+.music_wrapper {
+    grid-area: c;
+    background: #303030;
+}
+
+.settings_wrapper {
+    grid-area: c;
+    background: #303030;
+}

@@ -1,0 +1,33 @@
+.dialog_item {
+    display: grid;
+    grid-template-columns: 10fr 15fr;
+}
+
+.avatar_photo {
+    padding-left: 15px;
+}
+
+.avatar_photo img {
+    height: 50px;
+    width: 50px;
+}
+
+.dialog_name {
+    align-self: center;
+}
+
+.dialog_name a {
+    color: sandybrown;
+    text-decoration: none;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.dialog_name a:hover {
+    color: gold;
+}
+
+.dialogs_items .active {
+    font-weight: bold;
+    color: goldenrod;
+}

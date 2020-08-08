@@ -1,0 +1,26 @@
+.dialogs {
+    display: grid;
+    grid-template-columns: 2fr 6fr 1fr;
+}
+
+.dialogs_items {
+    padding: 10px;
+}
+
+.messages_in_items {
+    padding: 10px;
+    color: pink;
+}
+
+.messages_in_items p:hover {
+    color: hotpink;
+}
+
+.messages_out_items {
+    padding: 10px;
+    color: lightblue;
+}
+
+.messages_out_items p:hover {
+    color: dodgerblue;
+}

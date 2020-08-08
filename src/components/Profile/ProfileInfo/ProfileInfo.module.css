@@ -1,0 +1,38 @@
+.profile_block {
+}
+
+.profile_description {
+    display: grid;
+    grid-template-columns: 10fr 30fr;
+    padding: 25px;
+}
+
+.bgc_photo {
+    width: 100%;
+}
+
+.avatar {
+    width: 200px;
+}
+
+.name {
+    color: whitesmoke;
+    font-weight: bold;
+    padding: 10px 10px 20px 10px;
+}
+
+.name:hover {
+    color: gold;
+}
+
+.info_main {
+    padding: 10px 10px 20px;
+}
+
+.info {
+    color: whitesmoke;
+}
+
+.info:hover {
+    color: gold;
+}

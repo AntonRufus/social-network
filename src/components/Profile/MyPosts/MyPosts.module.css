@@ -1,0 +1,37 @@
+.my_posts_main {
+    padding: 10px;
+    background: #2c2e47;
+}
+
+.my_posts_label {
+    font-size: 125% ;
+}
+
+h3 {
+    color: whitesmoke;
+}
+
+h3:hover {
+    color: gold;
+}
+
+.textarea {
+    padding: 45px;
+}
+
+.buttons {
+    padding: 5px;
+}
+
+.buttons .button {
+    margin: 5px;
+}
+
+.posts_block {
+    padding: 5px;
+}
+
+.posts_block img {
+    padding-right: 10px;
+}
+

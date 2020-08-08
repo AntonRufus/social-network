@@ -1,0 +1,64 @@
+.item a {
+    text-decoration: none;
+    color: whitesmoke;
+    padding-left: 10px;
+}
+
+.item a.activeLink {
+    text-decoration: none;
+    color: goldenrod;
+    font-style: italic;
+    font-size: 110%;
+}
+
+.item a:hover {
+    color: gold;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.avatars_top {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.avatar_block {
+    padding-left: 10px;
+}
+
+.avatar_photo img {
+    height: 50px;
+    width: 50px;
+    border: 1px;
+    border-radius: 25px;
+    margin-left: 20px;
+}
+
+.avatar_name {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.avatar_name a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.avatar_name a:hover {
+    color: gold;
+}
+
+.friends {
+    font-size: 125%;
+    text-align: center;
+}
+
+.friends h3 {
+    color: whitesmoke;
+}
+
+.friends h3:hover {
+    color: gold;
+}
