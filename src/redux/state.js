@@ -176,7 +176,6 @@ let store = {
         }
     },
 
-
     _callSubscriber() {
         console.log(this._state);
     },
