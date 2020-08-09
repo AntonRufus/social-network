@@ -1,7 +1,15 @@
+nav {
+    margin-top: 10px;
+}
+
+.item {
+    padding-left: 35px;
+    padding-top: 3px;
+}
+
 .item a {
     text-decoration: none;
     color: whitesmoke;
-    padding-left: 10px;
 }
 
 .item a.activeLink {
@@ -55,10 +63,18 @@
     text-align: center;
 }
 
-.friends h3 {
+.friends a {
     color: whitesmoke;
+    text-decoration: none;
 }
 
-.friends h3:hover {
+.friends a.activeLink {
+    color: goldenrod;
+    text-decoration: underline;
+    font-style: italic;
+    font-size: 100%;
+}
+
+.friends a:hover {
     color: gold;
 }
