@@ -1,14 +1,14 @@
 import React from 'react';
 import navCSS from './NavBar.module.css';
 import {NavLink} from "react-router-dom";
-import FriendsList from "../Friends/FriendsList/FriendsList";
+import DialogItem from "../Dialogs/DialogItem/DialogItem";
 
 const NavBar = (props) => {
 
-    let avatarsElements = props.sideBar.dialogs
-        .map(dialog => <FriendsList url={dialog.photoUrl}
-                                    name={dialog.name}
-                                    id={dialog.id}/>);
+    let friendsShortList = props.sideBar.dialogs
+        .map(dialog => <DialogItem url={dialog.photoUrl}
+                                   name={dialog.name}
+                                   id={dialog.id}/>);
 
     return (
         <nav>
@@ -50,9 +50,11 @@ const NavBar = (props) => {
                     <b>FRIENDS</b>
                 </NavLink>
             </div>
-                {avatarsElements[3]}
-                {avatarsElements[0]}
-                {avatarsElements[2]}
+            <div className={navCSS.avatar_block}>
+                <div className={navCSS.avatars_top}>
+                    {friendsShortList}
+                </div>
+            </div>
         </nav>
     )
 }

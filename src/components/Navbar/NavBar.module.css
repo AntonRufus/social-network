@@ -29,33 +29,12 @@ nav {
 
 .avatars_top {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
 }
 
 .avatar_block {
-    padding-left: 10px;
-}
-
-.avatar_photo img {
-    height: 50px;
-    width: 50px;
-    border: 1px;
-    border-radius: 25px;
-    margin-left: 20px;
-}
-
-.avatar_name {
-    font-weight: bold;
-    font-style: italic;
-}
-
-.avatar_name a {
-    color: whitesmoke;
-    text-decoration: none;
-}
-
-.avatar_name a:hover {
-    color: gold;
+    padding-right: 10px;
+    width: 200px;
 }
 
 .friends {

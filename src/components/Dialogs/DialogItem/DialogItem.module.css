@@ -10,6 +10,8 @@
 .avatar_photo img {
     height: 50px;
     width: 50px;
+    border-radius: 15px;
+    padding: 10px;
 }
 
 .dialog_name {
