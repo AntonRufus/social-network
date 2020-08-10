@@ -36,6 +36,7 @@ const MyPosts = (props) => {
             <div className={postsCSS.textarea}>
                 <textarea ref={newPostElement}
                           onChange={onPostChange}
+                          placeholder={'Enter your post'}
                           value={props.newPostText}
                           name="text" id="new-post" cols="30" rows="1"/>
                 <div className={postsCSS.buttons}>
