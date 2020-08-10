@@ -1,2 +1,14 @@
 .message {
+    border: 1px solid whitesmoke;
+    border-radius: 10px;
+    width: 150px;
+    margin: 15px;
+    padding: 10px;
+    wrap-option: wrap;
+    overflow-wrap: break-word;
+}
+
+.message:hover {
+    border: 1px solid gold;
+    color: whitesmoke;
 }

@@ -1,9 +1,9 @@
 import React from 'react';
-import dialCSS from './Message.module.css'
+import messCSS from './Message.module.css'
 
 const Message = (props) => {
     return (
-        <div className={dialCSS.message}>{props.message}</div>
+        <div className={messCSS.message}>{props.message}</div>
     )
 }
 

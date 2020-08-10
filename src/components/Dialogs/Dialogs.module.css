@@ -12,7 +12,7 @@
 
 .dialogs {
     display: grid;
-    grid-template-columns: 2fr 6fr 1fr;
+    grid-template-columns: 1fr 2fr 2fr;
 }
 
 .dialogs_items {
@@ -22,6 +22,11 @@
 .messages_in_items {
     padding: 10px;
     color: pink;
+    margin-left: 150px;
+}
+
+.messages_in_items p {
+    padding-left: 30px;
 }
 
 .messages_in_items p:hover {
@@ -33,6 +38,21 @@
     color: lightblue;
 }
 
+.messages_out_items p {
+    padding-left: 30px;
+}
+
 .messages_out_items p:hover {
     color: dodgerblue;
+}
+
+button {
+    margin-left: 40px;
+    margin-top: 10px;
+    padding: 5px;
+    width: 125px;
+}
+
+textarea {
+    width: 195px;
 }
