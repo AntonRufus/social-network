@@ -1,0 +1,39 @@
+.avatar_block {
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.avatar_photo {
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.avatar_photo img {
+    height: 40px;
+    width: 40px;
+    border-radius: 15px;
+}
+
+.avatar_photo img:hover {
+    height: 36px;
+    width: 36px;
+    border: solid 2px gold;
+    border-radius: 15px;
+}
+
+.avatar_name {
+    padding: 5px;
+}
+
+.avatar_name a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.avatar_name a:hover {
+    color: gold;
+}
+
+.avatar_active {
+    color: goldenrod;
+}

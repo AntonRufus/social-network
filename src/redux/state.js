@@ -155,27 +155,7 @@ let store = {
             ],
             newMessageText: 'Default Message Text',
         },
-        sideBar: {
-            dialogs: [
-                {
-                    id: 1,
-                    name: 'Peppa Pig',
-                    photoUrl: 'https://sun9-28.userapi.com/c847021/v847021528/44667/lMWp94wS5jQ.jpg'
-                },
-                {
-                    id: 3,
-                    name: 'Daddy Pig',
-                    photoUrl: 'https://img.kp40.ru/avatars/30569.jpg?i=1'
-                },
-                {
-                    id: 4,
-                    name: 'Mummy Pig',
-                    photoUrl: 'https://slovnet.ru/wp-content/uploads/2018/12/18-10-150x150.png'
-                },
-            ],
-        }
     },
-
 
     _callSubscriber() {
         console.log(this._state);

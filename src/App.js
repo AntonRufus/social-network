@@ -18,7 +18,7 @@ const App = (props) => {
                 <Header/>
             </div>
             <div className={appCSS.nav}>
-                <NavBar sideBar={props.state.sideBar}/>
+                <NavBar sideBar={props.state.dialogsPage.dialogs}/>
             </div>
             <div className={appCSS.app_wrapper_content}>
                 <div className={appCSS.profile_wrapper}>

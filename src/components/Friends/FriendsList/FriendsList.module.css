@@ -1,14 +1,16 @@
-.friends {
+.avatar_block {
+    display: grid;
+    grid-template-columns: 1fr 15fr;
 }
 
-.friends {
-    font-size: 200%;
-    padding-left: 20px;
-    color: whitesmoke;
+.avatar_block:hover a {
+    color: gold;
 }
 
 .avatar_photo {
-    padding: 25px;
+    padding-left: 25px;
+    padding-top: 15px;
+    padding-right: 15px;
 }
 
 .avatar_photo img {
@@ -19,22 +21,20 @@
     margin-left: 0;
 }
 
+.avatar_photo img:hover {
+    height: 46px;
+    width: 45px;
+    border: solid 2px gold;
+    border-radius: 15px;
+}
+
 .avatar_name {
     font-weight: bold;
     font-style: italic;
-    padding-top: 40px;
+    padding-top: 30px;
 }
 
 .avatar_name a {
     color: whitesmoke;
     text-decoration: none;
-}
-
-.avatar_name a:hover {
-    color: gold;
-}
-
-.avatar_block {
-    display: grid;
-    grid-template-columns: 1fr 20fr;
 }
