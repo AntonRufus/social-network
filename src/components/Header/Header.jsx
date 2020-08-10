@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <header>
             <NavLink to='/profile'>
-                <div>
+                <div className={headCSS.header_block}>
                     <img className={headCSS.logo} src='http://localhost:3000/pic/buildlogo.jpg' alt='logo'/>
                 </div>
             </NavLink>

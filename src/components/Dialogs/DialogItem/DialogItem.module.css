@@ -1,6 +1,16 @@
 .dialog_item {
     display: grid;
-    grid-template-columns: 10fr 15fr;
+    grid-template-columns: 10fr 20fr;
+    padding: 10px;
+}
+
+.dialog_item:hover a {
+    color: gold;
+}
+
+.dialogs_items .active {
+    font-weight: bold;
+    color: goldenrod;
 }
 
 .avatar_photo {
@@ -10,8 +20,14 @@
 .avatar_photo img {
     height: 50px;
     width: 50px;
+    border-radius: 25px;
+}
+
+.avatar_photo img:hover {
+    height: 46px;
+    width: 46px;
+    border: solid 2px gold;
     border-radius: 15px;
-    padding: 10px;
 }
 
 .dialog_name {
@@ -19,17 +35,8 @@
 }
 
 .dialog_name a {
-    color: sandybrown;
+    color: whitesmoke;
     text-decoration: none;
     font-weight: bold;
     font-style: italic;
-}
-
-.dialog_name a:hover {
-    color: gold;
-}
-
-.dialogs_items .active {
-    font-weight: bold;
-    color: goldenrod;
 }

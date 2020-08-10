@@ -1,3 +1,15 @@
+.dialogs_block {
+    padding-top: 1px;
+}
+
+.dialogs_block .h {
+    color: whitesmoke;
+    font-size: 200%;
+    font-weight: bold;
+    padding: 15px 0 35px 35px;
+
+}
+
 .dialogs {
     display: grid;
     grid-template-columns: 2fr 6fr 1fr;

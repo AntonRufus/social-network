@@ -1,3 +1,9 @@
+const ADD_POST = 'ADD-POST';
+const CLEAR_POST = 'CLEAR-POST';
+const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+const SEND_MESSAGE_OUT = 'SEND-MESSAGE-OUT';
+const UPDATE_NEW_MESSAGE_OUT = 'UPDATE-NEW-MESSAGE-OUT';
+
 let store = {
     _state: {
         profilePage: {
@@ -203,7 +209,7 @@ let store = {
     },*/
 
     dispatch(action) {
-        if (action.type === 'ADD-POST') {
+        if (action.type === ADD_POST) {
             let newPost = {
                 id: this._state.profilePage.posts.length + 1,
                 message: this._state.profilePage.newPostText,
@@ -214,12 +220,14 @@ let store = {
             this._state.profilePage.posts.push(newPost);
             this._state.profilePage.newPostText = '';
             this._callSubscriber(this._state);
-        }
-        else if (action.type === 'UPDATE-NEW-POST-TEXT') {
+        } else if (action.type === UPDATE_NEW_POST_TEXT) {
             this._state.profilePage.newPostText = action.newPostText;
             this._callSubscriber(this._state);
+        } else if (action.type === CLEAR_POST) {
+            this._state.profilePage.newPostText = '';
+            this._callSubscriber(this._state);
         }
-        if (action.type === 'SEND-MESSAGE-OUT') {
+        if (action.type === SEND_MESSAGE_OUT) {
             let newMessageOut = {
                 id: this._state.dialogsPage.messagesOut.length + 1,
                 message: this._state.dialogsPage.newMessageText,
@@ -227,12 +235,33 @@ let store = {
             this._state.dialogsPage.newMessageText = '';
             this._state.dialogsPage.messagesOut.push(newMessageOut);
             this._callSubscriber(this._state);
-        }
-        else if (action.type === 'UPDATE-NEW-MESSAGE-OUT') {
+        } else if (action.type === UPDATE_NEW_MESSAGE_OUT) {
             this._state.dialogsPage.newMessageText = action.newMessageText;
             this._callSubscriber(this._state);
         }
     },
-
 }
+
+export const addPostActionCreator = () => ({
+    type: ADD_POST,
+})
+
+export const clearPostActionCreator = () => ({
+    type: CLEAR_POST,
+})
+
+export const updateNewPostTextActionCreator = (postUpdatedValue) => ({
+    type: UPDATE_NEW_POST_TEXT,
+    newPostText: postUpdatedValue,
+})
+
+export const sendMessageActionCreator = () => ({
+    type: SEND_MESSAGE_OUT,
+})
+
+export const onMessageChangeActionCreator = (messageUpdatedValue) => ({
+    type: UPDATE_NEW_MESSAGE_OUT,
+    newMessageText: messageUpdatedValue,
+})
+
 export default store;

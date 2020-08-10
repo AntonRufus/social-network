@@ -9,7 +9,9 @@ const DialogItem = (props) => {
     return (
         <div className={dialCSS.dialog_item}>
             <div className={dialCSS.avatar_photo}>
+                <NavLink to={path}>
                 <img src={props.url} alt=""/>
+                </NavLink>
             </div>
             <div className={dialCSS.dialog_name + ' ' + dialCSS.active}>
                 <NavLink to={path}>{name}</NavLink>

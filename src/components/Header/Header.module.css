@@ -1,5 +1,15 @@
 .logo {
     width: 70px;
-    margin-top: 10px;
-    margin-left: 10px;
+    margin-top: 20px;
+    margin-left: 35px;
+}
+
+.header_block {
+    height: 78px;
+}
+
+.header_block img:hover {
+    border: 2px solid gold;
+    width: 66px;
+    border-radius: 5px;
 }

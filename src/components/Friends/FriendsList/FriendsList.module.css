@@ -1,6 +1,7 @@
 .avatar_block {
     display: grid;
     grid-template-columns: 1fr 15fr;
+    padding-left: 10px;
 }
 
 .avatar_block:hover a {
