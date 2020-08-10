@@ -9,10 +9,14 @@ const NavBarFriends = (props) => {
     return (
         <div className={navFrCSS.avatar_block}>
             <div className={navFrCSS.avatar_photo}>
-                <img src={props.url} alt=""/>
+                <NavLink to={path}>
+                    <img src={props.url} alt=""/>
+                </NavLink>
             </div>
             <div className={navFrCSS.avatar_name + ' ' + navFrCSS.avatar_active}>
-                <NavLink to={path}>{name}</NavLink>
+                <NavLink to={path}>
+                    {name}
+                </NavLink>
             </div>
         </div>
     )

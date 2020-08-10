@@ -2,7 +2,7 @@ import React from 'react';
 import dialCSS from './Dialogs.module.css'
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
-import {onMessageChangeActionCreator, sendMessageActionCreator} from "../../redux/state";
+import {clearMessageActionCreator, onMessageChangeActionCreator, sendMessageActionCreator} from "../../redux/dialogs_reducer";
 
 const Dialogs = (props) => {
 
@@ -24,6 +24,11 @@ const Dialogs = (props) => {
 
     let sendMessage = () => {
         props.dispatch(sendMessageActionCreator());
+        console.log(props.dialogsPage.messagesOut)
+    }
+
+    let clearMessage = () => {
+        props.dispatch(clearMessageActionCreator());
         console.log(props.dialogsPage.messagesOut)
     }
 
@@ -53,6 +58,7 @@ const Dialogs = (props) => {
                               name="" id="" cols="30" rows="3"/>
                               <br/>
                     <button onClick={sendMessage}>send</button>
+                    <button onClick={clearMessage}>clear</button>
                 </div>
             </div>
         </div>

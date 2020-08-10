@@ -46,13 +46,14 @@
     color: dodgerblue;
 }
 
-button {
-    margin-left: 40px;
+.messages_out_items button {
     margin-top: 10px;
+    margin-right: 50px;
     padding: 5px;
-    width: 125px;
+    width: 75px;
+    border-radius: 5px;
 }
 
-textarea {
+.messages_out_items textarea {
     width: 195px;
 }
