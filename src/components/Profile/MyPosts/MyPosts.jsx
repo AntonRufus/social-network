@@ -1,7 +1,11 @@
 import React from 'react';
 import postsCSS from './MyPosts.module.css';
 import Post from "./Post/MyPost";
-import {addPostActionCreator, clearPostActionCreator, updateNewPostTextActionCreator} from "../../../redux/profile_reducer";
+import {
+    addPostActionCreator,
+    clearPostActionCreator,
+    updateNewPostTextActionCreator
+} from "../../../redux/profile_reducer";
 
 const MyPosts = (props) => {
 
@@ -51,7 +55,8 @@ const MyPosts = (props) => {
                 </div>
             </div>
             <div className={postsCSS.posts_block}>
-                {postsElements}</div>
+                {postsElements}
+            </div>
         </div>
     )
 }

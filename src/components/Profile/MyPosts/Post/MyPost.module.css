@@ -1,12 +1,18 @@
 .item img {
     width: 50px;
+
 }
 
 .item {
-    color: whitesmoke;;
-    padding: 5px;
+    color: whitesmoke;
+    padding: 10px 1px 10px 25px;
+    border: 1px solid whitesmoke;
+    width: 300px;
+    border-radius: 5px;
+    margin: 25px;
 }
 
 .item:hover {
+    border: 1px solid gold;
     color: gold;
 }

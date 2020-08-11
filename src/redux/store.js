@@ -39,7 +39,6 @@ let store = {
             dislikesCountDefault: 1,
             urlDefault: 'https://www.akibanation.com/wp-content/uploads/2016/07/Kon.BLEACH.full_.170410-150x150.jpg',
         },
-
         dialogsPage: {
             dialogs: [
                 {
@@ -161,10 +160,6 @@ let store = {
         },
     },
 
-    _callSubscriber() {
-        console.log(this._state);
-    },
-
     getState() {
         return this._state;
     },
@@ -173,10 +168,13 @@ let store = {
         this._callSubscriber = observer; //observer
     },
 
+    _callSubscriber() {
+        console.log(this._state);
+    },
+
     dispatch(action) {
 
         this._state.profilePage = profileReducer(this._state.profilePage, action);
-
         this._state.dialogsPage = dialogReducer(this._state.dialogsPage, action);
 
         this._callSubscriber(this._state);
