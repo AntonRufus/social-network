@@ -16,3 +16,9 @@
     border: 1px solid gold;
     color: gold;
 }
+
+
+.item span {
+    wrap-option: wrap;
+    overflow-wrap: break-word;
+}
