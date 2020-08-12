@@ -2,39 +2,38 @@ import React from 'react';
 import dialCSS from './Dialogs.module.css'
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
-import {clearMessageActionCreator, onMessageChangeActionCreator, sendMessageActionCreator} from "../../redux/dialogs_reducer";
 
 const Dialogs = (props) => {
 
-    let dialogsElements = props.dialogsPage.dialogs
+    let state = props.dialogsPage;
+
+    let dialogsElements = state.dialogs
         .map(dialog => <DialogItem url={dialog.photoUrl}
                                    name={dialog.name}
                                    id={dialog.id}/>);
 
-    let messagesInElements = props.dialogsPage.messagesIn
+    let messagesInElements = state.messagesIn
         .map(message => <Message message={message.message}
                                  id={message.id}/>);
 
-    let messagesOutElements = props.dialogsPage.messagesOut
+    let messagesOutElements = state.messagesOut
         .map(message => <Message message={message.message}
                                  id={message.id}
                                  sendMessageOut={props.sendMessageOut}/>);
 
     let newMessageElement = React.createRef();
 
-    let sendMessage = () => {
-        props.dispatch(sendMessageActionCreator());
-        console.log(props.dialogsPage.messagesOut)
+    let onSendMessage = () => {
+        props.sendMessage();
     }
 
-    let clearMessage = () => {
-        props.dispatch(clearMessageActionCreator());
-        console.log(props.dialogsPage.messagesOut)
+    let onClearMessage = () => {
+        props.clearMessage();
     }
 
-    let onMessageChange = () => {
-        let messageUpdatedValue = newMessageElement.current.value;
-        props.dispatch(onMessageChangeActionCreator(messageUpdatedValue));
+    let onNewMessageChange = () => {
+        let body = newMessageElement.current.value;
+        props.updateNewMessageBody(body);
     }
 
     return (
@@ -52,13 +51,13 @@ const Dialogs = (props) => {
                     <p><b>Outgo messages</b></p>
                     {messagesOutElements}
                     <textarea ref={newMessageElement}
-                              value={props.newMessageText}
-                              onChange={onMessageChange}
+                              value={state.newMessageText}
+                              onChange={onNewMessageChange}
                               placeholder={'Enter your message'}
                               name="" id="" cols="30" rows="3"/>
-                              <br/>
-                    <button onClick={sendMessage}>send</button>
-                    <button onClick={clearMessage}>clear</button>
+                    <br/>
+                    <button onClick={onSendMessage}>send</button>
+                    <button onClick={onClearMessage}>clear</button>
                 </div>
             </div>
         </div>

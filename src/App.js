@@ -4,11 +4,11 @@ import {Route} from "react-router-dom";
 import Header from "./components/Header/Header";
 import NavBar from "./components/Navbar/NavBar";
 import Profile from "./components/Profile/Profile";
-import Dialogs from "./components/Dialogs/Dialogs";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
 import Friends from "./components/Friends/Friends";
+import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
 const App = (props) => {
 
@@ -23,15 +23,13 @@ const App = (props) => {
             <div className={appCSS.app_wrapper_content}>
                 <div className={appCSS.profile_wrapper}>
                     <Route path='/profile'
-                           render={() => <Profile profilePage={props.state.profilePage}
-                                                  newPostText={props.state.profilePage.newPostText}
-                                                  dispatch={props.dispatch}/>}/>
+                           render={() => <Profile store={props.store}
+                           />}/>
                 </div>
                 <div className={appCSS.dialogs_wrapper}>
                     <Route path='/dialogs'
-                           render={() => <Dialogs dialogsPage={props.state.dialogsPage}
-                                                  newMessageText={props.state.dialogsPage.newMessageText}
-                                                  dispatch={props.dispatch}/>}/>
+                           render={() => <DialogsContainer store={props.store}
+                           />}/>
                 </div>
                 <div className={appCSS.news_wrapper}>
                     <Route path='/news' component={News}/>

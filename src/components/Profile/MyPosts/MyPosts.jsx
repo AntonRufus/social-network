@@ -1,11 +1,6 @@
 import React from 'react';
 import postsCSS from './MyPosts.module.css';
 import Post from "./Post/MyPost";
-import {
-    addPostActionCreator,
-    clearPostActionCreator,
-    updateNewPostTextActionCreator
-} from "../../../redux/profile_reducer";
 
 const MyPosts = (props) => {
 
@@ -16,20 +11,17 @@ const MyPosts = (props) => {
 
     let newPostElement = React.createRef();
 
-    let clearNewPostArea = () => {
-        props.dispatch(clearPostActionCreator());
-        console.log(props.posts)
+    let onAddNewPost = () => {
+        props.addNewPost();
     }
 
-    let addNewPost = () => {
-        props.dispatch(addPostActionCreator());
-        console.log(props.posts)
+    let onClearNewPostArea = () => {
+        props.clearPostArea();
     }
 
     function onPostChange() {
         let postUpdatedValue = newPostElement.current.value;
-        props.dispatch(updateNewPostTextActionCreator(postUpdatedValue));
-        console.log(postUpdatedValue);
+        props.updateNewPostText(postUpdatedValue);
     }
 
     return (
@@ -44,11 +36,11 @@ const MyPosts = (props) => {
                           value={props.newPostText}
                           name="text" id="new-post" cols="30" rows="1"/>
                 <div className={postsCSS.buttons}>
-                    <button onClick={addNewPost}
+                    <button onClick={onAddNewPost}
                             className={postsCSS.button}>
                         Add post
                     </button>
-                    <button onClick={clearNewPostArea}
+                    <button onClick={onClearNewPostArea}
                             className={postsCSS.button}>
                         Clear
                     </button>
