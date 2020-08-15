@@ -5,6 +5,7 @@ import {
     sendMessageActionCreator
 } from "../../redux/dialogs_reducer";
 import Dialogs from "./Dialogs";
+import StoreContext from "../../StoreContext";
 
 const DialogsContainer = (props) => {
 
@@ -23,11 +24,16 @@ const DialogsContainer = (props) => {
     }
 
     return (
-        <Dialogs updateNewMessageBody={onNewMessageChange}
-                 sendMessage={onSendMessage}
-                 clearMessage={onClearMessage}
-                 dialogsPage={state}
-        />
+        <StoreContext.Consumer> {
+            (store) => (
+                <Dialogs updateNewMessageBody={onNewMessageChange}
+                         sendMessage={onSendMessage}
+                         clearMessage={onClearMessage}
+                         dialogsPage={state}
+                />
+            )
+        }
+        </StoreContext.Consumer>
     )
 }
 

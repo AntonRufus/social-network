@@ -5,6 +5,7 @@ import {
     updateNewPostTextActionCreator
 } from "../../../redux/profile_reducer";
 import MyPosts from "./MyPosts";
+import StoreContext from "../../../StoreContext";
 
 const MyPostsContainer = (props) => {
 
@@ -26,12 +27,17 @@ const MyPostsContainer = (props) => {
     }
 
     return (
-        <MyPosts updateNewPostText={postChange}
-                 addNewPost={addNewPost}
-                 clearPostArea={clearNewPostArea}
-                 posts={state.profilePage.posts}
-                 newPostText={state.profilePage.newPostText}
-        />
+        <StoreContext.Consumer> {
+            (store) => (
+                <MyPosts updateNewPostText={postChange}
+                         addNewPost={addNewPost}
+                         clearPostArea={clearNewPostArea}
+                         posts={state.profilePage.posts}
+                         newPostText={state.profilePage.newPostText}
+                />
+            )
+        }
+        </StoreContext.Consumer>
     )
 }
 

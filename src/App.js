@@ -18,17 +18,20 @@ const App = (props) => {
                 <Header/>
             </div>
             <div className={appCSS.nav}>
-                <NavBar sideBar={props.state.dialogsPage.dialogs}/>
+                <NavBar/>
+                {/*<NavBar sideBar={props.state.dialogsPage.dialogs}/>*/}
             </div>
             <div className={appCSS.app_wrapper_content}>
                 <div className={appCSS.profile_wrapper}>
                     <Route path='/profile'
-                           render={() => <Profile store={props.store}
+                           render={() => <Profile
+                               // render={() => <Profile store={props.store}
                            />}/>
                 </div>
                 <div className={appCSS.dialogs_wrapper}>
                     <Route path='/dialogs'
-                           render={() => <DialogsContainer store={props.store}
+                           render={() => <DialogsContainer
+                               // render={() => <DialogsContainer store={props.store}
                            />}/>
                 </div>
                 <div className={appCSS.news_wrapper}>
@@ -42,7 +45,9 @@ const App = (props) => {
                 </div>
                 <div className={appCSS.friends_wrapper}>
                     <Route path='/friends'
-                           render={() => <Friends dialogsPage={props.state.dialogsPage}/>}/>
+                           render={() => <Friends
+                               // render={() => <Friends dialogsPage={props.state.dialogsPage}/>}/>
+                           />}/>
                 </div>
             </div>
         </div>
