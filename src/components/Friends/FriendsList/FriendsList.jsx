@@ -10,7 +10,7 @@ const FriendsList = (props) => {
         <div className={frListCSS.avatar_block}>
             <div className={frListCSS.avatar_photo}>
                 <NavLink to={path}>
-                <img src={props.url} alt=""/>
+                    <img src={props.url} alt=""/>
                 </NavLink>
             </div>
             <div className={frListCSS.avatar_name}>

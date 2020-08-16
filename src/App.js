@@ -2,23 +2,22 @@ import React from 'react';
 import appCSS from './App.module.css';
 import {Route} from "react-router-dom";
 import Header from "./components/Header/Header";
-import NavBar from "./components/Navbar/NavBar";
 import Profile from "./components/Profile/Profile";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
-import Friends from "./components/Friends/Friends";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
+import FriendsContainer from "./components/Friends/FriendsContainer";
+import NavBarContainer from "./components/Navbar/NavBarContainer";
 
-const App = (props) => {
-
+const App = () => {
     return (
         <div className={appCSS.app_wrapper}>
             <div className={appCSS.header}>
                 <Header/>
             </div>
             <div className={appCSS.nav}>
-                <NavBar/>
+                <NavBarContainer/>
                 {/*<NavBar sideBar={props.state.dialogsPage.dialogs}/>*/}
             </div>
             <div className={appCSS.app_wrapper_content}>
@@ -45,7 +44,7 @@ const App = (props) => {
                 </div>
                 <div className={appCSS.friends_wrapper}>
                     <Route path='/friends'
-                           render={() => <Friends
+                           render={() => <FriendsContainer
                                // render={() => <Friends dialogsPage={props.state.dialogsPage}/>}/>
                            />}/>
                 </div>
