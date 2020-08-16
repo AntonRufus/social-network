@@ -14,7 +14,6 @@ const NavBarContainer = () => {
                         .map(dialog => <NavBarFriends url={dialog.photoUrl}
                                                       name={dialog.name}
                                                       id={dialog.id}/>);
-                    console.log(friendsShortList);
 
                     return <NavBar friendsShortList={friendsShortList}/>
 
