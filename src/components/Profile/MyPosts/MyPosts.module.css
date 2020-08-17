@@ -4,7 +4,7 @@
 }
 
 .my_posts_label {
-    font-size: 125% ;
+    font-size: 125%;
     margin-left: 45px;
 }
 
@@ -17,7 +17,19 @@ h3:hover {
 }
 
 .textarea {
-    padding: 45px;
+    padding: 15px 45px;
+}
+
+.textarea textarea {
+    background-color: whitesmoke;
+    height: 15px;
+    padding: 5px;
+}
+
+.textarea textarea:hover {
+    border: 2px solid gold;
+    border-radius: 5px;
+    background-color: antiquewhite;
 }
 
 .buttons {
@@ -25,7 +37,22 @@ h3:hover {
 }
 
 .buttons .button {
-    margin: 5px;
+    margin: 5px 90px 5px 5px;
+    background-color: #999;
+}
+
+.buttons .button:hover {
+    background-color: #404040;
+    border: 1px solid wheat;
+    border-radius: 2px;
+    color: whitesmoke;
+    width: 99px;
+}
+
+.buttons button {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100px;
 }
 
 .posts_block {
