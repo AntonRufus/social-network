@@ -1,26 +1,17 @@
 import React from 'react';
-import StoreContext from "../../StoreContext";
-import NavBarFriends from "./NavBarFriends/NavBarFriends";
 import NavBar from "./NavBar";
+import {connect} from "react-redux";
 
-const NavBarContainer = () => {
-    return (
-        <StoreContext.Consumer>
-            {
-                (store) => {
-                    let state = store.getState();
-
-                    let friendsShortList = state.dialogsPage.dialogs
-                        .map(dialog => <NavBarFriends url={dialog.photoUrl}
-                                                      name={dialog.name}
-                                                      id={dialog.id}/>);
-
-                    return <NavBar friendsShortList={friendsShortList}/>
-
-                }
-            }
-        </StoreContext.Consumer>
-    )
+let mapStateToProps = (state) => {
+    return {
+        dialogsPage: state.dialogsPage
+    }
 }
+
+let mapDispatchToProps = (dispatch) => {
+
+}
+
+const NavBarContainer = connect(mapStateToProps, mapDispatchToProps)(NavBar);
 
 export default NavBarContainer;

@@ -1,35 +1,28 @@
 import React from 'react';
-import StoreContext from "../../../StoreContext";
 import {
     addPostActionCreator,
     clearPostActionCreator,
     updateNewPostTextActionCreator
 } from "../../../redux/profile_reducer";
 import MyPosts from "./MyPosts";
+import {connect} from "react-redux";
 
+/*import StoreContext from "../../../StoreContext";
 const MyPostsContainer = (props) => {
     return (
         <StoreContext.Consumer>
             {
                 (store) => {
-
                     let state = store.getState();
-
                     let clearNewPostArea = () => {
-                        let action = clearPostActionCreator();
-                        store.dispatch(action);
+                        store.dispatch(clearPostActionCreator());
                     }
-
                     let addNewPost = () => {
-                        let action = addPostActionCreator();
-                        store.dispatch(action);
+                        store.dispatch(addPostActionCreator());
                     }
-
                     function postChange(postUpdatedValue) {
-                        let action = updateNewPostTextActionCreator(postUpdatedValue);
-                        store.dispatch(action);
+                        store.dispatch(updateNewPostTextActionCreator(postUpdatedValue));
                     }
-
                     return <MyPosts updateNewPostText={postChange}
                                     addNewPost={addNewPost}
                                     clearPostArea={clearNewPostArea}
@@ -40,6 +33,29 @@ const MyPostsContainer = (props) => {
             }
         </StoreContext.Consumer>
     )
-}
+}*/
+
+let mapStateToProps = (state) => {
+    return {
+        posts: state.profilePage.posts,
+        newPostText: state.profilePage.newPostText,
+    }
+};
+
+let mapDispatchToProps = (dispatch) => {
+    return {
+        updateNewPostText: (postUpdatedValue) => {
+            dispatch(updateNewPostTextActionCreator(postUpdatedValue))
+        },
+        addNewPost: () => {
+            dispatch(addPostActionCreator())
+        },
+        clearPostArea: () => {
+            dispatch(clearPostActionCreator())
+        },
+    }
+};
+
+const MyPostsContainer = connect(mapStateToProps, mapDispatchToProps)(MyPosts);
 
 export default MyPostsContainer;
