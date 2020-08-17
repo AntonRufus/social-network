@@ -21,7 +21,11 @@ const ProfileInfo = () => {
                         <div className={profInfoCSS.info}>DOB</div>
                         <div className={profInfoCSS.info}>City</div>
                         <div className={profInfoCSS.info}>Education</div>
-                        <div className={profInfoCSS.info}>WebSite</div>
+                        <div className={profInfoCSS.info}>WebSite:
+                            https://
+                            <input type="text" defaultValue={'github.com/AntonRufus'}/>
+                            /newMaster
+                        </div>
                     </div>
                 </div>
             </div>
