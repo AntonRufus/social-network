@@ -1,7 +1,6 @@
 import React from 'react';
 import friendsCSS from './Friends.module.css'
 import FriendsList from "./FriendsList/FriendsList";
-import NavBarFriends from "../Navbar/NavBarFriends/NavBarFriends";
 
 const Friends = (props) => {
     let state = props.dialogsPage;
