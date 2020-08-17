@@ -54,7 +54,6 @@ const NavBar = (props) => {
             </div>
             <div className={navCSS.avatar_block}>
                 <div className={navCSS.avatars_top}>
-                    {/*{props.friendsShortList}*/}
                     {friendsShortList[5]}
                     {friendsShortList[1]}
                     {friendsShortList[15]}

@@ -7,33 +7,6 @@ import {
 import Dialogs from "./Dialogs";
 import {connect} from "react-redux";
 
-/*import StoreContext from "../../StoreContext";
-const DialogsContainer = () => {
-    return (
-        <StoreContext.Consumer>
-            {
-                (store) => {
-                    let state = store.getState();
-                    let onSendMessage = () => {
-                        store.dispatch(sendMessageActionCreator());
-                    }
-                    let onClearMessage = () => {
-                        store.dispatch(clearMessageActionCreator());
-                    }
-                    let onNewMessageChange = (body) => {
-                        store.dispatch(onMessageChangeActionCreator(body));
-                    }
-                    return <Dialogs updateNewMessageBody={onNewMessageChange}
-                                    sendMessage={onSendMessage}
-                                    clearMessage={onClearMessage}
-                                    dialogsPage={state.dialogsPage}
-                    />
-                }
-            }
-        </StoreContext.Consumer>
-    )
-}*/
-
 let mapStateToProps = (state) => {
     return {
         dialogsPage: state.dialogsPage

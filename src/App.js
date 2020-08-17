@@ -18,19 +18,16 @@ const App = () => {
             </div>
             <div className={appCSS.nav}>
                 <NavBarContainer/>
-                {/*<NavBar sideBar={props.state.dialogsPage.dialogs}/>*/}
             </div>
             <div className={appCSS.app_wrapper_content}>
                 <div className={appCSS.profile_wrapper}>
                     <Route path='/profile'
                            render={() => <Profile
-                               // render={() => <Profile store={props.store}
                            />}/>
                 </div>
                 <div className={appCSS.dialogs_wrapper}>
                     <Route path='/dialogs'
                            render={() => <DialogsContainer
-                               // render={() => <DialogsContainer store={props.store}
                            />}/>
                 </div>
                 <div className={appCSS.news_wrapper}>
@@ -45,7 +42,6 @@ const App = () => {
                 <div className={appCSS.friends_wrapper}>
                     <Route path='/friends'
                            render={() => <FriendsContainer
-                               // render={() => <Friends dialogsPage={props.state.dialogsPage}/>}/>
                            />}/>
                 </div>
             </div>
