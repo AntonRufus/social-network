@@ -1,8 +1,3 @@
-.item img {
-    width: 50px;
-
-}
-
 .item {
     color: whitesmoke;
     padding: 10px 1px 10px 25px;
@@ -12,13 +7,35 @@
     margin: 25px;
 }
 
+.item img {
+    width: 50px;
+    margin-bottom: 5px;
+}
+
+.item span {
+    wrap-option: wrap;
+    overflow-wrap: break-word;
+}
+
 .item:hover {
     border: 1px solid gold;
     color: gold;
 }
 
+.item_img_message {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 5px;
+}
 
-.item span {
-    wrap-option: wrap;
-    overflow-wrap: break-word;
+.item_img_message span {
+    color: lightblue;
+}
+
+.item_img_message span:hover {
+    font-weight: bold;
+}
+
+.item:hover .item_img_message span {
+    text-decoration: underline;
 }
