@@ -50,9 +50,11 @@ const profileReducer = (state = initialState, action) => {
                 dislikesCount: state.dislikesCountDefault,
                 url: state.urlDefault,
             };
-            stateCopy.posts = [...state.posts];
-            stateCopy.posts.push(newPost);
-            stateCopy.newPostText = '';
+            stateCopy = {
+                ...state,
+                posts: [...state.posts, newPost],
+                newPostText: '',
+            }
             return stateCopy;
         }
         case UPDATE_NEW_POST_TEXT: {
