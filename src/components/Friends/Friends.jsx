@@ -1,15 +1,19 @@
 import React from 'react';
 import friendsCSS from './Friends.module.css'
 import FriendsList from "./FriendsList/FriendsList";
+import NavBarFriends from "../Navbar/NavBarFriends/NavBarFriends";
 
 const Friends = (props) => {
-
     let state = props.dialogsPage;
 
     let avatarsElements = state.dialogs
-        .map(dialog => <FriendsList url={dialog.photoUrl}
-                                    name={dialog.name}
-                                    id={dialog.id}/>);
+        .map(dialog =>
+            <FriendsList url={dialog.photoUrl}
+                         name={dialog.name}
+                         id={dialog.id}
+                         key={dialog.id}
+            />
+        );
 
     return (
         <div className={friendsCSS.friends}>

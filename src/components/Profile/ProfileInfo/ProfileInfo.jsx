@@ -15,16 +15,41 @@ const ProfileInfo = () => {
                          src='http://localhost:3000/pic/ronin.jpg'
                          alt='avatar'/>
                 </div>
-                <div>
-                    <div className={profInfoCSS.name}> Name</div>
+                <div className={profInfoCSS.info_main_block}>
+                    <div className={profInfoCSS.name}>
+                        <div className={profInfoCSS.info_name}>
+                            Name:
+                            <div className={profInfoCSS.info_data}>
+                                <input/>
+                            </div>
+                        </div>
+                    </div>
                     <div className={profInfoCSS.info_main}>
-                        <div className={profInfoCSS.info}>DOB</div>
-                        <div className={profInfoCSS.info}>City</div>
-                        <div className={profInfoCSS.info}>Education</div>
-                        <div className={profInfoCSS.info}>WebSite:
-                            https://
-                            <input type="text" defaultValue={'github.com/AntonRufus'}/>
-                            /newMaster
+                        <div className={profInfoCSS.info}>
+                            DOB:
+                            <div className={profInfoCSS.info_data}>
+                                <input/>
+                            </div>
+                        </div>
+                        <div className={profInfoCSS.info}>
+                            City:.
+                            <div className={profInfoCSS.info_data}>
+                                <input/>
+                            </div>
+                        </div>
+                        <div className={profInfoCSS.info}>
+                            Education:
+                            <div className={profInfoCSS.info_data}>
+                                <input/>
+                            </div>
+                        </div>
+                        <div className={profInfoCSS.info}>
+                            WebSite:
+                            <div className={profInfoCSS.info_data}>
+                                https://
+                                <input type="text" defaultValue={'github.com/AntonRufus'}/>
+                                /newMaster
+                            </div>
                         </div>
                     </div>
                 </div>

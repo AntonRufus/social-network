@@ -4,22 +4,33 @@ import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
 
 const Dialogs = (props) => {
-
     let state = props.dialogsPage;
 
     let dialogsElements = state.dialogs
-        .map(dialog => <DialogItem url={dialog.photoUrl}
-                                   name={dialog.name}
-                                   id={dialog.id}/>);
+        .map(dialog =>
+            <DialogItem url={dialog.photoUrl}
+                        name={dialog.name}
+                        id={dialog.id}
+                        key={dialog.id}
+            />
+        );
 
     let messagesInElements = state.messagesIn
-        .map(message => <Message message={message.message}
-                                 id={message.id}/>);
+        .map(message =>
+            <Message message={message.message}
+                     id={message.id}
+                     key={message.id}
+            />
+        );
 
     let messagesOutElements = state.messagesOut
-        .map(message => <Message message={message.message}
-                                 id={message.id}
-                                 sendMessageOut={props.sendMessageOut}/>);
+        .map(message =>
+            <Message message={message.message}
+                     id={message.id}
+                     sendMessageOut={props.sendMessageOut}
+                     key={message.id}
+            />
+        );
 
     let newMessageElement = React.createRef();
 

@@ -4,13 +4,16 @@ import {NavLink} from "react-router-dom";
 import NavBarFriends from "./NavBarFriends/NavBarFriends";
 
 const NavBar = (props) => {
-
     let state = props.dialogsPage;
 
     let friendsShortList = state.dialogs
-        .map(dialog => <NavBarFriends url={dialog.photoUrl}
-                                      name={dialog.name}
-                                      id={dialog.id}/>);
+        .map(dialog =>
+            <NavBarFriends url={dialog.photoUrl}
+                           name={dialog.name}
+                           id={dialog.id}
+                           key={dialog.id}
+            />
+        );
 
     return (
         <nav>

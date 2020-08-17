@@ -1,3 +1,4 @@
+/*
 import React from 'react';
 import navFrCSS from './NavBarFriends.module.css'
 import {NavLink} from "react-router-dom";
@@ -23,3 +24,4 @@ const NavBarFriends = (props) => {
 }
 
 export default NavBarFriends;
+*/

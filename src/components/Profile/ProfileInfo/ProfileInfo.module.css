@@ -12,7 +12,14 @@
 }
 
 .avatar {
-    width: 200px;
+    width: 241px;
+    border: 2px solid whitesmoke;
+    margin: 15px 25px 25px 25px;
+}
+.avatar:hover {
+    border: 2px solid gold;
+    border-radius: 5px;
+    width: 241px;
 }
 
 .name {
@@ -29,10 +36,38 @@
     padding: 10px 10px 20px;
 }
 
-.info {
-    color: whitesmoke;
-}
-
 .info:hover {
     color: gold;
+}
+
+.info {
+    color: whitesmoke;
+    display: grid;
+    grid-template-columns: 1fr 12fr;
+    padding: 5px;
+}
+
+.info_name {
+    display: grid;
+    grid-template-columns: 1fr 12fr;
+    padding: 5px;
+}
+
+.info_data:hover {
+    text-decoration: underline;
+}
+
+.info_data input {
+    width: 172px;
+}
+
+.info_data input:hover {
+    border: 2px solid gold;
+    border-radius: 5px;
+    background-color: #999999;
+    color: gold;
+    font-weight: bold;
+}
+
+.info_main_block {
 }
