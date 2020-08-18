@@ -4,7 +4,6 @@ const SET_USERS = 'SET_USERS';
 
 let initialState = {
     users: [
-        /*
         {
             id: 1,
             fullName: 'Kabal',
@@ -13,43 +12,42 @@ let initialState = {
                 city: 'Madrid',
                 country: 'Spain'
             },
-            avatarPic: 'http://fightersgeneration.com/characters2/kabal-mk9port_small.jpg',
+            photoUrl: 'https://legacy.mortalkombatonline.com/content/games/mk3/kabal/bio.gif',
             followed: false,
         },
         {
             id: 2,
-            fullName: 'Kabal',
+            fullName: 'Scorpion',
             status: 'MKII',
             location: {
                 city: 'Madrid',
                 country: 'Spain'
             },
-            avatarPic: 'http://fightersgeneration.com/characters2/kabal-mk9port_small.jpg',
+            photoUrl: 'https://legacy.mortalkombatonline.com/content/games/umk3/scorpion/bio.gif',
             followed: true,
         },
         {
             id: 3,
-            fullName: 'Kabal',
+            fullName: 'Shang Tsung',
             status: 'MKII',
             location: {
                 city: 'Madrid',
                 country: 'Spain'
             },
-            avatarPic: 'http://fightersgeneration.com/characters2/kabal-mk9port_small.jpg',
+            photoUrl: 'https://legacy.mortalkombatonline.com/content/games/mk3/shangtsung/bio.gif',
             followed: true,
         },
         {
             id: 4,
-            fullName: 'Kabal',
+            fullName: 'Sub Zero',
             status: 'MKII',
             location: {
                 city: 'Madrid',
                 country: 'Spain'
             },
-            avatarPic: 'http://fightersgeneration.com/characters2/kabal-mk9port_small.jpg',
+            photoUrl: 'https://legacy.mortalkombatonline.com/content/games/mk3/subzero/bio.gif',
             followed: false,
         },
-        */
     ],
 };
 
@@ -70,9 +68,9 @@ const usersReducer = (state = initialState, action) => {
                 ...state,
                 users: state.users.map(user => {
                     if (user.id === action.userId) {
-                        return {...user, followed: true}
+                        return {...user, followed: false}
                     }
-                    return false;
+                    return user;
                 }),
             }
         case SET_USERS:

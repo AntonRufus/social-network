@@ -5,11 +5,11 @@ import Header from "./components/Header/Header";
 import Profile from "./components/Profile/Profile";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
+import UsersContainer from "./components/Users/UsersContainer";
 import Settings from "./components/Settings/Settings";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import FriendsContainer from "./components/Friends/FriendsContainer";
 import NavBarContainer from "./components/Navbar/NavBarContainer";
-import Users from "./components/Users/Users";
 
 const App = () => {
     return (
@@ -39,7 +39,7 @@ const App = () => {
                 </div>
                 <div className={appCSS.users_wrapper}>
                     <Route path='/users'
-                           render={() => <Users
+                           render={() => <UsersContainer
                            />}/>
                 </div>
                 <div className={appCSS.settings_wrapper}>
