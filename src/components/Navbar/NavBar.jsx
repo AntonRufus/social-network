@@ -41,6 +41,12 @@ const NavBar = (props) => {
                     Music
                 </NavLink>
             </div>
+            <div className={navCSS.item}>
+                <NavLink to='/users'
+                         activeClassName={navCSS.activeLink}>
+                    Users
+                </NavLink>
+            </div>
             <br/>
             <div className={`${navCSS.item} ${navCSS.bold}`}>
                 <NavLink to='/settings'

@@ -50,7 +50,12 @@ body {
     background: #303030;
 }
 
-.friends_wrapper{
+.friends_wrapper {
+    grid-area: c;
+    background: #303030;
+}
+
+.users_wrapper {
     grid-area: c;
     background: #303030;
 }

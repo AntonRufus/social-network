@@ -9,6 +9,7 @@ import Settings from "./components/Settings/Settings";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import FriendsContainer from "./components/Friends/FriendsContainer";
 import NavBarContainer from "./components/Navbar/NavBarContainer";
+import Users from "./components/Users/Users";
 
 const App = () => {
     return (
@@ -35,6 +36,11 @@ const App = () => {
                 </div>
                 <div className={appCSS.music_wrapper}>
                     <Route path='/music' component={Music}/>
+                </div>
+                <div className={appCSS.users_wrapper}>
+                    <Route path='/users'
+                           render={() => <Users
+                           />}/>
                 </div>
                 <div className={appCSS.settings_wrapper}>
                     <Route path='/settings' component={Settings}/>
