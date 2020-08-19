@@ -1,9 +1,18 @@
-.users{
+.users {
     color: whitesmoke;
     font-size: 200%;
     padding: 25px;
 }
 
-.userPhoto{
+.userPhoto {
     width: 75px;
+}
+
+.fullName {
+    color: gold;
+    text-decoration: none;
+}
+
+.fullName:hover {
+    color: goldenrod;
 }

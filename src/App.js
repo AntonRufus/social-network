@@ -40,7 +40,14 @@ const App = () => {
                 <div className={appCSS.users_wrapper}>
                     <Route path='/users'
                            render={() => <UsersContainer
-                           />}/>
+                           />}/>{/*
+                    <Route path='/users/Sub Zero'
+                           render={() => <UserSubZero
+                           />}/>*/}
+                    {/*<Route path='/users/Kabal'
+                           render={() => <UserKabal
+                           />}/>*/}
+
                 </div>
                 <div className={appCSS.settings_wrapper}>
                     <Route path='/settings' component={Settings}/>

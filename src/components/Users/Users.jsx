@@ -1,7 +1,60 @@
 import React from "react";
 import usersCSS from './Users.module.css'
+import {NavLink} from "react-router-dom";
 
 const Users = (props) => {
+
+    if (props.users.length === 0) {
+        props.setUsers(
+            [
+                {
+                    id: 1,
+                    fullName: 'Kabal',
+                    status: 'MKII',
+                    location: {
+                        city: 'Madrid',
+                        country: 'Spain'
+                    },
+                    photoUrl: 'https://legacy.mortalkombatonline.com/content/games/mk3/kabal/bio.gif',
+                    followed: false,
+                },
+                {
+                    id: 2,
+                    fullName: 'Scorpion',
+                    status: 'MKII',
+                    location: {
+                        city: 'Madrid',
+                        country: 'Spain'
+                    },
+                    photoUrl: 'https://legacy.mortalkombatonline.com/content/games/umk3/scorpion/bio.gif',
+                    followed: true,
+                },
+                {
+                    id: 3,
+                    fullName: 'Shang Tsung',
+                    status: 'MKII',
+                    location: {
+                        city: 'Madrid',
+                        country: 'Spain'
+                    },
+                    photoUrl: 'https://legacy.mortalkombatonline.com/content/games/mk3/shangtsung/bio.gif',
+                    followed: true,
+                },
+                {
+                    id: 4,
+                    fullName: 'Sub Zero',
+                    status: 'MKII',
+                    location: {
+                        city: 'Madrid',
+                        country: 'Spain'
+                    },
+                    photoUrl: 'https://legacy.mortalkombatonline.com/content/games/mk3/subzero/bio.gif',
+                    followed: false,
+                },
+            ]
+        )
+    }
+
     return (
         <div className={usersCSS.users}>
             {
@@ -21,17 +74,22 @@ const Users = (props) => {
                             }
                         </div>
                     </span>
-                    <span>
                         <span>
-                            <div>{user.fullName}</div>
-                            <div>{user.status}</div>
+                            <span>
+                                <div>
+                                    <NavLink to={'/users/' + user.fullName} className={usersCSS.fullName}>
+                                        {user.fullName}
+                                    </NavLink>
+                                </div>
+                                <div>{user.status}</div>
+                            </span>
+                            <span>
+                                <div>{user.location.city}</div>
+                                <div>{user.location.country}</div>
+                            </span>
                         </span>
-                        <span>
-                            <div>{user.location.city}</div>
-                            <div>{user.location.country}</div>
-                        </span>
-                    </span>
-                </div>)
+                    </div>
+                )
             }
         </div>
     )

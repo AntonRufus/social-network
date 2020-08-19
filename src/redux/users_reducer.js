@@ -4,7 +4,7 @@ const SET_USERS = 'SET_USERS';
 
 let initialState = {
     users: [
-        {
+        /*{
             id: 1,
             fullName: 'Kabal',
             status: 'MKII',
@@ -47,7 +47,7 @@ let initialState = {
             },
             photoUrl: 'https://legacy.mortalkombatonline.com/content/games/mk3/subzero/bio.gif',
             followed: false,
-        },
+        },*/
     ],
 };
 
