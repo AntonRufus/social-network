@@ -31,7 +31,7 @@ const Users = (props) => {
                 },
                 {
                     id: 3,
-                    fullName: 'Shang Tsung',
+                    fullName: 'Shang_Tsung',
                     status: 'MKII',
                     location: {
                         city: 'Madrid',
@@ -42,7 +42,7 @@ const Users = (props) => {
                 },
                 {
                     id: 4,
-                    fullName: 'Sub Zero',
+                    fullName: 'Sub_Zero_MK3',
                     status: 'MKII',
                     location: {
                         city: 'Madrid',
@@ -77,7 +77,7 @@ const Users = (props) => {
                         <span>
                             <span>
                                 <div>
-                                    <NavLink to={'/users/' + user.fullName} className={usersCSS.fullName}>
+                                    <NavLink to={'/user/' + user.fullName} className={usersCSS.fullName}>
                                         {user.fullName}
                                     </NavLink>
                                 </div>

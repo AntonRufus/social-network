@@ -10,6 +10,7 @@ import Settings from "./components/Settings/Settings";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import FriendsContainer from "./components/Friends/FriendsContainer";
 import NavBarContainer from "./components/Navbar/NavBarContainer";
+import UsersRouter from "./components/Users/User/UsersRouter";
 
 const App = () => {
     return (
@@ -40,14 +41,8 @@ const App = () => {
                 <div className={appCSS.users_wrapper}>
                     <Route path='/users'
                            render={() => <UsersContainer
-                           />}/>{/*
-                    <Route path='/users/Sub Zero'
-                           render={() => <UserSubZero
-                           />}/>*/}
-                    {/*<Route path='/users/Kabal'
-                           render={() => <UserKabal
-                           />}/>*/}
-
+                           />}/>
+                    <UsersRouter/>
                 </div>
                 <div className={appCSS.settings_wrapper}>
                     <Route path='/settings' component={Settings}/>
