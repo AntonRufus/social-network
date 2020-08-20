@@ -57,6 +57,9 @@ const Users = (props) => {
 
     return (
         <div className={usersCSS.users}>
+            <NavLink to='/users_list' className={usersCSS}>
+                UsersList
+            </NavLink>
             {
                 props.users.map(user => <div key={user.id}>
                     <span>

@@ -10,7 +10,8 @@ import Settings from "./components/Settings/Settings";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import FriendsContainer from "./components/Friends/FriendsContainer";
 import NavBarContainer from "./components/Navbar/NavBarContainer";
-import UsersRouter from "./components/Users/User/UsersRouter";
+import UsersRouter from "./components/Users/UsersRouter";
+import UsersList, {UserPage} from "./components/Users/UsersList";
 
 const App = () => {
     return (
@@ -41,6 +42,9 @@ const App = () => {
                 <div className={appCSS.users_wrapper}>
                     <Route path='/users'
                            render={() => <UsersContainer
+                           />}/>
+                    <Route path='/users_list'
+                           render={() => <UsersList
                            />}/>
                     <UsersRouter/>
                 </div>

@@ -6,22 +6,11 @@
 
 .users a {
     color: whitesmoke;
+    font-size: 200%;
+    padding: 25px;
     text-decoration: none;
 }
 
 .users a:hover {
     color: gold;
-}
-
-.userPhoto {
-    width: 75px;
-}
-
-.fullName {
-    color: gold;
-    text-decoration: none;
-}
-
-.fullName:hover {
-    color: goldenrod;
 }
