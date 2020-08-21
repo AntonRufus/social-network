@@ -10,9 +10,10 @@ const UsersList = () => {
     return (
         <div className={usersCSS.users}>
             <NavLink to='/user/Kabal'> Kabal</NavLink>
+            {/*<NavLink to='/user/Kabal'> Kabal</NavLink>
             <NavLink to='/user/Sub_Zero_MK3'> Sub Zero MK3</NavLink>
             <NavLink to='/user/Shang_Tsung'> Shang Tsung</NavLink>
-            <NavLink to='/user/Scorpion'> Scorpion</NavLink>
+            <NavLink to='/user/Scorpion'> Scorpion</NavLink>*/}
         </div>
     )
 }

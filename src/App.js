@@ -6,12 +6,12 @@ import Profile from "./components/Profile/Profile";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import UsersContainer from "./components/Users/UsersContainer";
+import UsersRouter from "./components/Users/UsersRouter";
+import UsersList from "./components/Users/UsersList";
 import Settings from "./components/Settings/Settings";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import FriendsContainer from "./components/Friends/FriendsContainer";
 import NavBarContainer from "./components/Navbar/NavBarContainer";
-import UsersRouter from "./components/Users/UsersRouter";
-import UsersList, {UserPage} from "./components/Users/UsersList";
 
 const App = () => {
     return (
@@ -43,10 +43,10 @@ const App = () => {
                     <Route path='/users'
                            render={() => <UsersContainer
                            />}/>
-                    <Route path='/users_list'
+                    {/*<Route path='/users_list'
                            render={() => <UsersList
                            />}/>
-                    <UsersRouter/>
+                    <UsersRouter/>*/}
                 </div>
                 <div className={appCSS.settings_wrapper}>
                     <Route path='/settings' component={Settings}/>

@@ -2,6 +2,11 @@
     color: whitesmoke;
     font-size: 200%;
     padding: 25px;
+    margin-bottom: 25px;
+}
+
+.users .getUsers {
+    margin-bottom: 25px;
 }
 
 .users a {
@@ -24,4 +29,8 @@
 
 .fullName:hover {
     color: goldenrod;
+}
+
+.location .locationCountry {
+    margin-bottom: 25px;
 }
