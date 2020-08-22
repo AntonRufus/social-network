@@ -33,12 +33,6 @@ const App = () => {
                            render={() => <DialogsContainer
                            />}/>
                 </div>
-                <div className={appCSS.news_wrapper}>
-                    <Route path='/news' component={News}/>
-                </div>
-                <div className={appCSS.music_wrapper}>
-                    <Route path='/music' component={Music}/>
-                </div>
                 <div className={appCSS.users_wrapper}>
                     <Route path='/users'
                            render={() => <UsersContainer
@@ -47,6 +41,12 @@ const App = () => {
                            render={() => <UsersList
                            />}/>
                     <UsersRouter/>*/}
+                </div>
+                <div className={appCSS.news_wrapper}>
+                    <Route path='/news' component={News}/>
+                </div>
+                <div className={appCSS.music_wrapper}>
+                    <Route path='/music' component={Music}/>
                 </div>
                 <div className={appCSS.settings_wrapper}>
                     <Route path='/settings' component={Settings}/>
