@@ -34,3 +34,16 @@
 .location .locationCountry {
     margin-bottom: 25px;
 }
+
+.users_block {
+    margin: 5px 50px;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+}
+
+.users_block:hover {
+    border: solid 1px whitesmoke;
+    border-radius: 5px;
+    padding: 14px;
+}

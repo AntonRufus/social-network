@@ -6,9 +6,16 @@ import userPhotoSmall from '../../assets/images/avatar-default-nonuser-small.png
 
 class Users extends React.Component {
 
-    constructor(props) {
-        super(props);
+    /*
+    it's happen by default:
 
+        constructor(props) {
+            super(props);
+        }
+
+    */
+
+    componentDidMount() {
         axios.get('https://social-network.samuraijs.com/api/1.0/users')
             .then(response => {
                     this.props.setUsers(response.data.items);
@@ -19,10 +26,9 @@ class Users extends React.Component {
     render() {
         return (
             <div className={usersCSS.users}>
-
                 {
                     this.props.users.map(user =>
-                        <div key={user.id}>
+                        <div key={user.id}  className={usersCSS.users_block}>
                             <div>
                                 <div>
                                     <img src={user.photos.small != null ? user.photos.small : userPhotoSmall}
@@ -43,11 +49,17 @@ class Users extends React.Component {
                             <div>
                                 <div>
                                     <div>
+                                        Name:_
                                         <NavLink to={'/user/' + user.name} className={usersCSS.fullName}>
                                             {user.name}
-                                        </NavLink>
+                                        </NavLink></div>
+                                    <div>
+                                        Status:___
+                                        {user.status}___?
                                     </div>
-                                    <div>{user.status}</div>
+                                    <div>
+                                        ID:_
+                                        {user.id}</div>
                                 </div>
                                 {/*<div className={usersCSS.location}>
                                     <div className={usersCSS.locationCity}>{'user.location.city'}</div>
