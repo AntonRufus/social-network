@@ -47,3 +47,23 @@
     border-radius: 5px;
     padding: 14px;
 }
+
+.activeLink {
+    color: goldenrod;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 100%;
+}
+
+.pages_buttons {
+    display: inline-flex;
+    margin: 5px;
+}
+
+.pages_buttons div {
+    padding-right: 10px;
+}
+
+.pages_buttons div:hover {
+    color: gold;
+}
