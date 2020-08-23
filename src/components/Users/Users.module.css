@@ -51,13 +51,15 @@
 .activeLink {
     color: goldenrod;
     font-weight: bold;
-    font-style: italic;
+text-decoration: underline;
     font-size: 100%;
 }
 
 .pages_buttons {
     display: inline-flex;
+    flex-wrap: wrap;
     margin: 5px;
+    width: auto;
 }
 
 .pages_buttons div {
