@@ -70,6 +70,22 @@
     color: gold;
 }
 
-.descriptions_block span{
-margin-right: 10px;
+.descriptions_block span {
+    margin-right: 10px;
+}
+
+.follow_button {
+    margin-left: 7px;
+}
+
+.follow_button:hover button {
+    background-color: whitesmoke;
+    font-weight: bold;
+    border-radius: 5px;
+    border-color: whitesmoke;
+}
+
+.img_avatar:hover img {
+    background-color: black;
+    border-radius: 45px;
 }

@@ -1,8 +1,7 @@
 import React from "react";
-import usersCSS from './Users.module.css'
+import usersCSS from './Users.module.css';
 import {NavLink} from "react-router-dom";
-import userPhotoSmall from '../../assets/images/avatar-default-nonuser-small.png'
-import * as axios from 'axios';
+import userPhotoSmall from '../../assets/images/avatar-default-nonuser-small.png';
 
 let Users = (props) => {
 
@@ -27,12 +26,12 @@ let Users = (props) => {
                 props.users.map(user =>
                     <div key={user.id} className={usersCSS.users_block}>
                         <div>
-                            <div>
+                            <div className={usersCSS.img_avatar}>
                                 <img src={user.photos.small != null ? user.photos.small : userPhotoSmall}
                                      alt='avatar'
                                      className={usersCSS.userPhoto}/>
                             </div>
-                            <div>
+                            <div className={usersCSS.follow_button}>
                                 {user.followed
                                     ? <button onClick={() => {
                                         props.unfollow(user.id)
@@ -72,38 +71,5 @@ let Users = (props) => {
         </div>
     )
 }
-
-/*class Users extends React.Component {
-
-    componentDidMount() {
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${this.props.currentPage}&count=${this.props.pageSize}`)
-            .then(response => {
-                    this.props.setUsers(response.data.items);
-                    this.props.setTotalUsersCount(response.data.totalCount);
-                }
-            );
-    }
-
-    onPageChanged = (pageNumber) => {
-        this.props.setCurrentPage(pageNumber);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/users?page=${pageNumber}&count=${this.props.pageSize}`)
-            .then(response => {
-                    this.props.setUsers(response.data.items);
-                }
-            );
-    }
-
-    render() {
-
-        let pagesCount = Math.ceil(this.props.totalUsersCount / this.props.pageSize);
-        let pages = [];
-        for (let i = 1; i <= pagesCount; i++) {
-            pages.push(i);
-        }
-
-        // return <UsersFunc/>
-
-    }
-}*/
 
 export default Users;
