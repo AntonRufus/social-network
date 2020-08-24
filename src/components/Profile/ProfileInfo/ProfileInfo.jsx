@@ -1,7 +1,7 @@
 import React from 'react';
 import profInfoCSS from './ProfileInfo.module.css';
 
-const ProfileInfo = () => {
+const ProfileInfo = (props) => {
     return (
         <div className={profInfoCSS.profile_block}>
             <div>

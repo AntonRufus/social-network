@@ -2,10 +2,10 @@ import React from 'react';
 import appCSS from './App.module.css';
 import {Route} from "react-router-dom";
 import Header from "./components/Header/Header";
-import Profile from "./components/Profile/Profile";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import UsersContainer from "./components/Users/UsersContainer";
+import ProfileContainer from "./components/Profile/ProfileContainer";
 import UsersRouter from "./components/Users/UsersRouter";
 import UsersList from "./components/Users/UsersList";
 import Settings from "./components/Settings/Settings";
@@ -25,7 +25,7 @@ const App = () => {
             <div className={appCSS.app_wrapper_content}>
                 <div className={appCSS.profile_wrapper}>
                     <Route path='/profile'
-                           render={() => <Profile
+                           render={() => <ProfileContainer
                            />}/>
                 </div>
                 <div className={appCSS.dialogs_wrapper}>

@@ -27,9 +27,11 @@ let Users = (props) => {
                     <div key={user.id} className={usersCSS.users_block}>
                         <div>
                             <div className={usersCSS.img_avatar}>
-                                <img src={user.photos.small != null ? user.photos.small : userPhotoSmall}
-                                     alt='avatar'
-                                     className={usersCSS.userPhoto}/>
+                                <NavLink to={'/profile/' + user.id} className={usersCSS.fullName}>
+                                    <img src={user.photos.small != null ? user.photos.small : userPhotoSmall}
+                                         alt='avatar'
+                                         className={usersCSS.userPhoto}/>
+                                </NavLink>
                             </div>
                             <div className={usersCSS.follow_button}>
                                 {user.followed
@@ -45,9 +47,10 @@ let Users = (props) => {
                         <div className={usersCSS.descriptions_block}>
                             <div>
                                 <span>Name:</span>
-                                <NavLink to={'/user/' + user.name} className={usersCSS.fullName}>
+                                <NavLink to={'/profile/' + user.id} className={usersCSS.fullName}>
                                     {user.name}
-                                </NavLink></div>
+                                </NavLink>
+                            </div>
                             <div>
                                 <span>Status:</span>
                                 {user.status}
