@@ -51,7 +51,7 @@
 .activeLink {
     color: goldenrod;
     font-weight: bold;
-text-decoration: underline;
+    text-decoration: underline;
     font-size: 100%;
 }
 
@@ -68,4 +68,8 @@ text-decoration: underline;
 
 .pages_buttons div:hover {
     color: gold;
+}
+
+.descriptions_block span{
+margin-right: 10px;
 }
