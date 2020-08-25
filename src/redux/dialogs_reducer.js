@@ -150,17 +150,10 @@ const dialogReducer = (state = initialState, action) => {
     }
 };
 
-export const onMessageChangeActionCreator = (messageUpdatedValue) => ({
-    type: UPDATE_NEW_MESSAGE_OUT,
-    newMessageText: messageUpdatedValue,
-});
+export const onMessageChange = (updatedValue) => ({type: UPDATE_NEW_MESSAGE_OUT, newMessageText: updatedValue});
 
-export const sendMessageActionCreator = () => ({
-    type: SEND_MESSAGE_OUT,
-});
+export const sendMessage = () => ({type: SEND_MESSAGE_OUT});
 
-export const clearMessageActionCreator = () => ({
-    type: CLEAR_MESSAGE,
-});
+export const clearMessage = () => ({type: CLEAR_MESSAGE});
 
 export default dialogReducer;

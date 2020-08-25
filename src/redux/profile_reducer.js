@@ -1,6 +1,7 @@
 const ADD_POST = 'ADD-POST';
 const CLEAR_POST = 'CLEAR-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+const SET_USER_PROFILE = 'SET_USER_PROFILE';
 
 let initialState = {
     posts: [
@@ -37,6 +38,7 @@ let initialState = {
     likesCountDefault: 10,
     dislikesCountDefault: 1,
     urlDefault: 'https://www.akibanation.com/wp-content/uploads/2016/07/Kon.BLEACH.full_.170410-150x150.jpg',
+    profile: null,
 };
 
 const profileReducer = (state = initialState, action) => {
@@ -65,22 +67,22 @@ const profileReducer = (state = initialState, action) => {
                 ...state,
                 newPostText: '',
             }
+        case SET_USER_PROFILE:
+            return {
+                ...state,
+                profile: action.profile,
+            }
         default:
             return state;
     }
 };
 
-export const addPostActionCreator = () => ({
-    type: ADD_POST,
-});
+export const addPost = () => ({type: ADD_POST});
 
-export const updateNewPostTextActionCreator = (postUpdatedValue) => ({
-    type: UPDATE_NEW_POST_TEXT,
-    newPostText: postUpdatedValue,
-});
+export const updateNewPostText = (updatedValue) => ({type: UPDATE_NEW_POST_TEXT, newPostText: updatedValue});
 
-export const clearPostActionCreator = () => ({
-    type: CLEAR_POST,
-});
+export const clearPost = () => ({type: CLEAR_POST});
+
+export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile});
 
 export default profileReducer;
