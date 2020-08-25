@@ -13,19 +13,25 @@
 
 .avatar {
     width: 241px;
+    height: 241px;
     border: 2px solid whitesmoke;
-    margin: 15px 25px 25px 25px;
+    margin: 18px 25px 25px 100px;
 }
+
 .avatar:hover {
     border: 2px solid gold;
     border-radius: 5px;
-    width: 241px;
+}
+
+.avatar_block {
+    display: inline-flex;
 }
 
 .name {
     color: whitesmoke;
     font-weight: bold;
     padding: 10px 10px 20px 10px;
+    /*margin-right: 450px;*/
 }
 
 .name:hover {
@@ -43,13 +49,13 @@
 .info {
     color: whitesmoke;
     display: grid;
-    grid-template-columns: 1fr 12fr;
+    grid-template-columns: 2fr 10fr;
     padding: 5px;
 }
 
 .info_name {
     display: grid;
-    grid-template-columns: 1fr 12fr;
+    grid-template-columns: 2fr 10fr;
     padding: 5px;
 }
 
@@ -61,6 +67,21 @@
     width: 172px;
 }
 
+.info_data span {
+    padding-left: 5px;
+}
+
+.info_data a {
+    color: whitesmoke;
+    padding: 5px;
+}
+
+.info_data a:hover {
+    color: gold;
+    padding: 5px;
+    text-decoration: none;
+}
+
 .info_data input:hover {
     border: 2px solid gold;
     border-radius: 5px;
@@ -70,4 +91,20 @@
 }
 
 .info_main_block {
+    display: inline-flex;
+}
+
+.info_main_block input{
+    margin-left: 25px;
+}
+
+.info_block {
+    margin-left: 100px;
+}
+
+.booleanPhoto {
+    height: 25px;
+    width: 25px;
+    margin-bottom: -8px;
+    margin-left: 8px;
 }
