@@ -12,6 +12,7 @@ import UsersList from "./components/Users/UsersList";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import FriendsContainer from "./components/Friends/FriendsContainer";
 import NavBarContainer from "./components/Navbar/NavBarContainer";
+import Preloader from "./components/common/preloader/Preloader";
 
 const App = () => {
     return (
@@ -23,8 +24,13 @@ const App = () => {
                 <NavBarContainer/>
             </div>
             <div className={appCSS.app_wrapper_content}>
+                {/*<div className={appCSS.profile_wrapper}>
+                    <Route path=''
+                           render={() => <Preloader
+                           />}/>
+                </div>*/}
                 <div className={appCSS.profile_wrapper}>
-                    <Route path='/profile'
+                    <Route path='/profile/:userId?'
                            render={() => <ProfileContainer
                            />}/>
                 </div>

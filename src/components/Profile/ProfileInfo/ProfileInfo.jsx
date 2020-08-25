@@ -70,7 +70,7 @@ const ProfileInfo = (props) => {
                             <div className={profInfoCSS.info_name}>
                                 Name:
                                 <div className={profInfoCSS.info_data}>
-                                    <span>{props.profile.fullName === null ? 'no detailde information' : props.profile.fullName}</span>
+                                    <span>{props.profile.fullName === null ? 'no detailed information' : props.profile.fullName}</span>
                                 </div>
                             </div>
                         </div>
@@ -78,56 +78,56 @@ const ProfileInfo = (props) => {
                             <div className={profInfoCSS.info}>
                                 About me:
                                 <div className={profInfoCSS.info_data}>
-                                    <span>{props.profile.aboutMe === null ? 'no detailde information' : props.profile.aboutMe}</span>
+                                    <span>{props.profile.aboutMe === null ? 'no detailed information' : props.profile.aboutMe}</span>
                                 </div>
                             </div>
                             <br/>
                             <div className={profInfoCSS.info}>
                                 FB:
                                 <div className={profInfoCSS.info_data}>
-                                    <span>{props.profile.contacts.facebook === null ? 'no detailde information' : props.profile.contacts.facebook}</span>
+                                    <span>{props.profile.contacts.facebook === null ? 'no detailed information' : props.profile.contacts.facebook}</span>
                                 </div>
                             </div>
                             <div className={profInfoCSS.info}>
                                 WebSite:
                                 <div className={profInfoCSS.info_data}>
-                                    <span>{props.profile.contacts.website === null ? 'no detailde information' : props.profile.contacts.website}</span>
+                                    <span>{props.profile.contacts.website === null ? 'no detailed information' : props.profile.contacts.website}</span>
                                 </div>
                             </div>
                             <div className={profInfoCSS.info}>
                                 VK:
                                 <div className={profInfoCSS.info_data}>
-                                    <span>{props.profile.contacts.vk === null ? 'no detailde information' : props.profile.contacts.vk}</span>
+                                    <span>{props.profile.contacts.vk === null ? 'no detailed information' : props.profile.contacts.vk}</span>
                                 </div>
                             </div>
                             <div className={profInfoCSS.info}>
                                 Twitter:
                                 <div className={profInfoCSS.info_data}>
-                                    <span>{props.profile.contacts.twitter === null ? 'no detailde information' : props.profile.contacts.twitter}</span>
+                                    <span>{props.profile.contacts.twitter === null ? 'no detailed information' : props.profile.contacts.twitter}</span>
                                 </div>
                             </div>
                             <div className={profInfoCSS.info}>
                                 Instagram:
                                 <div className={profInfoCSS.info_data}>
-                                    <span>{props.profile.contacts.instagram === null ? 'no detailde information' : props.profile.contacts.instagram}</span>
+                                    <span>{props.profile.contacts.instagram === null ? 'no detailed information' : props.profile.contacts.instagram}</span>
                                 </div>
                             </div>
                             <div className={profInfoCSS.info}>
                                 youtube:
                                 <div className={profInfoCSS.info_data}>
-                                    <span>{props.profile.contacts.youtube === null ? 'no detailde information' : props.profile.contacts.youtube}</span>
+                                    <span>{props.profile.contacts.youtube === null ? 'no detailed information' : props.profile.contacts.youtube}</span>
                                 </div>
                             </div>
                             <div className={profInfoCSS.info}>
                                 github:
                                 <div className={profInfoCSS.info_data}>
-                                    <span>{props.profile.contacts.github === null ? 'no detailde information' : props.profile.contacts.github}</span>
+                                    <span>{props.profile.contacts.github === null ? 'no detailed information' : props.profile.contacts.github}</span>
                                 </div>
                             </div>
                             <div className={profInfoCSS.info}>
                                 mainLink:
                                 <div className={profInfoCSS.info_data}>
-                                    <span>{props.profile.contacts.mainLink === null ? 'no detailde information' : props.profile.contacts.mainLink}</span>
+                                    <span>{props.profile.contacts.mainLink === null ? 'no detailed information' : props.profile.contacts.mainLink}</span>
                                 </div>
                             </div>
                             <br/>
@@ -142,9 +142,9 @@ const ProfileInfo = (props) => {
                                 </div>
                             </div>
                             <div className={profInfoCSS.info}>
-                                Looking for a job descriptions:
+                                Job descriptions:
                                 <div className={profInfoCSS.info_data}>
-                                    <span>{props.profile.lookingForAJobDescription === null ? 'no detailde information' : props.profile.lookingForAJobDescription}</span>
+                                    <span>{props.profile.lookingForAJobDescription === null ? 'no detailed information' : props.profile.lookingForAJobDescription}</span>
                                 </div>
                             </div>
                             <br/>

@@ -68,17 +68,16 @@
 }
 
 .info_data span {
-    padding-left: 5px;
+    padding-left: 15px;
 }
 
 .info_data a {
     color: whitesmoke;
-    padding: 5px;
+    padding: 15px;
 }
 
 .info_data a:hover {
     color: gold;
-    padding: 5px;
     text-decoration: none;
 }
 
