@@ -12,6 +12,7 @@ import Settings from "./components/Settings/Settings";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import FriendsContainer from "./components/Friends/FriendsContainer";
 import NavBarContainer from "./components/Navbar/NavBarContainer";
+import ProfileContainer from "./components/Profile/ProfileContainer";
 
 const App = () => {
     return (
@@ -25,7 +26,7 @@ const App = () => {
             <div className={appCSS.app_wrapper_content}>
                 <div className={appCSS.profile_wrapper}>
                     <Route path='/profile'
-                           render={() => <Profile
+                           render={() => <ProfileContainer
                            />}/>
                 </div>
                 <div className={appCSS.dialogs_wrapper}>
