@@ -13,12 +13,13 @@ import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import FriendsContainer from "./components/Friends/FriendsContainer";
 import NavBarContainer from "./components/Navbar/NavBarContainer";
 import Preloader from "./components/common/preloader/Preloader";
+import HeaderContainer from "./components/Header/HeaderContainer";
 
 const App = () => {
     return (
         <div className={appCSS.app_wrapper}>
             <div className={appCSS.header}>
-                <Header/>
+                <HeaderContainer/>
             </div>
             <div className={appCSS.nav}>
                 <NavBarContainer/>

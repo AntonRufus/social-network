@@ -24,6 +24,15 @@
 .login_block:hover {
     background-color: whitesmoke;
     border-radius: 5px;
+    border: 2px solid gold;
+    padding: 4px 9px;
+}
+
+.login_block a {
+    color: whitesmoke;
+}
+
+.login_block:hover a {
     color: #191a28;
     font-weight: bold;
 }
