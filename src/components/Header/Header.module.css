@@ -36,3 +36,10 @@
     color: #191a28;
     font-weight: bold;
 }
+
+.login_process {
+    width: 55px;
+    float: right;
+    padding-top: 28px;
+    margin-left: -55px;
+}

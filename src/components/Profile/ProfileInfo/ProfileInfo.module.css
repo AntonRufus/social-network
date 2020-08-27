@@ -16,6 +16,8 @@
     height: 241px;
     border: 2px solid whitesmoke;
     margin: 18px 25px 25px 100px;
+    color: palegoldenrod;
+    font-size:88px;
 }
 
 .avatar:hover {

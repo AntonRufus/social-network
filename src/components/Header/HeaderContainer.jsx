@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 import Header from "./Header";
+import headCSS from './Header.module.css';
 import * as axios from "axios";
-import {setAuthUserData} from "../../redux/auth_reducer";
+import {setAuthUserData, toggleIsFetching} from "../../redux/auth_reducer";
 import {connect} from "react-redux";
+import Preloader from "../common/preloader/Preloader";
 
 class HeaderContainer extends Component {
 
@@ -15,19 +17,26 @@ class HeaderContainer extends Component {
                 if (response.data.resultCode === 0) {
                     let {email, id, login} = response.data.data;
                     this.props.setAuthUserData(email, id, login);
+                    this.props.toggleIsFetching(false);
                 }
                 // debugger;
             });
     }
 
     render() {
-        return <Header {...this.props}/>
+        return <>
+            <div className={headCSS.login_process}>
+                {this.props.isFetching ? <Preloader/> : null}
+            </div>
+            <div><Header {...this.props}/></div>
+        </>
     }
 }
 
 const mapStateToProps = (state) => ({
     isAuth: state.auth.isAuth,
     login: state.auth.login,
+    isFetching: state.auth.isFetching,
 });
 
-export default connect(mapStateToProps, {setAuthUserData})(HeaderContainer);
+export default connect(mapStateToProps, {setAuthUserData, toggleIsFetching})(HeaderContainer);
