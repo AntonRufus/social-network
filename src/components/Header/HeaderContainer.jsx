@@ -9,24 +9,25 @@ import Preloader from "../common/preloader/Preloader";
 class HeaderContainer extends Component {
 
     componentDidMount() {
-        // this.props.toggleIsFetching(true);
-        axios.get(`https://social-network.samuraijs.com/api/1.0/auth/me/`, {withCredentials: true})
-            .then(response => {
-                // debugger;
-                console.log(response)
-                if (response.data.resultCode === 0) {
-                    let {email, id, login} = response.data.data;
-                    this.props.setAuthUserData(email, id, login);
-                    this.props.toggleIsFetching(false);
-                }
-                // debugger;
-            });
+        axios.get(
+            `https://social-network.samuraijs.com/api/1.0/auth/me/`,
+            {withCredentials: true}
+        ).then(response => {
+            // debugger;
+            console.log(response)
+            if (response.data.resultCode === 0) {
+                let {email, id, login} = response.data.data;
+                this.props.setAuthUserData(email, id, login);
+                this.props.toggleIsFetching(false);
+            }
+            // debugger;
+        });
     }
 
     render() {
         return <>
             <div className={headCSS.login_process}>
-                {this.props.isFetching ? <Preloader/> : null}
+                {this.props.isFetchingAuth ? <Preloader/> : null}
             </div>
             <div><Header {...this.props}/></div>
         </>
@@ -36,7 +37,7 @@ class HeaderContainer extends Component {
 const mapStateToProps = (state) => ({
     isAuth: state.auth.isAuth,
     login: state.auth.login,
-    isFetching: state.auth.isFetching,
+    isFetchingAuth: state.auth.isFetchingAuth,
 });
 
 export default connect(mapStateToProps, {setAuthUserData, toggleIsFetching})(HeaderContainer);

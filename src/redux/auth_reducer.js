@@ -6,7 +6,7 @@ let initialState = {
     email: null,
     login: null,
     isAuth: false,
-    isFetching: true,
+    isFetchingAuth: true,
 };
 
 const authReducer = (state = initialState, action) => {
@@ -21,7 +21,7 @@ const authReducer = (state = initialState, action) => {
         case TOGGLE_IS_FETCHING:
             return {
                 ...state,
-                isFetching: action.isFetching
+                isFetchingAuth: action.isFetchingAuth
             }
         default:
             return state;
@@ -30,6 +30,6 @@ const authReducer = (state = initialState, action) => {
 
 export const setAuthUserData = (email, id, login) => ({type: SET_USER_DATA, data: {email, id, login}});
 
-export const toggleIsFetching = (isFetching) => ({type: TOGGLE_IS_FETCHING, isFetching});
+export const toggleIsFetching = (isFetchingAuth) => ({type: TOGGLE_IS_FETCHING, isFetchingAuth});
 
 export default authReducer;
