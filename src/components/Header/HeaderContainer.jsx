@@ -1,27 +1,23 @@
 import React, {Component} from 'react';
 import Header from "./Header";
 import headCSS from './Header.module.css';
-import * as axios from "axios";
 import {setAuthUserData, toggleIsFetching} from "../../redux/auth_reducer";
 import {connect} from "react-redux";
 import Preloader from "../common/preloader/Preloader";
+import {getAuthMe} from "../../api/api";
+import * as axios from "axios";
 
 class HeaderContainer extends Component {
 
     componentDidMount() {
-        axios.get(
-            `https://social-network.samuraijs.com/api/1.0/auth/me/`,
-            {withCredentials: true}
-        ).then(response => {
-            // debugger;
-            console.log(response)
-            if (response.data.resultCode === 0) {
-                let {email, id, login} = response.data.data;
-                this.props.setAuthUserData(email, id, login);
-                this.props.toggleIsFetching(false);
-            }
-            // debugger;
-        });
+        getAuthMe()
+            .then(response => {
+                if (response.data.resultCode === 0) {
+                    let {email, id, login} = response.data.data;
+                    this.props.setAuthUserData(email, id, login);
+                    this.props.toggleIsFetching(false);
+                }
+            });
     }
 
     render() {

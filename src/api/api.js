@@ -14,9 +14,23 @@ export const getUsers = (currentPage = 1, pageSize = 100) => {
         )
 }
 
-export const getFollow = (userId) => {
+export const getProfile = (userId) => {
+    return axios.get(
+        baseUrl + `/profile/${userId}`,
+    )
+
+}
+
+export const getAuthMe = () => {
+    return axios.get(
+        baseUrl + `auth/me/`,
+        {withCredentials: true}
+    )
+}
+
+export const postFollow = (userId) => {
     return axios.post(
-        baseUrl+`follow/${userId}`,
+        baseUrl + `follow/${userId}`,
         {}, {
             withCredentials: true,
             headers: ApiKey,
@@ -24,9 +38,9 @@ export const getFollow = (userId) => {
     )
 }
 
-export const getUnfollow = (userId) => {
+export const deleteFollow = (userId) => {
     return axios.delete(
-        baseUrl+`follow/${userId}`,
+        baseUrl + `follow/${userId}`,
         {
             withCredentials: true,
             headers: ApiKey,
