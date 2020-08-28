@@ -21,7 +21,8 @@ let Users = (props) => {
                                 className={props.currentPage === page && usersCSS.activeLink}
                                 onClick={(event) => {
                                     props.onPageChanged(page);
-                                }}> {page} </div>
+                                }}> {page}
+                    </div>
                 })}
             </div>
             {
@@ -37,22 +38,30 @@ let Users = (props) => {
                             </div>
                             <div className={usersCSS.follow_button}>
                                 {user.followed
-                                    ? <button onClick={() => {
-                                        usersAPI.deleteFollow(user.id)
-                                            .then(response => {
-                                                if (response.data.resultCode === 0) {
-                                                    props.unfollow(user.id);
-                                                }
-                                            })
-                                    }}> Unfollow </button>
-                                    : <button onClick={() => {
-                                        usersAPI.postFollow(user.id)
-                                            .then(response => {
-                                                if (response.data.resultCode === 0) {
-                                                    props.follow(user.id);
-                                                }
-                                            })
-                                    }}>Follow</button>
+                                    ? <button
+                                        disabled={props.followingInProgress.some(id => id === user.id)}
+                                        onClick={() => {
+                                            props.toggleFollowingProgress(true, user.id);
+                                            usersAPI.deleteFollow(user.id)
+                                                .then(response => {
+                                                    if (response.data.resultCode === 0) {
+                                                        props.unfollow(user.id);
+                                                    }
+                                                    props.toggleFollowingProgress(false, user.id);
+                                                });
+                                        }}>Unfollow</button>
+                                    : <button
+                                        disabled={props.followingInProgress.some(id => id === user.id)}
+                                        onClick={() => {
+                                            props.toggleFollowingProgress(true, user.id);
+                                            usersAPI.postFollow(user.id)
+                                                .then(response => {
+                                                    if (response.data.resultCode === 0) {
+                                                        props.follow(user.id);
+                                                    }
+                                                    props.toggleFollowingProgress(false, user.id);
+                                                });
+                                        }}>Follow</button>
                                 }
                             </div>
                         </div>
@@ -72,12 +81,10 @@ let Users = (props) => {
                                 <span>ID:</span>
                                 {user.id}
                             </div>
-                            {/*
-                                    <div className={usersCSS.location}>
+                            {/*     <div className={usersCSS.location}>
                                     <div className={usersCSS.locationCity}>{'user.location.city'}</div>
                                     <div className={usersCSS.locationCountry}>{'user.location.country'}</div>
-                                    </div>
-                                    */}
+                             */}
                             <br/>
                         </div>
                     </div>
