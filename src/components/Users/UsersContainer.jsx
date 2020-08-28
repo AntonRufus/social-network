@@ -10,23 +10,14 @@ import {
 } from "../../redux/users_reducer";
 import Users from "./Users";
 import Preloader from "../common/preloader/Preloader";
-import {getUsers} from "../../api/api";
-import * as axios from 'axios';
+import {usersAPI} from "../../api/api";
+import * as axios from "axios";
 
 class UsersContainer extends React.Component {
 
-    /*
-    it's happen by default:
-
-        constructor(props) {
-            super(props);
-        }
-
-    */
-
     componentDidMount() {
         this.props.toggleIsFetching(true);
-        getUsers(this.props.currentPage, this.props.pageSize)
+        usersAPI.getUsers(this.props.currentPage, this.props.pageSize)
             .then(data => {
                     debugger;
                     this.props.setUsers(data.items);
@@ -39,7 +30,7 @@ class UsersContainer extends React.Component {
     onPageChanged = (pageNumber) => {
         this.props.toggleIsFetching(true);
         this.props.setCurrentPage(pageNumber);
-        getUsers(pageNumber, this.props.pageSize)
+        usersAPI.getUsers(pageNumber, this.props.pageSize)
             .then(data => {
                     this.props.toggleIsFetching(false);
                     this.props.setUsers(data.items);

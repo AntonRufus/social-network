@@ -2,7 +2,7 @@ import React from "react";
 import usersCSS from './Users.module.css';
 import {NavLink} from "react-router-dom";
 import userPhotoSmall from '../../assets/images/avatar-default-nonuser-small.png';
-import {postFollow, deleteFollow} from "../../api/api";
+import {usersAPI} from "../../api/api";
 import * as axios from "axios";
 
 let Users = (props) => {
@@ -38,21 +38,21 @@ let Users = (props) => {
                             <div className={usersCSS.follow_button}>
                                 {user.followed
                                     ? <button onClick={() => {
-                                        postFollow(user.id)
-                                            .then(response => {
-                                                if (response.data.resultCode === 0) {
-                                                    props.follow(user.id);
-                                                }
-                                            })
-                                    }}> Unfollow </button>
-                                    : <button onClick={() => {
-                                        deleteFollow(user.id)
+                                        usersAPI.deleteFollow(user.id)
                                             .then(response => {
                                                 if (response.data.resultCode === 0) {
                                                     props.unfollow(user.id);
                                                 }
                                             })
-                                    }}> Follow </button>
+                                    }}> Unfollow </button>
+                                    : <button onClick={() => {
+                                        usersAPI.postFollow(user.id)
+                                            .then(response => {
+                                                if (response.data.resultCode === 0) {
+                                                    props.follow(user.id);
+                                                }
+                                            })
+                                    }}>Follow</button>
                                 }
                             </div>
                         </div>
