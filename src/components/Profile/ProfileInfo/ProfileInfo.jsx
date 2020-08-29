@@ -3,6 +3,8 @@ import profInfoCSS from './ProfileInfo.module.css';
 import Preloader from "../../common/preloader/Preloader";
 import booleanPhotoTrue from "../../../assets/images/booleanPhotoTrue.png";
 import booleanPhotoFalse from "../../../assets/images/booleanPhotoFalse.png";
+import antPortrait from '../../../assets/images/antPortrait.jpg'
+
 
 const ProfileInfo = (props) => {
 
@@ -23,7 +25,9 @@ const ProfileInfo = (props) => {
                          src='http://localhost:3000/pic/ronin.jpg'
                          alt='avatar'/>*/}
                     <img className={profInfoCSS.avatar}
-                         src={props.profile.photos.large}
+                         src={props.profile.photos.large
+                             ? props.profile.photos.large
+                             : antPortrait}
                          alt='avatar'/>
                 </div>
                 <div className={profInfoCSS.info_main_block}>
@@ -135,9 +139,10 @@ const ProfileInfo = (props) => {
                                 Looking for a job:
                                 <div className={profInfoCSS.info_data}>
                                     <span>
-                                        {props.profile.lookingForAJob === true ? 'true' : 'false' }
-                                        <img src={props.profile.lookingForAJob === true ? booleanPhotoTrue : booleanPhotoFalse}
-                                             className={profInfoCSS.booleanPhoto} alt='boolean'/>
+                                        {props.profile.lookingForAJob === true ? 'true' : 'false'}
+                                        <img
+                                            src={props.profile.lookingForAJob === true ? booleanPhotoTrue : booleanPhotoFalse}
+                                            className={profInfoCSS.booleanPhoto} alt='boolean'/>
                                     </span>
                                 </div>
                             </div>

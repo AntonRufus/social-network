@@ -23,12 +23,12 @@ export const usersAPI = {
         return instance.get(`auth/me/`)
     },
 
-    postFollow: (userId) => {
+    follow: (userId) => {
         return instance.post(`follow/${userId}`, {}
         )
     },
 
-    deleteFollow: (userId) => {
+    unfollow: (userId) => {
         return instance.delete(`follow/${userId}`)
     }
 }
