@@ -27,5 +27,3 @@ const mapStateToProps = (state) => ({
 });
 
 export default connect(mapStateToProps, {getAuthUserData})(HeaderContainer);
-
-//test
