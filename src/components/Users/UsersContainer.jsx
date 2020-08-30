@@ -48,6 +48,7 @@ const mapStoreToProps = (state) => {
     }
 }
 
-export default connect(mapStoreToProps, {
-    follow, unfollow, setCurrentPage, toggleFollowingProgress, getUsers
-})(UsersContainer);
+export default connect(
+    mapStoreToProps,
+    {follow, unfollow, setCurrentPage, toggleFollowingProgress, getUsers}
+)(UsersContainer);
