@@ -7,11 +7,12 @@ import Settings from "./components/Settings/Settings";
 import HeaderContainer from "./components/Header/HeaderContainer";
 import UsersContainer from "./components/Users/UsersContainer";
 import ProfileContainer from "./components/Profile/ProfileContainer";
+import LoginContainer from "./components/Login/Login";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import FriendsContainer from "./components/Friends/FriendsContainer";
 import NavBarContainer from "./components/Navbar/NavBarContainer";
-import UsersRouter from "./components/Users/UsersRouter";
-import UsersList from "./components/Users/UsersList";
+// import UsersRouter from "./components/Users/UsersRouter";
+// import UsersList from "./components/Users/UsersList";
 
 const App = () => {
     return (
@@ -23,7 +24,7 @@ const App = () => {
                 <NavBarContainer/>
             </div>
             <div className={appCSS.app_wrapper_content}>
-                <div className={appCSS.profile_wrapper}>
+                <div className={appCSS.content_wrapper}>
                     <Route path='/profile/:userId?'
                            render={() => <ProfileContainer
                            />}/>
@@ -33,12 +34,12 @@ const App = () => {
                            render={() => <ProfileContainer
                            />}/>
                 </div>*/}
-                <div className={appCSS.dialogs_wrapper}>
+                <div className={appCSS.content_wrapper}>
                     <Route path='/dialogs'
                            render={() => <DialogsContainer
                            />}/>
                 </div>
-                <div className={appCSS.users_wrapper}>
+                <div className={appCSS.content_wrapper}>
                     <Route path='/users'
                            render={() => <UsersContainer
                            />}/>
@@ -47,18 +48,23 @@ const App = () => {
                            />}/>
                     <UsersRouter/>*/}
                 </div>
-                <div className={appCSS.news_wrapper}>
+                <div className={appCSS.content_wrapper}>
                     <Route path='/news' component={News}/>
                 </div>
-                <div className={appCSS.music_wrapper}>
+                <div className={appCSS.content_wrapper}>
                     <Route path='/music' component={Music}/>
                 </div>
-                <div className={appCSS.settings_wrapper}>
+                <div className={appCSS.content_wrapper}>
                     <Route path='/settings' component={Settings}/>
                 </div>
-                <div className={appCSS.friends_wrapper}>
+                <div className={appCSS.content_wrapper}>
                     <Route path='/friends'
                            render={() => <FriendsContainer
+                           />}/>
+                </div>
+                <div className={appCSS.content_wrapper}>
+                    <Route path='/login'
+                           render={() => <LoginContainer
                            />}/>
                 </div>
             </div>
