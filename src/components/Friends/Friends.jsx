@@ -17,6 +17,7 @@ const Friends = (props) => {
     return (
         <div className={friendsCSS.friends}>
             <h3>My friends list </h3>
+            {/*take users which i follow*/}
             {avatarsElements}
         </div>
     )

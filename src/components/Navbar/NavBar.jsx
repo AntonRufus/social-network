@@ -62,6 +62,7 @@ const NavBar = (props) => {
                 </NavLink>
             </div>
             <div className={navCSS.avatar_block}>
+                {/*put 3 followed users*/}
                 <div className={navCSS.avatars_top}>
                     {friendsShortList[5]}
                     {friendsShortList[1]}

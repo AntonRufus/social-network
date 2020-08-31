@@ -1,3 +1,19 @@
-.music{
-    font-size: 200%
+.login {
+    font-size: 500%;
+    min-height: 320px;
+    text-align: center;
+    padding-top: 200px;
+}
+
+.login a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.login a:hover {
+    color: gold;
+    border: 2px solid goldenrod;
+    border-radius: 5px;
+    padding: 55px;
+    background-color: black;
 }

@@ -7,8 +7,8 @@ const Login = () => {
     // if (props.isAuth) return <Redirect to='/profile'/>;
 
     return (
-        <div className={loginCSS.music}>
-            Login
+        <div className={loginCSS.login}>
+            <a href="https://social-network.samuraijs.com/">Login</a>
         </div>
     )
 }
