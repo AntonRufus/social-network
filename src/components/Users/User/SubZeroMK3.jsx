@@ -50,7 +50,7 @@ const Info = () => {
     </div>
 }
 
-const SubZeroMK3 = (props) => {
+const SubZeroMK3 = () => {
     return (
         <div>
             <NavLink to='/users' className={usersCSS.fullName}>
@@ -66,3 +66,4 @@ const SubZeroMK3 = (props) => {
 }
 
 export default SubZeroMK3;
+
