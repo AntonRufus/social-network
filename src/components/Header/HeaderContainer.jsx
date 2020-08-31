@@ -4,6 +4,7 @@ import headCSS from './Header.module.css';
 import Preloader from "../common/preloader/Preloader";
 import {getAuthUserData} from "../../redux/auth_reducer";
 import {connect} from "react-redux";
+import Login from "../Login/Login";
 
 class HeaderContainer extends Component {
     componentDidMount() {
@@ -16,6 +17,7 @@ class HeaderContainer extends Component {
                 {this.props.isFetchingAuth ? <Preloader/> : null}
             </div>
             <div><Header {...this.props}/></div>
+            <div><Login {...this.props}/></div>
         </>
     }
 }

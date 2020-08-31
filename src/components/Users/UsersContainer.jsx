@@ -1,16 +1,10 @@
 import React from 'react';
 import {connect} from "react-redux";
-import {
-    setCurrentPage,
-    toggleFollowingProgress,
-    getUsers,
-    follow,
-    unfollow,
-} from "../../redux/users_reducer";
+import {setCurrentPage, toggleFollowingProgress, getUsers, follow, unfollow} from "../../redux/users_reducer";
 import Users from "./Users";
 import Preloader from "../common/preloader/Preloader";
 import {withAuthRedirect} from "../../hoc/withAuthRedirect";
-// import Dialogs from "../Dialogs/Dialogs";
+import {compose} from "redux";
 
 class UsersContainer extends React.Component {
     componentDidMount() {
@@ -24,7 +18,6 @@ class UsersContainer extends React.Component {
     render() {
         return <>
             {this.props.isFetching ? <Preloader/> : null}
-            {/*<PreloaderAuth/> is not working here together with <Preloader/>*/}
             <Users
                 totalUsersCount={this.props.totalUsersCount}
                 pageSize={this.props.pageSize}
@@ -50,8 +43,5 @@ const mapStoreToProps = (state) => {
     }
 }
 
-let AuthRedirectComponent = withAuthRedirect(UsersContainer);
-
-export default connect(mapStoreToProps,
-    {follow, unfollow, setCurrentPage, toggleFollowingProgress, getUsers}
-)(AuthRedirectComponent);
+export default compose(connect(mapStoreToProps, {follow, unfollow, setCurrentPage, toggleFollowingProgress, getUsers}
+), withAuthRedirect)(UsersContainer);
