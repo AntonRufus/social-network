@@ -36,9 +36,9 @@ const NavBar = (props) => {
                 </NavLink>
             </div>
             <div className={navCSS.item}>
-                <NavLink to='/usersFollowed'
+                <NavLink to='/usersFollowing'
                          activeClassName={navCSS.activeLink}>
-                    Followed
+                    Following
                 </NavLink>
             </div>
             <div className={navCSS.item}>
