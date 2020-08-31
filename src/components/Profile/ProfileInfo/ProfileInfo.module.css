@@ -17,7 +17,7 @@
     border: 2px solid whitesmoke;
     margin: 18px 25px 25px 100px;
     color: palegoldenrod;
-    font-size:88px;
+    font-size: 88px;
 }
 
 .avatar:hover {
@@ -33,11 +33,32 @@
     color: whitesmoke;
     font-weight: bold;
     padding: 10px 10px 20px 10px;
-    /*margin-right: 450px;*/
 }
 
-.name:hover {
+.status_block {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    padding: 5px;
+}
+
+.status_block:hover {
     color: gold;
+}
+
+.status {
+    font-weight: normal;
+    padding: 0;
+    text-decoration: none;
+}
+
+.status_cont {
+    font-weight: normal;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.status_cont input, .status_cont span {
+    margin-left: 15px;
 }
 
 .info_main {
@@ -59,6 +80,10 @@
     display: grid;
     grid-template-columns: 2fr 10fr;
     padding: 5px;
+}
+
+.info_name:hover {
+    color: gold;
 }
 
 .info_data:hover {
@@ -95,8 +120,8 @@
     display: inline-flex;
 }
 
-.info_main_block input{
-    margin-left: 25px;
+.info_main_block input {
+    /*margin-left: 25px;*/
 }
 
 .info_block {

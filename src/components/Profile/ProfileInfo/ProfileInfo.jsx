@@ -3,27 +3,22 @@ import profInfoCSS from './ProfileInfo.module.css';
 import Preloader from "../../common/preloader/Preloader";
 import booleanPhotoTrue from "../../../assets/images/booleanPhotoTrue.png";
 import booleanPhotoFalse from "../../../assets/images/booleanPhotoFalse.png";
-import antPortrait from '../../../assets/images/antPortrait.jpg'
-
+import antPortrait from '../../../assets/images/antPortrait.jpg';
+import ProfileStatus from './ProfileStatus'
 
 const ProfileInfo = (props) => {
-
     if (!props.profile) {
         return <Preloader/>
     }
-
     return (
         <div className={profInfoCSS.profile_block}>
             <div>
                 <img className={profInfoCSS.bgc_photo}
                      src='http://localhost:3000/pic/bgc200.jpg'
-                     alt='bgc-photo'/>
+                     alt='backgroundPic'/>
             </div>
             <div className={profInfoCSS.profile_description}>
                 <div className={profInfoCSS.avatar_block}>
-                    {/*<img className={profInfoCSS.avatar}
-                         src='http://localhost:3000/pic/ronin.jpg'
-                         alt='avatar'/>*/}
                     <img className={profInfoCSS.avatar}
                          src={props.profile.photos.large
                              ? props.profile.photos.large
@@ -31,44 +26,6 @@ const ProfileInfo = (props) => {
                          alt='avatar'/>
                 </div>
                 <div className={profInfoCSS.info_main_block}>
-                    {/*<div>
-                        <div className={profInfoCSS.name}>
-                            <div className={profInfoCSS.info_name}>
-                                Name:
-                                <div className={profInfoCSS.info_data}>
-                                    <input/>
-                                </div>
-                            </div>
-                        </div>
-                        <div className={profInfoCSS.info_main}>
-                            <div className={profInfoCSS.info}>
-                                DOB:
-                                <div className={profInfoCSS.info_data}>
-                                    <input/>
-                                </div>
-                            </div>
-                            <div className={profInfoCSS.info}>
-                                City:.
-                                <div className={profInfoCSS.info_data}>
-                                    <input/>
-                                </div>
-                            </div>
-                            <div className={profInfoCSS.info}>
-                                Education:
-                                <div className={profInfoCSS.info_data}>
-                                    <input/>
-                                </div>
-                            </div>
-                            <div className={profInfoCSS.info}>
-                                WebSite:
-                                <div className={profInfoCSS.info_data}>
-                                    https://
-                                    <input type="text" defaultValue={'github.com/AntonRufus'}/>
-                                    /newMaster
-                                </div>
-                            </div>
-                        </div>
-                    </div>*/}
                     <div className={profInfoCSS.info_block}>
                         <div className={profInfoCSS.name}>
                             <div className={profInfoCSS.info_name}>
@@ -76,6 +33,9 @@ const ProfileInfo = (props) => {
                                 <div className={profInfoCSS.info_data}>
                                     <span>{props.profile.fullName === null ? 'no detailed information' : props.profile.fullName}</span>
                                 </div>
+                            </div>
+                            <div className={profInfoCSS.status_block}>
+                                <ProfileStatus status={'status'}/>
                             </div>
                         </div>
                         <div className={profInfoCSS.info_main}>
@@ -162,13 +122,15 @@ const ProfileInfo = (props) => {
                             <div className={profInfoCSS.info}>
                                 Photo large:
                                 <div className={profInfoCSS.info_data}>
-                                    <a href={props.profile.photos.large} target='_blank'>link</a>
+                                    <a href={props.profile.photos.large} target='_blank'
+                                       rel='noopener noreferrer'>link</a>
                                 </div>
                             </div>
                             <div className={profInfoCSS.info}>
                                 Photo small:
                                 <div className={profInfoCSS.info_data}>
-                                    <a href={props.profile.photos.small} target='_blank'>link</a>
+                                    <a href={props.profile.photos.small} target='_blank'
+                                       rel='noopener noreferrer'>link</a>
                                 </div>
                             </div>
                         </div>
