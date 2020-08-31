@@ -11,7 +11,7 @@ import Login from "./components/Login/Login";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import FriendsContainer from "./components/Friends/FriendsContainer";
 import NavBarContainer from "./components/Navbar/NavBarContainer";
-// import UsersFollowed from "./components/Users/UsersFollowed";
+// import UserFollowed from "./components/Users/UserFollowed";
 
 const App = () => {
     return <div className={appCSS.app_wrapper}>
@@ -37,11 +37,11 @@ const App = () => {
                        render={() => <UsersContainer
                        />}/>
             </div>
-            {/*<div className={appCSS.content_wrapper}>
+            <div className={appCSS.content_wrapper}>
                     <Route path='/usersFollowed'
-                           render={() => <UsersFollowed
-                           />}/>
-                </div>*/}
+                           /*render={() => <UserFollowed
+                           />}*//>
+                </div>
             <div className={appCSS.content_wrapper}>
                 <Route path='/news' component={News}/>
             </div>

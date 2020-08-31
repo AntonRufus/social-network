@@ -2,9 +2,10 @@ import React from "react";
 import usersCSS from './Users.module.css';
 import {NavLink} from "react-router-dom";
 import userPhotoSmall from '../../assets/images/avatar-default-nonuser-small.png';
-// import UserFollowed from "./UserFollowed";
 
-let Users = (props) => {
+/*make a list with users who followed me.*/
+
+let UserFollowed = (props) => {
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
     let pages = [];
     for (let i = 1; i <= pagesCount; i++) {
@@ -67,20 +68,10 @@ let Users = (props) => {
                         <span>ID:</span>
                         {user.id}
                     </div>
-                    {/*<div>
-                        {user.followed
-                            ? <UserFollowed {...user}/>
-                            : null
-                        }
-                    </div>*/}
-                    {/*     <div className={usersCSS.location}>
-                                    <div className={usersCSS.locationCity}>{'user.location.city'}</div>
-                                    <div className={usersCSS.locationCountry}>{'user.location.country'}</div>
-                             */}
                 </div>
             </div>
         )}
     </div>
 }
 
-export default Users;
+export default UserFollowed;
