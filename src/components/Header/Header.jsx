@@ -9,7 +9,6 @@ const Header = (props) => {
                 <img className={headCSS.logo} src='http://localhost:3000/pic/buildlogo.jpg' alt='logo'/>
             </NavLink>
             <div className={headCSS.login_block}>
-                {console.log(props.login)}
                 {props.isAuth
                     ? <NavLink to='/profile'> {props.login} </NavLink>
                     : <NavLink to='/login'> Login </NavLink>

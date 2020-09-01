@@ -11,8 +11,8 @@ class ProfileContainer extends Component {
     componentDidMount() {
         let userId = this.props.match.params.userId;
         if (!userId) {
-            userId = 9457;
-            // userId = 8245;
+            // userId = 9457;??????????????????????????? check URL
+            userId = 8245;
         }
         this.props.getUserProfile(userId);
     }
@@ -23,5 +23,5 @@ class ProfileContainer extends Component {
 }
 
 let mapStateToProps = (state) => ({profile: state.profilePage.profile});
-
+//check compose
 export default compose(connect(mapStateToProps, {getUserProfile}), withRouter, withAuthRedirect)(ProfileContainer);

@@ -42,6 +42,6 @@ const mapStoreToProps = (state) => {
         followingInProgress: state.usersPage.followingInProgress,
     }
 }
-
+//check compose
 export default compose(connect(mapStoreToProps, {follow, unfollow, setCurrentPage, toggleFollowingProgress, getUsers}
 ), withAuthRedirect)(UsersContainer);
