@@ -156,4 +156,10 @@ export const sendMessage = () => ({type: SEND_MESSAGE_OUT});
 
 export const clearMessage = () => ({type: CLEAR_MESSAGE});
 
+/*export const getMessage = (body) => (dispatch)=>{
+    dispatch(onMessageChange(body));
+    dispatch(sendMessage());
+    dispatch(clearMessage());
+};*/
+
 export default dialogReducer;
