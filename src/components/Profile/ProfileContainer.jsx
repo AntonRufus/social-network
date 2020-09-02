@@ -10,11 +10,14 @@ class ProfileContainer extends Component {
 
     componentDidMount() {
         let userId = this.props.match.params.userId;
+        // alert(userId)
+        //this.props.match.params.userId; is not working
         if (!userId) {
             userId = 9457;
             // userId = 8245;??????????????????????????? check URL///
         }
         this.props.getUserProfile(userId);
+        // debugger;
     }
 
     render() {
@@ -23,5 +26,5 @@ class ProfileContainer extends Component {
 }
 
 let mapStateToProps = (state) => ({profile: state.profilePage.profile});
-//check compose
+
 export default compose(connect(mapStateToProps, {getUserProfile}), withRouter, withAuthRedirect)(ProfileContainer);

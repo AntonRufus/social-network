@@ -10,6 +10,7 @@ let Users = (props) => {
     for (let i = 1; i <= pagesCount; i++) {
         pages.push(i);
     }
+    // alert(props.currentPage)
 
     return <div className={usersCSS.users}>
         <div className={usersCSS.pages_buttons}>

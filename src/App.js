@@ -26,6 +26,7 @@ const App = () => {
                 <Route path='/profile/:userId?'
                        render={() => <ProfileContainer
                        />}/>
+                       {/*userId is not detecting*/}
             </div>
             <div className={appCSS.content_wrapper}>
                 <Route path='/dialogs'

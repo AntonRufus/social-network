@@ -1,9 +1,10 @@
+/*
 import React from "react";
 import usersCSS from './Users.module.css';
 import {NavLink} from "react-router-dom";
 import userPhotoSmall from '../../assets/images/avatar-default-nonuser-small.png';
 
-/*make a list with users who followed me.*/
+/!*make a list with users who followed me.*!/
 
 let UserFollowed = (props) => {
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
@@ -75,3 +76,4 @@ let UserFollowed = (props) => {
 }
 
 export default UserFollowed;
+*/
