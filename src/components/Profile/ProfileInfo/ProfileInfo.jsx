@@ -35,7 +35,7 @@ const ProfileInfo = (props) => {
                                 </div>
                             </div>
                             <div className={profInfoCSS.status_block}>
-                                <ProfileStatus status={'status'}/>
+                                <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
                             </div>
                         </div>
                         <div className={profInfoCSS.info_main}>

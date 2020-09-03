@@ -26,21 +26,27 @@ export const usersAPI = {
     getProfile(userId) {
         console.warn('Obsolete method.Please use profileApa object');
         return profileAPI.getProfile(userId);
-        // return instance.get(`/profile/${userId}`)
+        // return instance.get(`profile/${userId}`)
     }
 }
 
 export const profileAPI = {
     getProfile(userId) {
-        return instance.get(`/profile/${userId}`)
-        // return instance.get(`/profile/` + userId)
+        // return instance.get(`profile/${userId}`)
+        return instance.get(`profile/` + userId)
     },
+
     getStatus(userId) {
-        return instance.get(`/status/${userId}`)
+        // return instance.get(`profile/status/${userId}`)
+        // return instance.get(`status/${userId}`)
+        return instance.get(`profile/status/` + userId)
     },
+
     updateStatus(status) {
-        return instance.put(`/status/${status}`)
-    }
+        // return instance.put(`profile/status/${status}`)
+        // return instance.put(`profile/status/` + {status})
+        return instance.put(`profile/status/`, {status: status})
+    },
 }
 
 export const authAPI = {

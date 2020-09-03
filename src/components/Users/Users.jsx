@@ -61,7 +61,6 @@ let Users = (props) => {
                     </div>
                     <div>
                         <span>Status:</span>
-                        {user.status}
                         {user.status != null ? user.status : 'no status'}
                     </div>
                     <div>
