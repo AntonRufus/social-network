@@ -28,6 +28,13 @@ class ProfileStatus extends React.Component {
         });
     }
 
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        //do setState only when certain condition is met
+        if (prevProps.status !== this.props.status) {
+            this.setState({status: this.props.status});
+        }
+    }
+
     render() {
         return <>
             <div className={profInfoCSS.status}>My status:</div>
