@@ -12,6 +12,8 @@ let Users = (props) => {
     }
     // alert(props.currentPage)
 
+
+
     return <div className={usersCSS.users}>
         <div className={usersCSS.pages_buttons}>
             {pages.map(page => {
