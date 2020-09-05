@@ -2,6 +2,7 @@ import React from 'react';
 import dialCSS from './Dialogs.module.css'
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
+import AddMessageFormRedux from "./DialogsForm";
 
 const Dialogs = (props) => {
     let state = props.dialogsPage;
@@ -32,19 +33,8 @@ const Dialogs = (props) => {
             />
         );
 
-    let newMessageElement = React.createRef();
-
-    let onSendMessage = () => {
-        props.sendMessage();
-    }
-
-    let onClearMessage = () => {
-        props.clearMessage();
-    }
-
-    let onNewMessageChange = () => {
-        let body = newMessageElement.current.value;
-        props.updateNewMessageBody(body);
+    let addNewMessage = (values) => {
+        props.sendMessage(values.newMessageBody);
     }
 
     return (
@@ -61,14 +51,7 @@ const Dialogs = (props) => {
                 <div className={dialCSS.messages_out_items}>
                     <p><b>Outgo messages</b></p>
                     {messagesOutElements}
-                    <textarea ref={newMessageElement}
-                              value={state.newMessageText}
-                              onChange={onNewMessageChange}
-                              placeholder={'Enter your message'}
-                              name="" id="" cols="30" rows="3"/>
-                    <br/>
-                    <button onClick={onSendMessage}>send</button>
-                    <button onClick={onClearMessage}>clear</button>
+                    <AddMessageFormRedux onSubmit={addNewMessage}/>
                 </div>
             </div>
         </div>

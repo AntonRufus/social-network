@@ -1,6 +1,4 @@
 const SEND_MESSAGE_OUT = 'SEND-MESSAGE-OUT';
-const UPDATE_NEW_MESSAGE_OUT = 'UPDATE-NEW-MESSAGE-OUT';
-const CLEAR_MESSAGE = 'CLEAR-POST';
 
 let initialState = {
     dialogs: [
@@ -119,47 +117,25 @@ let initialState = {
         {id: 9, message: 'Message_out_9'},
         {id: 10, message: 'Message_out_10'},
     ],
-    newMessageText: 'Default Message Text',
 };
 
 const dialogReducer = (state = initialState, action) => {
     switch (action.type) {
         case SEND_MESSAGE_OUT: {
-            let newMessageOut = {
-                id: state.messagesOut.length + 1,
-                message: [...state.newMessageText],
-            };
+            let body = action.newMessageBody;
             return {
                 ...state,
-                messagesOut: [...state.messagesOut, newMessageOut],
-                newMessageText: '',
+                messagesOut: [...state.messagesOut, {
+                    id: state.messagesOut.length + 1,
+                    message: body,
+                }],
             }
         }
-        case UPDATE_NEW_MESSAGE_OUT:
-            return {
-                ...state,
-                newMessageText: action.newMessageText,
-            }
-        case CLEAR_MESSAGE:
-            return {
-                ...state,
-                newMessageText: '',
-            }
         default:
             return state;
     }
 };
 
-export const onMessageChange = (updatedValue) => ({type: UPDATE_NEW_MESSAGE_OUT, newMessageText: updatedValue});
-
-export const sendMessage = () => ({type: SEND_MESSAGE_OUT});
-
-export const clearMessage = () => ({type: CLEAR_MESSAGE});
-
-/*export const getMessage = (body) => (dispatch)=>{
-    dispatch(onMessageChange(body));
-    dispatch(sendMessage());
-    dispatch(clearMessage());
-};*/
+export const sendMessage = (newMessageBody) => ({type: SEND_MESSAGE_OUT, newMessageBody});
 
 export default dialogReducer;
