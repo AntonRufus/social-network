@@ -1,8 +1,6 @@
 import {profileAPI, usersAPI} from "../api/api";
 
 const ADD_POST = 'ADD-POST';
-const CLEAR_POST = 'CLEAR-POST';
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 const SET_USER_PROFILE = 'SET_USER_PROFILE';
 const SET_STATUS = 'SET_STATUS';
 
@@ -37,7 +35,6 @@ let initialState = {
             url: 'https://avatars.mds.yandex.net/get-pdb/1590269/e908d30d-87d8-47e8-9c56-c5d92fd9ff79/s375'
         },
     ],
-    newPostText: 'Default Post Text',
     likesCountDefault: 10,
     dislikesCountDefault: 1,
     urlDefault: 'https://www.akibanation.com/wp-content/uploads/2016/07/Kon.BLEACH.full_.170410-150x150.jpg',
@@ -50,7 +47,7 @@ const profileReducer = (state = initialState, action) => {
         case ADD_POST: {
             let newPost = {
                 id: state.posts.length + 1,
-                message: state.newPostText,
+                message: action.newPostText,
                 likesCount: state.likesCountDefault,
                 dislikesCount: state.dislikesCountDefault,
                 url: state.urlDefault,
@@ -58,19 +55,8 @@ const profileReducer = (state = initialState, action) => {
             return {
                 ...state,
                 posts: [...state.posts, newPost],
-                newPostText: '',
             }
         }
-        case UPDATE_NEW_POST_TEXT:
-            return {
-                ...state,
-                newPostText: action.newPostText,
-            }
-        case CLEAR_POST:
-            return {
-                ...state,
-                newPostText: '',
-            }
         case SET_USER_PROFILE:
             return {
                 ...state,
@@ -86,11 +72,7 @@ const profileReducer = (state = initialState, action) => {
     }
 };
 
-export const addPost = () => ({type: ADD_POST});
-
-export const updateNewPostText = (updatedValue) => ({type: UPDATE_NEW_POST_TEXT, newPostText: updatedValue});
-
-export const clearPost = () => ({type: CLEAR_POST});
+export const addPost = (newPostText) => ({type: ADD_POST, newPostText});
 
 export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile});
 

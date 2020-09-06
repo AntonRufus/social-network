@@ -22,8 +22,10 @@ h3:hover {
 
 .textarea textarea {
     background-color: whitesmoke;
-    height: 15px;
+    height: 75px;
     padding: 5px;
+    wrap-option: wrap;
+    overflow-wrap: break-word;
 }
 
 .textarea textarea:hover {
@@ -64,3 +66,12 @@ h3:hover {
     padding-right: 10px;
 }
 
+.post_button {
+    margin-top: 10px;
+}
+
+.post_button:hover {
+    border: 3px solid gold;
+    border-radius: 3px;
+    background-color: #fff;
+}

@@ -1,9 +1,5 @@
 import React from 'react';
-import {
-    addPost,
-    clearPost,
-    updateNewPostText
-} from "../../../redux/profile_reducer";
+import {addPost} from "../../../redux/profile_reducer";
 import MyPosts from "./MyPosts";
 import {connect} from "react-redux";
 
@@ -16,14 +12,8 @@ let mapStateToProps = (state) => {
 
 let mapDispatchToProps = (dispatch) => {
     return {
-        updateNewPostText: (postUpdatedValue) => {
-            dispatch(updateNewPostText(postUpdatedValue))
-        },
-        addNewPost: () => {
-            dispatch(addPost())
-        },
-        clearPostArea: () => {
-            dispatch(clearPost())
+        addPost: (newPostText) => {
+            dispatch(addPost(newPostText))
         },
     }
 };

@@ -30,6 +30,9 @@
 
 .item_img_message span {
     color: lightblue;
+    width: 180px;
+    wrap-option: wrap;
+    overflow-wrap: break-word;
 }
 
 .item_img_message span:hover {
