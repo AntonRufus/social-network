@@ -7,7 +7,6 @@
     font-size: 200%;
     font-weight: bold;
     padding: 15px 0 35px 35px;
-
 }
 
 .dialogs {
@@ -55,5 +54,11 @@
 }
 
 .messages_out_items textarea {
-    width: 195px;
+    border: 2px solid whitesmoke;
+    width: 300px;
+}
+.messages_out_items textarea:hover {
+    border: 2px solid gold;
+    border-radius: 5px;
+    background-color: antiquewhite;
 }

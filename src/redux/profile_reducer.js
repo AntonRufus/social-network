@@ -1,4 +1,5 @@
 import {profileAPI, usersAPI} from "../api/api";
+import antPortrait from './../assets/images/antPortrait.jpg';
 
 const ADD_POST = 'ADD-POST';
 const SET_USER_PROFILE = 'SET_USER_PROFILE';
@@ -38,6 +39,7 @@ let initialState = {
     likesCountDefault: 10,
     dislikesCountDefault: 1,
     urlDefault: 'https://www.akibanation.com/wp-content/uploads/2016/07/Kon.BLEACH.full_.170410-150x150.jpg',
+    // urlDefault: antPortrait,
     profile: null,
     status: 'default status',
 };

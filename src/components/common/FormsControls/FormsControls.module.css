@@ -1,5 +1,28 @@
+.form_control {
+}
 
 .form_control .error textarea,
 .form_control .error input {
-    border: 1px solid red;
+    border: 2px solid red;
+    margin-bottom: -20px;
+}
+
+.form_control span {
+    color: red;
+    margin-left: 35px;
+}
+
+.inputCheckbox .not_remember {
+    color: red;
+    margin-top: -5px;
+    padding-top: 2px;
+}
+
+.inputCheckbox .remember {
+    color: whitesmoke;
+}
+
+.inputCheckbox span {
+    padding-top: 2px;
+    padding-left: 4px;
 }
