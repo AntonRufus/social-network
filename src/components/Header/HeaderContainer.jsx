@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Header from "./Header";
 import headCSS from './Header.module.css';
-import Preloader from "../common/preloader/Preloader";
+import Preloader from "../common/Preloader/Preloader";
 import {getAuthUserData} from "../../redux/auth_reducer";
 import {connect} from "react-redux";
 import Login from "../Login/Login";

@@ -1,6 +1,6 @@
 import React from 'react';
 import profInfoCSS from './ProfileInfo.module.css';
-import Preloader from "../../common/preloader/Preloader";
+import Preloader from "../../common/Preloader/Preloader";
 import booleanPhotoTrue from "../../../assets/images/booleanPhotoTrue.png";
 import booleanPhotoFalse from "../../../assets/images/booleanPhotoFalse.png";
 import antPortrait from '../../../assets/images/antPortrait.jpg';
