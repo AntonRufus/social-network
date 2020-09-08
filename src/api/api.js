@@ -1,4 +1,5 @@
 import * as axios from "axios";
+import React from "react";
 
 const instance = axios.create({
     withCredentials: true,
@@ -33,24 +34,30 @@ export const usersAPI = {
 export const profileAPI = {
     getProfile(userId) {
         // return instance.get(`profile/${userId}`)
-        return instance.get(`profile/` + userId)
+        return instance.get(`profile/` + userId);
     },
 
     getStatus(userId) {
         // return instance.get(`profile/status/${userId}`)
         // return instance.get(`status/${userId}`)
-        return instance.get(`profile/status/` + userId)
+        return instance.get(`profile/status/` + userId);
     },
 
     updateStatus(status) {
         // return instance.put(`profile/status/${status}`)
         // return instance.put(`profile/status/` + {status})
-        return instance.put(`profile/status/`, {status: status})
+        return instance.put(`profile/status/`, {status: status});
     },
 }
 
 export const authAPI = {
     me() {
-        return instance.get(`auth/me/`)
-    }
+        return instance.get(`auth/me/`);
+    },
+    login(email, password, rememberMe = false) {
+        return instance.post(`auth/login/`, {email, password, rememberMe});
+    },
+    logout() {
+        return instance.delete(`auth/login/`);
+    },
 }

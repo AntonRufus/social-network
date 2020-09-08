@@ -15,26 +15,50 @@
 
 .login_block {
     float: right;
-    color: whitesmoke;
     margin-top: 25px;
     margin-right: 35px;
     padding: 5px 10px;
-}
-
-.login_block:hover {
-    background-color: whitesmoke;
-    border-radius: 5px;
-    border: 2px solid gold;
-    padding: 4px 9px;
+    text-decoration: none;
 }
 
 .login_block a {
     color: whitesmoke;
+    text-decoration: none;
 }
 
-.login_block:hover a {
+.login {
+    color: whitesmoke;
+    border-radius: 5px;
+    padding: 4px 12px;
+}
+
+.login:hover {
     color: #191a28;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    border: 2px solid gold;
+    padding: 4px 6.5px;
     font-weight: bold;
+}
+
+.logout{
+    font-size: 75%;
+    padding: 5px 12px;
+    border-radius: 5px;
+    color: lightcoral;
+    text-decoration: none;
+    background-color: #191a28;
+    border: 0;
+}
+
+.logout:hover{
+    font-size: 100%;
+    padding: 5px 11px;
+    background-color: #390f00;
+    border-radius: 5px;
+    border: 1px solid darkred;
+    color: #be0000;
+    margin-top: -5px;
 }
 
 .login_process {

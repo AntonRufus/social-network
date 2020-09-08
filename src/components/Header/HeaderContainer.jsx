@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import Header from "./Header";
 import headCSS from './Header.module.css';
 import Preloader from "../common/Preloader/Preloader";
-import {getAuthUserData} from "../../redux/auth_reducer";
+import {getAuthUserData, logout} from "../../redux/auth_reducer";
 import {connect} from "react-redux";
-import Login from "../Login/Login";
+import {Redirect} from "react-router-dom";
 
 class HeaderContainer extends Component {
     componentDidMount() {
@@ -17,7 +17,12 @@ class HeaderContainer extends Component {
                 {this.props.isFetchingAuth ? <Preloader/> : null}
             </div>
             <div><Header {...this.props}/></div>
-            <div><Login {...this.props}/></div>
+            <div>
+                {this.props.isAuth
+                    ? <Redirect to='/profile'/>
+                    : <Redirect to='/login'/>
+                }
+            </div>
         </>
     }
 }
@@ -28,4 +33,4 @@ const mapStateToProps = (state) => ({
     isFetchingAuth: state.auth.isFetchingAuth,
 });
 
-export default connect(mapStateToProps, {getAuthUserData})(HeaderContainer);
+export default connect(mapStateToProps, {getAuthUserData, logout})(HeaderContainer);

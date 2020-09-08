@@ -1,24 +1,26 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Profile from "./Profile";
 import {withRouter} from "react-router-dom";
 import {connect} from "react-redux";
 import {getUserProfile, getStatus, updateStatus} from "../../redux/profile_reducer";
 import {withAuthRedirect} from "../../hoc/withAuthRedirect";
 import {compose} from "redux";
- 
-class ProfileContainer extends Component {
+
+class ProfileContainer extends React.Component {
 
     componentDidMount() {
         let userId = this.props.match.params.userId;
+        //how to get the last numbers of url(userId)?
+        // debugger;
         // alert(userId)
+        console.log(userId);
         //this.props.match.params.userId; is not working
         if (!userId) {
             userId = 9457;
-            // userId = 8245;??????????????????????????? check URL///
+            // userId = 8245;
         }
         this.props.getUserProfile(userId);
         this.props.getStatus(userId);
-        // debugger;
     }
 
     render() {
