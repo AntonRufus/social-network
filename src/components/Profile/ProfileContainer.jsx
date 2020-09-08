@@ -7,13 +7,11 @@ import {withAuthRedirect} from "../../hoc/withAuthRedirect";
 import {compose} from "redux";
 
 class ProfileContainer extends React.Component {
-
     componentDidMount() {
         let userId = this.props.match.params.userId;
         //how to get the last numbers of url(userId)?
-        // debugger;
+        debugger;
         // alert(userId)
-        console.log(userId);
         //this.props.match.params.userId; is not working
         if (!userId) {
             userId = 9457;

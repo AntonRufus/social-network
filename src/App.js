@@ -26,7 +26,7 @@ const App = () => {
                 <Route path='/profile/:userId?'
                        render={() => <ProfileContainer
                        />}/>
-                       {/*userId is not detecting*/}
+                {/*userId is not detecting*/}
             </div>
             <div className={appCSS.content_wrapper}>
                 <Route path='/dialogs'
@@ -39,10 +39,10 @@ const App = () => {
                        />}/>
             </div>
             <div className={appCSS.content_wrapper}>
-                    <Route path='/usersFollowed'
-                           /*render={() => <UserFollowed
-                           />}*//>
-                </div>
+                <Route path='/usersFollowed'
+                    /*render={() => <UserFollowed
+                    />}*//>
+            </div>
             <div className={appCSS.content_wrapper}>
                 <Route path='/news' component={News}/>
             </div>

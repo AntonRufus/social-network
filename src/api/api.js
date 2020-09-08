@@ -33,8 +33,9 @@ export const usersAPI = {
 
 export const profileAPI = {
     getProfile(userId) {
+            return instance.get(`profile/` + userId);
         // return instance.get(`profile/${userId}`)
-        return instance.get(`profile/` + userId);
+        // return axios.get(`https://social-network.samuraijs.com/api/1.0/profile/2`);
     },
 
     getStatus(userId) {
