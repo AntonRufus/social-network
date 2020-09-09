@@ -10,11 +10,11 @@ class ProfileContainer extends React.Component {
     componentDidMount() {
         let userId = this.props.match.params.userId;
         //how to get the last numbers of url(userId)?
-        debugger;
-        // alert(userId)
         //this.props.match.params.userId; is not working
+        // debugger;
         if (!userId) {
-            userId = 9457;
+            userId = this.props.authorizedUserId;
+            // userId = 9457;
             // userId = 8245;
         }
         this.props.getUserProfile(userId);
@@ -22,20 +22,22 @@ class ProfileContainer extends React.Component {
     }
 
     render() {
-        return <div>
+        return <>
             <Profile
                 {...this.props}
                 profile={this.props.profile}
                 status={this.props.status}
                 updateStatus={this.props.updateStatus}
             />
-        </div>
+        </>
     }
 }
 
 let mapStateToProps = (state) => ({
     profile: state.profilePage.profile,
     status: state.profilePage.status,
+    authorizedUserId: state.auth.id,
+    isAuth: state.auth.isAuth
 });
 
 export default compose(connect(mapStateToProps,

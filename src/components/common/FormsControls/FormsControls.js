@@ -1,11 +1,11 @@
 import React from "react";
-import textareaCSS from "./FormsControls.module.css";
+import formsCSS from "./FormsControls.module.css";
 
 const FormControl = ({input, meta, ...props}) => {
     const hasAnError = meta.touched && meta.error;
     return <>
-        <div className={textareaCSS.form_control}>
-            <div className={(hasAnError ? textareaCSS.error : '')}>
+        <div className={formsCSS.form_control}>
+            <div className={(hasAnError ? formsCSS.error : '')}>
                 {props.children}
             </div>
             {hasAnError && <span> {meta.error}</span>}
@@ -24,12 +24,12 @@ export const Input = (props) => {
 }
 
 export const InputCheckbox = ({input, meta, ...props}) => {
-    const hasAnError = meta.error;
+    const inputRememberValue = !input.value;
     return (
-        <div className={textareaCSS.inputCheckbox}>
+        <div className={formsCSS.inputCheckbox}>
             <input {...input} {...props}/>
-            {hasAnError && <span className={textareaCSS.not_remember}> remember me =)</span>}
-            {!hasAnError && <span className={textareaCSS.remember}> remember me =)</span>}
+            {inputRememberValue && <span className={formsCSS.not_remember}>do not remember</span>}
+            {!inputRememberValue && <span className={formsCSS.remember}>remember me =)</span>}
         </div>
     )
 }

@@ -22,8 +22,10 @@ const LoginFrom = (props) => {
             <div className={loginCSS.checkbox}>
                 <Field type='checkbox' name='rememberMe'
                        component={InputCheckbox}
-                       validate={[requiredField]}/>
+                       validate={[maxLength]}
+                />
             </div>
+            {props.error && <div className={loginCSS.form_summery_error}>{props.error}</div>}
             <div>
                 <button>login</button>
             </div>
