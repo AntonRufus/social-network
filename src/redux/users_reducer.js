@@ -97,7 +97,7 @@ export const getUsers = (currentPage, pageSize) => {
                 }
             );
     }
-}
+};
 
 export const follow = (userId) => {
     return (dispatch) => {
@@ -110,7 +110,7 @@ export const follow = (userId) => {
                 dispatch(toggleFollowingProgress(false, userId));
             });
     }
-}
+};
 
 export const unfollow = (userId) => {
     return (dispatch) => {
@@ -123,6 +123,6 @@ export const unfollow = (userId) => {
                 dispatch(toggleFollowingProgress(false, userId));
             });
     }
-}
+};
 
 export default usersReducer;

@@ -38,7 +38,7 @@ export const setAuthUserData = (email, id, login, isAuth) => ({
 export const toggleIsFetching = (isFetchingAuth) => ({type: TOGGLE_IS_FETCHING, isFetchingAuth});
 
 export const getAuthUserData = () => (dispatch) => {
-    authAPI.me()
+    return authAPI.me()
         .then(response => {
                 if (response.data.resultCode === 0) {
                     let {email, id, login} = response.data.data;

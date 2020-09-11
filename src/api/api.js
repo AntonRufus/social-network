@@ -29,7 +29,7 @@ export const usersAPI = {
         return profileAPI.getProfile(userId);
         // return instance.get(`profile/${userId}`)
     }
-}
+};
 
 export const profileAPI = {
     getProfile(userId) {
@@ -49,7 +49,7 @@ export const profileAPI = {
         // return instance.put(`profile/status/` + {status})
         return instance.put(`profile/status/`, {status: status});
     },
-}
+};
 
 export const authAPI = {
     me() {
@@ -61,4 +61,4 @@ export const authAPI = {
     logout() {
         return instance.delete(`auth/login/`);
     },
-}
+};
