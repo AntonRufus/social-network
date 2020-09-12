@@ -4,7 +4,6 @@ import headCSS from './Header.module.css';
 import Preloader from "../common/Preloader/Preloader";
 import {logout} from "../../redux/auth_reducer";
 import {connect} from "react-redux";
-import {Redirect} from "react-router-dom";
 
 class HeaderContainer extends Component {
     render() {
@@ -19,7 +18,8 @@ class HeaderContainer extends Component {
                 {this.props.isAuth
                     // ? <Redirect to='/profile'/>
                     ? ''
-                    : <Redirect to='/login'/>
+                    // : <Redirect to='/login'/>
+                    : ''
                 }
             </div>
         </>
