@@ -1,5 +1,5 @@
 import {profileAPI, usersAPI} from "../api/api";
-import antPortrait from './../assets/images/antPortrait.jpg';
+// import antPortrait from './../assets/images/antPortrait.jpg';
 
 const ADD_POST = 'ADD-POST';
 const SET_USER_PROFILE = 'SET_USER_PROFILE';

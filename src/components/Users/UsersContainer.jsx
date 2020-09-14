@@ -9,6 +9,7 @@ import {compose} from "redux";
 import {
     getUsers, getCurrentPage, getFollowingInProgress, getIsFetching, getPageSize, getTotalUsersCount
 } from "../../redux/users_selectors";
+
 // import {withAuthRedirect} from "../../hoc/withAuthRedirect";
 
 class UsersContainer extends React.Component {
