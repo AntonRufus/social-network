@@ -5,11 +5,11 @@ import {
 } from "../../redux/users_reducer";
 import Users from "./Users";
 import Preloader from "../common/Preloader/Preloader";
-// import {withAuthRedirect} from "../../hoc/withAuthRedirect";
 import {compose} from "redux";
 import {
     getUsers, getCurrentPage, getFollowingInProgress, getIsFetching, getPageSize, getTotalUsersCount
 } from "../../redux/users_selectors";
+// import {withAuthRedirect} from "../../hoc/withAuthRedirect";
 
 class UsersContainer extends React.Component {
     componentDidMount() {
@@ -58,7 +58,6 @@ let mapStoreToProps = (state) => {
         followingInProgress: getFollowingInProgress(state),
     }
 }
-
 
 export default compose(connect(mapStoreToProps, {
         follow,
