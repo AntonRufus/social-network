@@ -4,7 +4,8 @@ import Preloader from "../../common/Preloader/Preloader";
 import booleanPhotoTrue from "../../../assets/images/booleanPhotoTrue.png";
 import booleanPhotoFalse from "../../../assets/images/booleanPhotoFalse.png";
 import antPortrait from '../../../assets/images/antPortrait.jpg';
-import ProfileStatus from './ProfileStatus'
+// import ProfileStatus from './ProfileStatus'
+import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 
 const ProfileInfo = (props) => {
     if (!props.profile) {
@@ -35,7 +36,7 @@ const ProfileInfo = (props) => {
                                 </div>
                             </div>
                             <div className={profInfoCSS.status_block}>
-                                <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
+                                <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus}/>
                             </div>
                         </div>
                         <div className={profInfoCSS.info_main}>
