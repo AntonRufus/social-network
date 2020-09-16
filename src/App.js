@@ -36,11 +36,15 @@ class App extends React.Component {
                 <NavBarContainer/>
             </div>
             <div className={appCSS.app_wrapper_content}>
+                {/*<div className={appCSS.content_wrapper}>
+                    <Route exect path=''
+                           render={() => <ProfileContainer
+                           />}/>
+                </div>*/}
                 <div className={appCSS.content_wrapper}>
                     <Route path='/profile/:userId?'
                            render={() => <ProfileContainer
                            />}/>
-                    {/*userId is not detecting*/}
                 </div>
                 <div className={appCSS.content_wrapper}>
                     <Route path='/dialogs'

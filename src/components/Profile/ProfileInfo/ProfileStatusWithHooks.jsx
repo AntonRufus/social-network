@@ -1,20 +1,39 @@
-import React from 'react';
+import React, {useState} from 'react';
 import profInfoCSS from "./ProfileInfo.module.css";
 
 const ProfileStatusWithHooks = (props) => {
 
+    let [editMode, setEditMode] = useState(false);
+    let [status, setStatus] = useState(props.status);
+
+    const activateEditMode = () => {
+        setEditMode(true);
+    }
+
+    const deactivateEditMode = () => {
+        setEditMode(false);
+        props.updateStatus(status);
+    }
+
+    const onStatusChange = (event) => {
+        setStatus(event.currentTarget.value);
+    }
+
     return <>
         <div className={profInfoCSS.status}>My status:</div>
         <div className={profInfoCSS.status_cont}>
-            {true &&
+            {!editMode &&
             <div>
-                <span>
+                <span onDoubleClick={activateEditMode}>
                       {props.status === '' || null ? 'no status' : props.status}
                 </span>
             </div>}
-            {false &&
+            {editMode &&
             <div>
-                <input autoFocus={true} type="text"/>
+                <input onChange={onStatusChange} autoFocus={true}
+                       onBlur={deactivateEditMode} type="text"
+                       value={status}
+                />
             </div>
             }
         </div>
