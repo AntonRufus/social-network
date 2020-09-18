@@ -9,9 +9,6 @@ import {compose} from "redux";
 class ProfileContainer extends React.Component {
     componentDidMount() {
         let userId = this.props.match.params.userId;
-        //how to get the last numbers of url(userId)?
-        //this.props.match.params.userId; is not working
-        // debugger;
         if (!userId) {
             userId = this.props.authorizedUserId;
             if (!userId) {
