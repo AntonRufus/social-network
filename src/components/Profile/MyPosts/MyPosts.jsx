@@ -4,7 +4,7 @@ import Post from "./Post/MyPost";
 import AddPostFormRedux from "./PostForm";
 
 const MyPosts = React.memo((props) => {
-    console.log('render in process')
+
     let postsElements = props.posts
         .map(post =>
             <Post message={post.message}
