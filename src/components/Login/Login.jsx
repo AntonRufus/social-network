@@ -13,12 +13,12 @@ const Login = (props) => {
 
     return <>
         <div className={loginCSS.login}>
-            {props.isAuth
-                ? <Redirect to='/profile'/>
-                : <div className={loginCSS.login_form}>
+            {!props.isAuth
+                ? <div className={loginCSS.login_form}>
                     <h1>Login</h1>
                     <LoginReduxForm onSubmit={onSubmit}/>
                 </div>
+                : <div><Redirect to='/profile'/></div> //Redirect doesn't work
             }
         </div>
     </>
