@@ -1,0 +1,21 @@
+.activeLink {
+    color: goldenrod;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 100%;
+}
+
+.pages_buttons {
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: 5px;
+    width: auto;
+}
+
+.pages_buttons div {
+    padding-right: 10px;
+}
+
+.pages_buttons div:hover {
+    color: gold;
+}

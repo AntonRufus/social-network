@@ -1,31 +1,20 @@
 import React from 'react';
-import {Field, reduxForm} from "redux-form";
+import {reduxForm} from "redux-form";
 import loginCSS from "./Login.module.css";
-import {InputCheckbox, Input} from "../common/FormsControls/FormsControls";
+import {InputCheckbox, Input, createField} from "../common/FormsControls/FormsControls";
 import {maxLengthCreator, requiredField} from "../../utils/validators/validators";
 
 const maxLength = maxLengthCreator(25);
 
-const LoginFrom = (props) => {
+const LoginFrom = ({handleSubmit, error}) => {
     return (
-        <form onSubmit={props.handleSubmit}>
-            <div>
-                <Field type='text' name='email' placeholder=' Enter email'
-                       component={Input}
-                       validate={[requiredField, maxLength]}/>
-            </div>
-            <div>
-                <Field type='password' name='password' placeholder=' and password'
-                       component={Input}
-                       validate={[requiredField, maxLength]}/>
-            </div>
+        <form onSubmit={handleSubmit}>
+            {createField('text', ' Enter email', 'email', [requiredField, maxLength], Input)}
+            {createField('password', 'and password', 'password', [requiredField, maxLength], Input)}
             <div className={loginCSS.checkbox}>
-                <Field type='checkbox' name='rememberMe'
-                       component={InputCheckbox}
-                       validate={[maxLength]}
-                />
+                {createField('checkbox', null, 'rememberMe', [maxLength], InputCheckbox)}
             </div>
-            {props.error && <div className={loginCSS.form_summery_error}>{props.error}</div>}
+            {error && <div className={loginCSS.form_summery_error}>{error}</div>}
             <div>
                 <button>login</button>
             </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import formsCSS from "./FormsControls.module.css";
 import FormControl from "./FormControl";
+import {Field} from "redux-form";
 
 export const Textarea = (props) => {
     const {input, meta, child, ...restProps} = props;
@@ -22,3 +23,11 @@ export const InputCheckbox = ({input, meta, ...props}) => {
         </div>
     )
 }
+
+export const createField = (type, placeholder, name, validators, component) => (
+    <div>
+        <Field type={type} name={name} placeholder={placeholder}
+               component={component}
+               validate={validators}/>
+    </div>
+)

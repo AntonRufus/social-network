@@ -4,7 +4,6 @@ import Preloader from "../../common/Preloader/Preloader";
 import booleanPhotoTrue from "../../../assets/images/booleanPhotoTrue.png";
 import booleanPhotoFalse from "../../../assets/images/booleanPhotoFalse.png";
 import antPortrait from '../../../assets/images/antPortrait.jpg';
-// import ProfileStatus from './ProfileStatus'
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 
 const ProfileInfo = (props) => {
