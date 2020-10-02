@@ -4,10 +4,8 @@ import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
 import AddMessageFormRedux from "./DialogsForm";
 
-const Dialogs = (props) => {
-    let state = props.dialogsPage;
-
-    let dialogsElements = state.dialogs
+const Dialogs = ({dialogsPage, sendMessageOut, ...props}) => {
+    let dialogsElements = dialogsPage.dialogs
         .map(dialog =>
             <DialogItem url={dialog.photoUrl}
                         name={dialog.name}
@@ -16,7 +14,7 @@ const Dialogs = (props) => {
             />
         );
 
-    let messagesInElements = state.messagesIn
+    let messagesInElements = dialogsPage.messagesIn
         .map(message =>
             <Message message={message.message}
                      id={message.id}
@@ -24,11 +22,11 @@ const Dialogs = (props) => {
             />
         );
 
-    let messagesOutElements = state.messagesOut
+    let messagesOutElements = dialogsPage.messagesOut
         .map(message =>
             <Message message={message.message}
                      id={message.id}
-                     sendMessageOut={props.sendMessageOut}
+                     sendMessageOut={sendMessageOut}
                      key={message.id}
             />
         );

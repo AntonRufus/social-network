@@ -4,7 +4,6 @@ import Post from "./Post/MyPost";
 import AddPostFormRedux from "./PostForm";
 
 const MyPosts = React.memo((props) => {
-
     let postsElements = [...props.posts]
         .reverse()
         .map(post =>

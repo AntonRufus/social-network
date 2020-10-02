@@ -2,34 +2,13 @@ nav {
     margin-top: 10px;
 }
 
-.item {
-    padding-left: 35px;
-    padding-top: 3px;
-}
-
-.item a {
-    text-decoration: none;
-    color: whitesmoke;
-}
-
-.item a.activeLink {
-    text-decoration: none;
-    color: goldenrod;
-    font-style: italic;
-    font-size: 110%;
-}
-
-.item a:hover {
-    color: gold;
-}
-
-.bold {
-    font-weight: bold;
-}
-
 .avatars_top {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+}
+.avatars_top div:hover {
+    margin-top: 5px;
+    transition-duration: 1s;
 }
 
 .avatar_block {
@@ -38,8 +17,9 @@ nav {
 }
 
 .friends {
-    font-size: 125%;
-    text-align: center;
+    font-size: 100%;
+    text-align: right;
+    margin-right: 15px;
 }
 
 .friends a {
@@ -56,4 +36,16 @@ nav {
 
 .friends a:hover {
     color: gold;
+}
+
+.settings {
+    font-weight: bold;
+    text-align: right;
+    margin-right: 15px;
+    margin-top: -47px;
+}
+
+.settings a:hover, .friends a:hover {
+    margin-right: 25px;
+    transition-duration: 1s;
 }

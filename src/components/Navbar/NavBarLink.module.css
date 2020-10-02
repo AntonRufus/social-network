@@ -1,0 +1,22 @@
+.item {
+    padding-left: 20px;
+    padding-top: 3px;
+}
+
+.item a {
+    text-decoration: none;
+    color: whitesmoke;
+    transition-duration: 1s;
+}
+
+.item a.activeLink {
+    text-decoration: none;
+    color: goldenrod;
+    font-style: italic;
+}
+
+.item a:hover {
+    color: gold;
+    margin-left: 25px;
+    transition-duration: 1s;
+}

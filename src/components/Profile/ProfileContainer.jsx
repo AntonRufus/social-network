@@ -8,28 +8,27 @@ import {compose} from "redux";
 
 class ProfileContainer extends React.Component {
     componentDidMount() {
-        let userId = this.props.match.params.userId;
+        const {match, authorizedUserId, history, getUserProfile, getStatus} = this.props;
+        let userId = match.params.userId;
         if (!userId) {
-            userId = this.props.authorizedUserId;
+            userId = authorizedUserId;
             if (!userId) {
-                this.props.history.push('/login')
+                history.push('/login')
             }
             // userId = 9457;
             // userId = 8245;
         }
-        this.props.getUserProfile(userId);
-        this.props.getStatus(userId);
+        getUserProfile(userId);
+        getStatus(userId);
     }
 
     render() {
-        return <>
-            <Profile
-                {...this.props}
-                profile={this.props.profile}
-                status={this.props.status}
-                updateStatus={this.props.updateStatus}
-            />
-        </>
+        const {profile, status, updateStatus} = this.props;
+        return <Profile
+            {...this.props}
+            profile={profile}
+            status={status}
+            updateStatus={updateStatus}/>
     }
 }
 

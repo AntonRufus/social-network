@@ -4,9 +4,10 @@
 
 .dialogs_block .h {
     color: whitesmoke;
-    font-size: 200%;
+    font-size: 100%;
     font-weight: bold;
-    padding: 15px 0 35px 35px;
+    padding: 15px 0 35px 120px;
+    text-decoration: underline;
 }
 
 .dialogs {

@@ -2,6 +2,8 @@
     width: 70px;
     margin-top: 20px;
     margin-left: 35px;
+    border: 2px solid #b9bbba;
+    transition-duration: 1s;
 }
 
 .header_block {
@@ -9,8 +11,8 @@
 
 .header_block img:hover {
     border: 2px solid gold;
-    width: 66px;
     border-radius: 5px;
+    transition-duration: 0.1s;
 }
 
 .login_block {
@@ -49,6 +51,7 @@
     text-decoration: none;
     background-color: #191a28;
     border: 0;
+    transition-duration: 0.1s;
 }
 
 .logout:hover{
@@ -59,6 +62,7 @@
     border: 1px solid darkred;
     color: #be0000;
     margin-top: -5px;
+    transition-duration: 0.1s;
 }
 
 .login_process {

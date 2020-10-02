@@ -4,7 +4,7 @@ import settCSS from './Settings.module.css'
 const Settings = () => {
     return (
         <div className={settCSS.settings}>
-            settings
+            My settings
         </div>
     )
 }

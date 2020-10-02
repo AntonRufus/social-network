@@ -4,7 +4,7 @@ import newsCSS from './News.module.css'
 const News = () => {
     return (
         <div className={newsCSS.news}>
-            news
+            top news
         </div>
     )
 }

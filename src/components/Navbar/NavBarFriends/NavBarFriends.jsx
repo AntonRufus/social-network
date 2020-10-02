@@ -2,15 +2,14 @@ import React from 'react';
 import navFrCSS from './NavBarFriends.module.css'
 import {NavLink} from "react-router-dom";
 
-const NavBarFriends = (props) => {
-    let path = '/dialogs/' + props.id;
-    let name = props.name;
+const NavBarFriends = ({id, url, name}) => {
+    let path = '/dialogs/' + id;
 
     return (
         <div className={navFrCSS.avatar_block}>
             <div className={navFrCSS.avatar_photo}>
                 <NavLink to={path}>
-                    <img src={props.url} alt=""/>
+                    <img src={url} alt=""/>
                 </NavLink>
             </div>
             <div className={navFrCSS.avatar_name + ' ' + navFrCSS.avatar_active}>

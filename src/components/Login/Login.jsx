@@ -5,15 +5,15 @@ import LoginReduxForm from "./LoginForm";
 import {connect} from "react-redux";
 import {login} from "../../redux/auth_reducer";
 
-const Login = (props) => {
+const Login = ({login,isAuth}) => {
     const onSubmit = (formData) => {
         console.log(formData)
-        props.login(formData.email, formData.password, formData.rememberMe)
+        login(formData.email, formData.password, formData.rememberMe)
     }
 
     return <>
         <div className={loginCSS.login}>
-            {!props.isAuth
+            {!isAuth
                 ? <div className={loginCSS.login_form}>
                     <h1>Login</h1>
                     <LoginReduxForm onSubmit={onSubmit}/>

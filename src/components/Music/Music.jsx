@@ -4,7 +4,7 @@ import musicCSS from './Music.module.css'
 const Music = () => {
     return (
         <div className={musicCSS.music}>
-            music
+            the best music
         </div>
     )
 }

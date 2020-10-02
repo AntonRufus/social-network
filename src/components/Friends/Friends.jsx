@@ -2,10 +2,8 @@ import React from 'react';
 import friendsCSS from './Friends.module.css'
 import FriendsList from "./FriendsList/FriendsList";
 
-const Friends = (props) => {
-    let state = props.dialogsPage;
-
-    let avatarsElements = state.dialogs
+const Friends = ({dialogsPage}) => {
+    let avatarsElements = dialogsPage.dialogs
         .map(dialog =>
             <FriendsList url={dialog.photoUrl}
                          name={dialog.name}
