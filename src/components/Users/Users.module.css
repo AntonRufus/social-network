@@ -1,12 +1,11 @@
-.users {
+.pages {
     color: whitesmoke;
-    /*font-size: 125%;*/
-    padding: 25px;
-    margin-bottom: 25px;
+    padding: 10px;
 }
+/*
 
 .users .getUsers {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .users a {
@@ -32,7 +31,7 @@
 }
 
 .location .locationCountry {
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .users_block {
@@ -68,3 +67,4 @@
     border-radius: 45px;
 }
 
+*/

@@ -5,7 +5,7 @@ import User from "./User";
 
 let Users = ({totalUsersCount, pageSize, currentPage, onPageChanged, users, followingInProgress, unfollow, follow}) => {
     return <>
-        <div className={usersCSS.users}>
+        <div className={usersCSS.pages}>
             <Paginator
                 totalUsersCount={totalUsersCount}
                 pageSize={pageSize}

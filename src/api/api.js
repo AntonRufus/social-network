@@ -1,5 +1,4 @@
 import * as axios from "axios";
-import React from "react";
 
 const instance = axios.create({
     withCredentials: true,
@@ -25,7 +24,7 @@ export const usersAPI = {
     },
 
     getProfile(userId) {
-        console.warn('Obsolete method.Please use profileApa object');
+        console.warn('Obsolete method.Please use profileApi object//api.js line 27');
         return profileAPI.getProfile(userId);
         // return instance.get(`profile/${userId}`)
     }

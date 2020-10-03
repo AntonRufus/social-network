@@ -6,6 +6,12 @@ nav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
+
+.avatars_top div {
+    margin-top: 0;
+    transition-duration: 1s;
+}
+
 .avatars_top div:hover {
     margin-top: 5px;
     transition-duration: 1s;

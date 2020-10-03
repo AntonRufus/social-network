@@ -11,7 +11,7 @@ let Paginator = ({totalUsersCount, pageSize, currentPage, onPageChanged}) => {
     return <div className={paginatorCSS.pages_buttons}>
         {pages.map(page => {
             return <div key={page}
-                        className={currentPage === page && paginatorCSS.activeLink}
+                        className={currentPage === page ? paginatorCSS.activeLink : undefined}
                         onClick={() => {
                             onPageChanged(page);
                         }}>

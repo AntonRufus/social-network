@@ -15,6 +15,11 @@
     margin-bottom: 25px;
 }
 
+.descriptions_block div {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
 .descriptions_block span {
     margin-right: 10px;
 }
@@ -38,12 +43,11 @@
 .user {
     color: whitesmoke;
     font-size: 110%;
-    padding: 25px;
-    margin-bottom: 25px;
+    padding: 10px 25px;
 }
 
 .user_block {
-    margin: 5px 50px;
+    margin: 0 50px;
     padding: 15px;
     display: grid;
     grid-template-columns: 1fr 8fr;

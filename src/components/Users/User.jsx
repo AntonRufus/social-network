@@ -6,7 +6,7 @@ import userPhotoSmall from '../../assets/images/avatar-default-nonuser-small.png
 let User = ({user, followingInProgress, unfollow, follow,}) => {
     return <div className={userCSS.user}>
         <div key={user.id} className={userCSS.user_block}>
-            <div>
+            <div  className={''}>
                 <div className={userCSS.img_avatar}>
                     <NavLink to={'/profile/' + user.id} className={userCSS.fullName}>
                         <img src={user.photos.small != null ? user.photos.small : userPhotoSmall}
