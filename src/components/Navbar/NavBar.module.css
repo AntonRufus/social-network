@@ -9,12 +9,12 @@ nav {
 
 .avatars_top div {
     margin-top: 0;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
 }
 
 .avatars_top div:hover {
     margin-top: 5px;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
 }
 
 .avatar_block {
