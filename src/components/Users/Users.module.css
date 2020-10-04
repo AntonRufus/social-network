@@ -2,6 +2,11 @@
     color: whitesmoke;
     padding: 10px;
 }
+
+.block {
+    min-height: 850px;
+}
+
 /*
 
 .users .getUsers {

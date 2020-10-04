@@ -4,10 +4,10 @@ import Paginator from "../common/Paginator/Paginator";
 import User from "./User";
 
 let Users = ({totalUsersCount, pageSize, currentPage, onPageChanged, users, followingInProgress, unfollow, follow}) => {
-    return <>
+        return <div className={usersCSS.block}>
         <div className={usersCSS.pages}>
             <Paginator
-                totalUsersCount={totalUsersCount}
+                totalItemsCount={totalUsersCount}
                 pageSize={pageSize}
                 currentPage={currentPage}
                 onPageChanged={onPageChanged}
@@ -22,7 +22,7 @@ let Users = ({totalUsersCount, pageSize, currentPage, onPageChanged, users, foll
                   follow={follow}
             />
         )}
-    </>
+    </div>
 }
 
 export default Users;

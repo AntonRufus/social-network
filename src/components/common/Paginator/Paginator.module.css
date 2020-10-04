@@ -8,7 +8,7 @@
 .pages_buttons {
     display: inline-flex;
     flex-wrap: wrap;
-    margin: 5px;
+    margin: 18px 5px;
     width: auto;
 }
 
@@ -18,4 +18,24 @@
 
 .pages_buttons div:hover {
     color: gold;
+}
+
+.pagesPortion {
+    margin-left: 115px;
+}
+
+.buttonPrev {
+    margin-left: 85px;
+    margin-right: 10px;
+}
+
+.buttonNext, .buttonNextDisabled {
+    margin-left: 415px;
+    position: absolute;
+}
+
+
+.buttonPrevDisabled {
+    margin-left: 85px;
+    margin-right: 50px;
 }
