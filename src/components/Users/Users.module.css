@@ -5,10 +5,11 @@
 
 .block {
     min-height: 850px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 /*
-
 .users .getUsers {
     margin-bottom: 15px;
 }
@@ -71,5 +72,4 @@
     background-color: black;
     border-radius: 45px;
 }
-
 */

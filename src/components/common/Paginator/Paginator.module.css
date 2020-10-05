@@ -1,14 +1,17 @@
 .activeLink {
     color: goldenrod;
     font-weight: bold;
-    text-decoration: underline;
+    /*text-decoration: underline;*/
     font-size: 100%;
 }
 
 .pages_buttons {
     display: inline-flex;
     flex-wrap: wrap;
-    margin: 18px 5px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    /*margin: 18px 5px;*/
+    /*font-size: 120%;*/
     width: auto;
 }
 
@@ -27,15 +30,19 @@
 .buttonPrev {
     margin-left: 85px;
     margin-right: 10px;
+    font-size: 70%;
 }
 
 .buttonNext, .buttonNextDisabled {
-    margin-left: 415px;
+    margin-left: 413px;
     position: absolute;
+    font-size: 70%;
+    padding-top: 1px;
+    padding-bottom: 1px;
 }
-
 
 .buttonPrevDisabled {
     margin-left: 85px;
     margin-right: 50px;
+    font-size: 70%;
 }

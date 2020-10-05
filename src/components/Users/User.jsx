@@ -39,7 +39,7 @@ let User = ({user, followingInProgress, unfollow, follow,}) => {
                         {user.name}
                     </NavLink>
                 </div>
-                <div>
+                <div  className={userCSS.status}>
                     <span>Status:</span>
                     {user.status != null ? user.status : 'no status'}
                 </div>

@@ -50,11 +50,15 @@
     margin: 0 50px;
     padding: 15px;
     display: grid;
-    grid-template-columns: 1fr 8fr;
+    grid-template-columns: 1fr 2fr;
 }
 
 .user_block:hover {
     border: solid 1px whitesmoke;
     border-radius: 5px;
     padding: 14px;
+}
+
+.status{
+    max-width: 250px;
 }
