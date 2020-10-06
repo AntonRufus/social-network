@@ -3,21 +3,23 @@ import appCSS from './App.module.css';
 import {BrowserRouter, Route, withRouter} from "react-router-dom";
 import {connect, Provider} from "react-redux";
 import {compose} from "redux";
-import News from "./components/News/News";
-import Music from "./components/Music/Music";
-import Settings from "./components/Settings/Settings";
 import HeaderContainer from "./components/Header/HeaderContainer";
-import UsersContainer from "./components/Users/UsersContainer";
-import ProfileContainer from "./components/Profile/ProfileContainer";
-import Login from "./components/Login/Login";
-import DialogsContainer from "./components/Dialogs/DialogsContainer";
-import FriendsContainer from "./components/Friends/FriendsContainer";
 import NavBarContainer from "./components/Navbar/NavBarContainer";
 import {initializeApp} from "./redux/app_reducer";
 import Preloader from "./components/common/Preloader/Preloader";
 import store from "./redux/redux_store";
+import {withSuspense} from "./hoc/withSuspense";
 
-// import UserFollowed from "./components/Users/UserFollowed";
+const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileContainer'));
+const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'));
+const UsersContainer = React.lazy(() => import('./components/Users/UsersContainer'));
+const UserFollowed = React.lazy(() => import('./components/Users/UserFollowed'));
+const News = React.lazy(() => import('./components/News/News'));
+const Music = React.lazy(() => import('./components/Music/Music'));
+const Settings = React.lazy(() => import('./components/Settings/Settings'));
+const FriendsContainer = React.lazy(() => import('./components/Friends/FriendsContainer'));
+const Login = React.lazy(() => import('./components/Login/Login'));
+
 
 class App extends React.Component {
     componentDidMount() {
@@ -43,43 +45,31 @@ class App extends React.Component {
                            />}/>
                 </div>*/}
                 <div className={appCSS.content_wrapper}>
-                    <Route path='/profile/:userId?'
-                           render={() => <ProfileContainer
-                           />}/>
+                    <Route path='/profile/:userId?' render={withSuspense(ProfileContainer)}/>
                 </div>
                 <div className={appCSS.content_wrapper}>
-                    <Route path='/dialogs'
-                           render={() => <DialogsContainer
-                           />}/>
+                    <Route path='/dialogs' render={withSuspense(DialogsContainer)}/>
                 </div>
                 <div className={appCSS.content_wrapper}>
-                    <Route path='/users'
-                           render={() => <UsersContainer
-                           />}/>
+                    <Route path='/users' render={withSuspense(UsersContainer)}/>
                 </div>
                 <div className={appCSS.content_wrapper}>
-                    <Route path='/usersFollowed'
-                        /*render={() => <UserFollowed
-                        />}*//>
+                    <Route path='/usersFollowed' render={withSuspense(UserFollowed)}/>
                 </div>
                 <div className={appCSS.content_wrapper}>
-                    <Route path='/news' component={News}/>
+                    <Route path='/news' render={withSuspense(News)}/>
                 </div>
                 <div className={appCSS.content_wrapper}>
-                    <Route path='/music' component={Music}/>
+                    <Route path='/music' render={withSuspense(Music)}/>
                 </div>
                 <div className={appCSS.content_wrapper}>
-                    <Route path='/settings' component={Settings}/>
+                    <Route path='/settings' render={withSuspense(Settings)}/>
                 </div>
                 <div className={appCSS.content_wrapper}>
-                    <Route path='/friends'
-                           render={() => <FriendsContainer
-                           />}/>
+                    <Route path='/friends' render={withSuspense(FriendsContainer)}/>
                 </div>
                 <div className={appCSS.content_wrapper}>
-                    <Route path='/login'
-                           render={() => <Login
-                           />}/>
+                    <Route path='/login' render={withSuspense(Login)}/>
                 </div>
             </div>
         </div>
@@ -94,10 +84,10 @@ let AppContainer = compose(withRouter, connect(mapStateToProps, {initializeApp})
 
 const NetworkApp = () => {
     return <BrowserRouter>
-            <Provider store={store}>
-                <AppContainer/>
-            </Provider>
-        </BrowserRouter>
+        <Provider store={store}>
+            <AppContainer/>
+        </Provider>
+    </BrowserRouter>
 }
 
 export default NetworkApp;

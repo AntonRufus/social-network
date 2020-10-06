@@ -1,3 +1,18 @@
+import React from 'react';
+import usersCSS from './UserFollowed.module.css'
+
+const UserFollowed = () => {
+    return (
+        <div className={usersCSS.followed}>
+            Followed users
+        </div>
+    )
+}
+
+export default UserFollowed;
+
+
+
 /*
 import React from "react";
 import usersCSS from './Users.module.css';

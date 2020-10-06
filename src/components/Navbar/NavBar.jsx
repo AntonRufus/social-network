@@ -17,7 +17,7 @@ const NavBar = ({dialogsPage}) => {
         <NavBarLink to={'/profile'} body={'Profile'}/>
         <NavBarLink to={'/dialogs'} body={'Messages'}/>
         <NavBarLink to={'/users'} body={'Users'}/>
-        <NavBarLink to={'/usersFollowing'} body={'Following'}/>
+        <NavBarLink to={'/usersFollowed'} body={'Following'}/>
         <NavBarLink to={'/news'} body={'News'}/>
         <NavBarLink to={'/music'} body={'Music'}/>
         <div className={navCSS.settings}>

@@ -5,7 +5,7 @@ import LoginReduxForm from "./LoginForm";
 import {connect} from "react-redux";
 import {login} from "../../redux/auth_reducer";
 
-const Login = ({login,isAuth}) => {
+const Login = ({login, isAuth}) => {
     const onSubmit = (formData) => {
         console.log(formData)
         login(formData.email, formData.password, formData.rememberMe)
