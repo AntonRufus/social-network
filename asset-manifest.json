@@ -2,7 +2,7 @@
   "files": {
     "static/js/0.1e938b7f.chunk.js": "/social-network/static/js/0.1e938b7f.chunk.js",
     "static/js/0.1e938b7f.chunk.js.map": "/social-network/static/js/0.1e938b7f.chunk.js.map",
-    "main.css": "/social-network/static/css/main.9c19deac.chunk.css",
+    "main.css": "/social-network/static/css/main.de4025c8.chunk.css",
     "main.js": "/social-network/static/js/main.00e06ec9.chunk.js",
     "main.js.map": "/social-network/static/js/main.00e06ec9.chunk.js.map",
     "runtime-main.js": "/social-network/static/js/runtime-main.ca7b8381.js",
@@ -37,7 +37,7 @@
     "static/js/12.117fab13.chunk.js": "/social-network/static/js/12.117fab13.chunk.js",
     "static/js/12.117fab13.chunk.js.map": "/social-network/static/js/12.117fab13.chunk.js.map",
     "index.html": "/social-network/index.html",
-    "precache-manifest.480deb3b24693d0c83d5cb2773fa5d32.js": "/social-network/precache-manifest.480deb3b24693d0c83d5cb2773fa5d32.js",
+    "precache-manifest.c2f71769912774b72c3f060ac628d87b.js": "/social-network/precache-manifest.c2f71769912774b72c3f060ac628d87b.js",
     "service-worker.js": "/social-network/service-worker.js",
     "static/css/10.0c1f47c9.chunk.css.map": "/social-network/static/css/10.0c1f47c9.chunk.css.map",
     "static/css/11.b2575dee.chunk.css.map": "/social-network/static/css/11.b2575dee.chunk.css.map",
@@ -48,7 +48,7 @@
     "static/css/7.26c52089.chunk.css.map": "/social-network/static/css/7.26c52089.chunk.css.map",
     "static/css/8.893b4b5e.chunk.css.map": "/social-network/static/css/8.893b4b5e.chunk.css.map",
     "static/css/9.05cdfa07.chunk.css.map": "/social-network/static/css/9.05cdfa07.chunk.css.map",
-    "static/css/main.9c19deac.chunk.css.map": "/social-network/static/css/main.9c19deac.chunk.css.map",
+    "static/css/main.de4025c8.chunk.css.map": "/social-network/static/css/main.de4025c8.chunk.css.map",
     "static/js/3.b383237d.chunk.js.LICENSE.txt": "/social-network/static/js/3.b383237d.chunk.js.LICENSE.txt",
     "static/media/antPortrait.jpg": "/social-network/static/media/antPortrait.014fc96c.jpg",
     "static/media/booleanPhotoFalse.png": "/social-network/static/media/booleanPhotoFalse.16ccd59a.png",
@@ -58,7 +58,7 @@
   "entrypoints": [
     "static/js/runtime-main.ca7b8381.js",
     "static/js/3.b383237d.chunk.js",
-    "static/css/main.9c19deac.chunk.css",
+    "static/css/main.de4025c8.chunk.css",
     "static/js/main.00e06ec9.chunk.js"
   ]
 }
