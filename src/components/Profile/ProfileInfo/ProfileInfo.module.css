@@ -11,6 +11,10 @@
     width: 100%;
 }
 
+.bgc_photo_div {
+    height: 181px;
+}
+
 .avatar {
     width: 361px;
     height: 239px;

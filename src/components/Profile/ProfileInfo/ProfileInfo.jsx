@@ -12,7 +12,7 @@ const ProfileInfo = ({profile, status, updateStatus}) => {
     }
     return (
         <div className={profInfoCSS.profile_block}>
-            <div>
+            <div className={profInfoCSS.bgc_photo_div}>
                 <img className={profInfoCSS.bgc_photo}
                      src='http://localhost:3000/pic/bgc200.jpg'
                      alt='backgroundPic'/>
