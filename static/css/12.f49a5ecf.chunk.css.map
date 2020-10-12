@@ -1,0 +1,1 @@
+{"version":3,"sources":["UserFollowed.module.css"],"names":[],"mappings":"AAAA,8BACI,cAAe,CACf,gBACJ","file":"12.f49a5ecf.chunk.css","sourcesContent":[".followed{\r\n    font-size: 100%;\r\n    min-height: 850px;\r\n}\r\n"]}
