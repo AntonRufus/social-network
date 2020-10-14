@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import paginatorCSS from './Paginator.module.css';
+import cn from 'classnames';
 
 let Paginator = ({totalItemsCount, pageSize, currentPage, onPageChanged, portionSize = 10}) => {
     let pagesCount = Math.ceil(totalItemsCount / pageSize);
@@ -21,17 +22,20 @@ let Paginator = ({totalItemsCount, pageSize, currentPage, onPageChanged, portion
                 setPortionNumber(portionNumber - 1)
             }}>prev</button>
             : <button className={paginatorCSS.buttonPrevDisabled} disabled='disabled'>prev</button>}
-            {pages
-                .filter(page => page >= leftPortionPageNumber && page <= rightPortionPageNumber)
-                .map(page => {
-                    return <div key={page}
-                                className={currentPage === page ? paginatorCSS.activeLink : undefined}
-                                onClick={() => {
-                                    onPageChanged(page);
-                                }}>
-                        {page}
-                    </div>
-                })}
+        {pages
+            .filter(page => page >= leftPortionPageNumber && page <= rightPortionPageNumber)
+            .map(page => {
+                return <div key={page}
+                            className={currentPage === page ? paginatorCSS.activeLink : undefined}
+                    //className={ cn ({
+                    // [paginatorCSS.activeLink]:currentPage === page
+                    // }, paginatorCSS.????) }
+                            onClick={() => {
+                                onPageChanged(page);
+                            }}>
+                    {page}
+                </div>
+            })}
         {portionCount > portionNumber
             ? <button className={paginatorCSS.buttonNext} onClick={() => {
                 setPortionNumber(portionNumber + 1)

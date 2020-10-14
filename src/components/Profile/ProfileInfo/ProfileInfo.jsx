@@ -10,6 +10,23 @@ const ProfileInfo = ({profile, status, updateStatus}) => {
     if (!profile) {
         return <Preloader/>
     }
+
+    let no = 'no detailed information';
+    let aboutMe = profile.aboutMe;
+    let facebook = profile.contacts.facebook;
+    let website = profile.contacts.website;
+    let vk = profile.contacts.vk;
+    let twitter = profile.contacts.twitter;
+    let instagram = profile.contacts.instagram;
+    let youtube = profile.contacts.youtube;
+    let github = profile.contacts.github;
+    let mainLink = profile.contacts.mainLink
+    let lookingForAJob = profile.lookingForAJob;
+    let lookingForAJobDescription = profile.lookingForAJobDescription;
+    let userId = profile.userId;
+    let photosLarge = profile.photos.large;
+    let photosSmall = profile.photos.small
+
     return (
         <div className={profInfoCSS.profile_block}>
             <div className={profInfoCSS.bgc_photo_div}>
@@ -20,9 +37,11 @@ const ProfileInfo = ({profile, status, updateStatus}) => {
             <div className={profInfoCSS.profile_description}>
                 <div className={profInfoCSS.avatar_block}>
                     <img className={profInfoCSS.avatar}
+                        /*src={profile.photos.large
+                            ? profile.photos.large
+                            : antPortrait}*/
                          src={profile.photos.large
-                             ? profile.photos.large
-                             : antPortrait}
+                         || antPortrait}
                          alt='avatar'/>
                 </div>
                 <div className={profInfoCSS.info_main_block}>
@@ -31,7 +50,7 @@ const ProfileInfo = ({profile, status, updateStatus}) => {
                             <div className={profInfoCSS.info_name}>
                                 Name:
                                 <div className={profInfoCSS.info_data}>
-                                    <span>{profile.fullName === null ? 'no detailed information' : profile.fullName}</span>
+                                    <span>{profile.fullName === null ? no : profile.fullName}</span>
                                 </div>
                             </div>
                             <div className={profInfoCSS.status_block}>
@@ -42,56 +61,56 @@ const ProfileInfo = ({profile, status, updateStatus}) => {
                             <div className={profInfoCSS.info}>
                                 About me:
                                 <div className={profInfoCSS.info_data}>
-                                    <span>{profile.aboutMe === null ? 'no detailed information' : profile.aboutMe}</span>
+                                    <span>{aboutMe === null ? no : aboutMe}</span>
                                 </div>
                             </div>
                             <br/>
                             <div className={profInfoCSS.info}>
                                 FB:
                                 <div className={profInfoCSS.info_data}>
-                                    <span>{profile.contacts.facebook === null ? 'no detailed information' : profile.contacts.facebook}</span>
+                                    <span>{facebook === null ? no : facebook}</span>
                                 </div>
                             </div>
                             <div className={profInfoCSS.info}>
                                 WebSite:
                                 <div className={profInfoCSS.info_data}>
-                                    <span>{profile.contacts.website === null ? 'no detailed information' : profile.contacts.website}</span>
+                                    <span>{website === null ? no : website}</span>
                                 </div>
                             </div>
                             <div className={profInfoCSS.info}>
                                 VK:
                                 <div className={profInfoCSS.info_data}>
-                                    <span>{profile.contacts.vk === null ? 'no detailed information' : profile.contacts.vk}</span>
+                                    <span>{vk === null ? no : vk}</span>
                                 </div>
                             </div>
                             <div className={profInfoCSS.info}>
                                 Twitter:
                                 <div className={profInfoCSS.info_data}>
-                                    <span>{profile.contacts.twitter === null ? 'no detailed information' : profile.contacts.twitter}</span>
+                                    <span>{twitter === null ? no : twitter}</span>
                                 </div>
                             </div>
                             <div className={profInfoCSS.info}>
                                 Instagram:
                                 <div className={profInfoCSS.info_data}>
-                                    <span>{profile.contacts.instagram === null ? 'no detailed information' : profile.contacts.instagram}</span>
+                                    <span>{instagram === null ? no : instagram}</span>
                                 </div>
                             </div>
                             <div className={profInfoCSS.info}>
                                 youtube:
                                 <div className={profInfoCSS.info_data}>
-                                    <span>{profile.contacts.youtube === null ? 'no detailed information' : profile.contacts.youtube}</span>
+                                    <span>{youtube === null ? no : youtube}</span>
                                 </div>
                             </div>
                             <div className={profInfoCSS.info}>
                                 github:
                                 <div className={profInfoCSS.info_data}>
-                                    <span>{profile.contacts.github === null ? 'no detailed information' : profile.contacts.github}</span>
+                                    <span>{github === null ? no : github}</span>
                                 </div>
                             </div>
                             <div className={profInfoCSS.info}>
                                 mainLink:
                                 <div className={profInfoCSS.info_data}>
-                                    <span>{profile.contacts.mainLink === null ? 'no detailed information' : profile.contacts.mainLink}</span>
+                                    <span>{mainLink === null ? no : mainLink}</span>
                                 </div>
                             </div>
                             <br/>
@@ -99,9 +118,9 @@ const ProfileInfo = ({profile, status, updateStatus}) => {
                                 Looking for a job:
                                 <div className={profInfoCSS.info_data}>
                                     <span>
-                                        {profile.lookingForAJob === true ? 'true' : 'false'}
+                                        {lookingForAJob === true ? 'true' : 'false'}
                                         <img
-                                            src={profile.lookingForAJob === true ? booleanPhotoTrue : booleanPhotoFalse}
+                                            src={lookingForAJob === true ? booleanPhotoTrue : booleanPhotoFalse}
                                             className={profInfoCSS.booleanPhoto} alt='boolean'/>
                                     </span>
                                 </div>
@@ -109,28 +128,28 @@ const ProfileInfo = ({profile, status, updateStatus}) => {
                             <div className={profInfoCSS.info}>
                                 Job descriptions:
                                 <div className={profInfoCSS.info_data}>
-                                    <span>{profile.lookingForAJobDescription === null ? 'no detailed information' : profile.lookingForAJobDescription}</span>
+                                    <span>{lookingForAJobDescription === null ? no : lookingForAJobDescription}</span>
                                 </div>
                             </div>
                             <br/>
                             <div className={profInfoCSS.info}>
                                 User ID:
                                 <div className={profInfoCSS.info_data}>
-                                    <span>{profile.userId}</span>
+                                    <span>{userId}</span>
                                 </div>
                             </div>
                             <div className={profInfoCSS.info}>
                                 Photo large:
                                 <div className={profInfoCSS.info_data}>
-                                    <a href={profile.photos.large} target='_blank'
-                                       rel='noopener noreferrer'>link</a>
+                                    <a href={photosLarge} target='_blank'
+                                       rel='noopener noreferrer'>{photosLarge ? 'link' : 'no photo'}</a>
                                 </div>
                             </div>
                             <div className={profInfoCSS.info}>
                                 Photo small:
                                 <div className={profInfoCSS.info_data}>
-                                    <a href={profile.photos.small} target='_blank'
-                                       rel='noopener noreferrer'>link</a>
+                                    <a href={photosSmall} target='_blank'
+                                       rel='noopener noreferrer'>{photosSmall ? 'link' : 'no photo'}</a>
                                 </div>
                             </div>
                         </div>
