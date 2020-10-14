@@ -14,7 +14,7 @@ const ProfileInfo = ({profile, status, updateStatus}) => {
         <div className={profInfoCSS.profile_block}>
             <div className={profInfoCSS.bgc_photo_div}>
                 <img className={profInfoCSS.bgc_photo}
-                     src='http://localhost:3000/pic/bgc200.jpg'
+                     src='/social-network/pic/bgc200.jpg'
                      alt='backgroundPic'/>
             </div>
             <div className={profInfoCSS.profile_description}>

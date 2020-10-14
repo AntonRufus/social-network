@@ -25,72 +25,72 @@ let initialState = {
         {
             id: 5,
             name: 'April O`Neil',
-            photoUrl: 'http://localhost:3000/pic/avatars/April/April.png'
+            photoUrl: '/social-network/pic/avatars/April/April.png'
         },
         {
             id: 6,
             name: 'Bibop',
-            photoUrl: 'http://localhost:3000/pic/avatars/Bibop/Bibop.jpg'
+            photoUrl: '/social-network/pic/avatars/Bibop/Bibop.jpg'
         },
         {
             id: 7,
             name: 'Casey',
-            photoUrl: 'http://localhost:3000/pic/avatars/Casey/Casey.jpg'
+            photoUrl: '/social-network/pic/avatars/Casey/Casey.jpg'
         },
         {
             id: 8,
             name: 'Don',
-            photoUrl: 'http://localhost:3000/pic/avatars/Don/Don.jpg'
+            photoUrl: '/social-network/pic/avatars/Don/Don.jpg'
         },
         {
             id: 9,
             name: 'Karai',
-            photoUrl: 'http://localhost:3000/pic/avatars/Karai/Karai.jpg'
+            photoUrl: '/social-network/pic/avatars/Karai/Karai.jpg'
         },
         {
             id: 10,
             name: 'Krang',
-            photoUrl: 'http://localhost:3000/pic/avatars/Krang/Krang.jpg'
+            photoUrl: '/social-network/pic/avatars/Krang/Krang.jpg'
         },
         {
             id: 11,
             name: 'Leo',
-            photoUrl: 'http://localhost:3000/pic/avatars/Leo/Leo.jpg'
+            photoUrl: '/social-network/pic/avatars/Leo/Leo.jpg'
         },
         {
             id: 12,
             name: 'Mikey',
-            photoUrl: 'http://localhost:3000/pic/avatars/Mikey/Mikey.jpg'
+            photoUrl: '/social-network/pic/avatars/Mikey/Mikey.jpg'
         },
         {
             id: 13,
             name: 'Raph',
-            photoUrl: 'http://localhost:3000/pic/avatars/Raph/Raph.jpg'
+            photoUrl: '/social-network/pic/avatars/Raph/Raph.jpg'
         },
         {
             id: 14,
             name: 'Rockstady',
-            photoUrl: 'http://localhost:3000/pic/avatars/Rockstady/Rockstady.jpg'
+            photoUrl: '/social-network/pic/avatars/Rockstady/Rockstady.jpg'
         },
         {
             id: 15,
             name: 'Shredder',
-            photoUrl: 'http://localhost:3000/pic/avatars/Shredder/Shredder.png'
+            photoUrl: '/social-network/pic/avatars/Shredder/Shredder.png'
         },
         {
             id: 16,
             name: 'Splinter',
-            photoUrl: 'http://localhost:3000/pic/avatars/Splinter/Splinter.jpg'
+            photoUrl: '/social-network/pic/avatars/Splinter/Splinter.jpg'
         },
         {
             id: 17,
             name: 'Foot Ninja',
-            photoUrl: 'http://localhost:3000/pic/avatars/FootClan/Foot-Ninja.jpg'
+            photoUrl: '/social-network/pic/avatars/FootClan/Foot-Ninja.jpg'
         },
         {
             id: 18,
             name: 'Elite Foot Ninja',
-            photoUrl: 'http://localhost:3000/pic/avatars/FootClan/Elite-Foot-Ninja.jpg'
+            photoUrl: '/social-network/pic/avatars/FootClan/Elite-Foot-Ninja.jpg'
         },
     ],
     messagesIn: [
