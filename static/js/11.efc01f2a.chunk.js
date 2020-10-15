@@ -1,2 +1,0 @@
-(this["webpackJsonpsocial-network"]=this["webpackJsonpsocial-network"]||[]).push([[11],{310:function(t,s,n){t.exports={settings:"Settings_settings__3BZTl"}},316:function(t,s,n){"use strict";n.r(s);var e=n(0),i=n.n(e),a=n(310),c=n.n(a);s.default=function(){return i.a.createElement("div",{className:c.a.settings},"My settings")}}}]);
-//# sourceMappingURL=11.efc01f2a.chunk.js.map
