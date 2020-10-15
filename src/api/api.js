@@ -32,7 +32,7 @@ export const usersAPI = {
 
 export const profileAPI = {
     getProfile(userId) {
-            return instance.get(`profile/` + userId);
+        return instance.get(`profile/` + userId);
         // return instance.get(`profile/${userId}`)
         // return axios.get(`https://social-network.samuraijs.com/api/1.0/profile/2`);
     },
@@ -48,6 +48,12 @@ export const profileAPI = {
         // return instance.put(`profile/status/` + {status})
         return instance.put(`profile/status/`, {status: status});
     },
+
+    savePhoto(photoFile) {
+        const formData = new FormData();
+        formData.append('image', photoFile)
+        return instance.put(`profile/photo/`, formData, {'Context-Type': 'multipart/form-data'});
+    }
 };
 
 export const authAPI = {

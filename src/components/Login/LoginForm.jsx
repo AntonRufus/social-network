@@ -4,7 +4,7 @@ import loginCSS from "./Login.module.css";
 import {InputCheckbox, Input, createField} from "../common/FormsControls/FormsControls";
 import {maxLengthCreator, requiredField} from "../../utils/validators/validators";
 
-const maxLength = maxLengthCreator(25);
+const maxLength = maxLengthCreator(50);
 
 const LoginFrom = ({handleSubmit, error}) => {
     return (

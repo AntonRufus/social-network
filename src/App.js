@@ -39,11 +39,6 @@ class App extends React.Component {
                 <NavBarContainer/>
             </div>
             <div className={appCSS.app_wrapper_content}>
-                {/*<div className={appCSS.content_wrapper}>
-                    <Route exect path=''
-                           render={() => <ProfileContainer
-                           />}/>
-                </div>*/}
                 <div className={appCSS.content_wrapper}>
                     <Route path='/profile/:userId?' render={withSuspense(ProfileContainer)}/>
                 </div>
@@ -84,13 +79,13 @@ let AppContainer = compose(withRouter, connect(mapStateToProps, {initializeApp})
 
 const NetworkApp = () => {
     return <HashRouter>
-    {/*return <HashRouter basename={process.env.PUBLIC_URL}>*/}
-    {/*return <BrowserRouter basename={process.env.PUBLIC_URL}>*/}
+        {/*return <HashRouter basename={process.env.PUBLIC_URL}>*/}
+        {/*return <BrowserRouter basename={process.env.PUBLIC_URL}>*/}
         <Provider store={store}>
             <AppContainer/>
         </Provider>
-    {/*</BrowserRouter>*/}
-    {/*</HashRouter>*/}
+        {/*</BrowserRouter>*/}
+        {/*</HashRouter>*/}
     </HashRouter>
 }
 

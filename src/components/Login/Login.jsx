@@ -18,7 +18,7 @@ const Login = ({login, isAuth}) => {
                     <h1>Login</h1>
                     <LoginReduxForm onSubmit={onSubmit}/>
                 </div>
-                : <div><Redirect to='/profile'/></div> //Redirect doesn't work
+                : <div><Redirect to='/profile'/></div>
             }
         </div>
     </>

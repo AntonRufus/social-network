@@ -5,7 +5,7 @@ import {NavLink} from "react-router-dom";
 const Header = (props) => {
     return <header>
         <div className={headCSS.header_block}>
-            <NavLink to='/profile/9457'>
+            <NavLink to='/profile/'>
                 <img className={headCSS.logo} src='/social-network/pic/buildlogo.jpg' alt='logo'/>
             </NavLink>
             <div className={headCSS.login_block}>

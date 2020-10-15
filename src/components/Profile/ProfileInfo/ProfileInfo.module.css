@@ -30,7 +30,23 @@
 }
 
 .avatar_block {
-    display: inline-flex;
+    display: block;
+}
+
+.avatar_block input {
+    margin-left: 160px;
+}
+
+.avatar_block input {
+    color: whitesmoke;
+    border: 1px solid #303030;
+}
+
+.avatar_block input:hover {
+    background-color: #505050;
+    border: 1px solid wheat;
+    border-radius: 3px;
+    color: whitesmoke;
 }
 
 .name {

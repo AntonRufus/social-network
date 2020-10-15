@@ -6,7 +6,7 @@ import booleanPhotoFalse from "../../../assets/images/booleanPhotoFalse.png";
 import antPortrait from '../../../assets/images/antPortrait.jpg';
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 
-const ProfileInfo = ({profile, status, updateStatus}) => {
+const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto}) => {
     if (!profile) {
         return <Preloader/>
     }
@@ -27,6 +27,12 @@ const ProfileInfo = ({profile, status, updateStatus}) => {
     let photosLarge = profile.photos.large;
     let photosSmall = profile.photos.small
 
+    const onMainPhotoSelected = (event) => {
+        if (event.target.files.length) {
+            savePhoto(event.target.files[0]);
+        }
+    }
+
     return (
         <div className={profInfoCSS.profile_block}>
             <div className={profInfoCSS.bgc_photo_div}>
@@ -43,6 +49,7 @@ const ProfileInfo = ({profile, status, updateStatus}) => {
                          src={profile.photos.large
                          || antPortrait}
                          alt='avatar'/>
+                    <div>{isOwner && <input type={"file"} onChange={onMainPhotoSelected}/>}</div>
                 </div>
                 <div className={profInfoCSS.info_main_block}>
                     <div className={profInfoCSS.info_block}>
