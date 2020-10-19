@@ -14,10 +14,10 @@ class HeaderContainer extends Component {
             </div>
             <div><Header {...this.props}/></div>
             <div>
-                {this.props.isAuth
+                {/*{this.props.isAuth
                     ? <Redirect to='/profile'/>
                     : <Redirect to='/login'/>
-                }
+                }*/}
             {/* if use Redirect than after any update redirecting to profile */}
             </div>
         </>

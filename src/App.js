@@ -13,13 +13,12 @@ import {withSuspense} from "./hoc/withSuspense";
 const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileContainer'));
 const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'));
 const UsersContainer = React.lazy(() => import('./components/Users/UsersContainer'));
-const UserFollowed = React.lazy(() => import('./components/Users/UserFollowed'));
+const Followers = React.lazy(() => import('./components/Users/Followers'));
 const News = React.lazy(() => import('./components/News/News'));
 const Music = React.lazy(() => import('./components/Music/Music'));
 const Settings = React.lazy(() => import('./components/Settings/Settings'));
 const FriendsContainer = React.lazy(() => import('./components/Friends/FriendsContainer'));
 const Login = React.lazy(() => import('./components/Login/Login'));
-
 
 class App extends React.Component {
     componentDidMount() {
@@ -49,7 +48,7 @@ class App extends React.Component {
                     <Route path='/users' render={withSuspense(UsersContainer)}/>
                 </div>
                 <div className={appCSS.content_wrapper}>
-                    <Route path='/usersFollowed' render={withSuspense(UserFollowed)}/>
+                    <Route path='/followers' render={withSuspense(Followers)}/>
                 </div>
                 <div className={appCSS.content_wrapper}>
                     <Route path='/news' render={withSuspense(News)}/>

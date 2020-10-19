@@ -1,17 +1,17 @@
 import React from 'react';
-import usersCSS from './UserFollowed.module.css'
+import usersCSS from './Followers.module.css'
 import InDeveloping from "../common/InDeveloping/InDeveloping";
 
-const UserFollowed = () => {
+const Followers = () => {
     return (
         <div className={usersCSS.followed}>
-            <div className={usersCSS.sign}>Followed users in developing.</div>
+            <div className={usersCSS.sign}>Followers in developing.</div>
             <InDeveloping/>
         </div>
     )
 }
 
-export default UserFollowed;
+export default Followers;
 
 
 /*
