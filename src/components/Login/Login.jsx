@@ -20,6 +20,7 @@ const Login = ({login, isAuth}) => {
                 </div>
                 : <div><Redirect to='/profile'/></div>
             }
+            {/* check HeaderContainer.jsx and uncomment Redirect */}
         </div>
     </>
 }
