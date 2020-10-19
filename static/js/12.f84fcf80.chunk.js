@@ -1,2 +1,0 @@
-(this["webpackJsonpsocial-network"]=this["webpackJsonpsocial-network"]||[]).push([[12],{308:function(e,o,l){e.exports={followed:"UserFollowed_followed__1u7-m"}},314:function(e,o,l){"use strict";l.r(o);var s=l(0),n=l.n(s),t=l(308),a=l.n(t);o.default=function(){return n.a.createElement("div",{className:a.a.followed},"Followed users")}}}]);
-//# sourceMappingURL=12.f84fcf80.chunk.js.map

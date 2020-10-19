@@ -1,1 +1,0 @@
-{"version":3,"sources":["News.module.css"],"names":[],"mappings":"AAAA,kBACI,cAAe,CACf,gBACJ","file":"10.0c1f47c9.chunk.css","sourcesContent":[".news{\r\n    font-size: 100%;\r\n    min-height: 850px;\r\n}\r\n"]}
