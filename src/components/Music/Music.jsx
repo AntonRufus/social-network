@@ -5,7 +5,6 @@ import InDeveloping from "../common/InDeveloping/InDeveloping";
 const Music = () => {
     return (
         <div className={musicCSS.music}>
-            <div className={musicCSS.sign}>Music in developing.</div>
             <InDeveloping/>
         </div>
     )

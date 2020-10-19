@@ -4,6 +4,7 @@ import inDevelopingCSS from './InDeveloping.module.css';
 
 let InDeveloping = () => {
     return <div className={inDevelopingCSS.inDeveloping}>
+        <div>This part of the application is under development, stay tuned.</div>
         <img src={inDeveloping} alt=""/>
     </div>
 }

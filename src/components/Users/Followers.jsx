@@ -5,7 +5,6 @@ import InDeveloping from "../common/InDeveloping/InDeveloping";
 const Followers = () => {
     return (
         <div className={usersCSS.followed}>
-            <div className={usersCSS.sign}>Followers in developing.</div>
             <InDeveloping/>
         </div>
     )

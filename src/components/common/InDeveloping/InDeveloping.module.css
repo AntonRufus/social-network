@@ -7,3 +7,9 @@
     margin-left: 35%;
     width: 45%;
 }
+
+.inDeveloping div {
+    color: whitesmoke;
+    font-size: 200%;
+    padding: 50px 0 0 100px;
+}
