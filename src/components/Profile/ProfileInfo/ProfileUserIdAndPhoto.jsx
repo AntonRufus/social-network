@@ -27,7 +27,6 @@ export const ProfileUserIdAndPhoto = ({profile}) => {
         </div>
         <PhotoLink sing={'Photo large'} size={photosLarge}/>
         <PhotoLink sing={'Photo small'} size={photosSmall}/>
-        <br/>
     </>
 }
 
