@@ -13,7 +13,7 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto}) => {
         return <Preloader/>
     }
 
-    return (
+    return <>
         <div className={profInfoCSS.profile_block}>
             <ProfileBgcPhoto/>
             <div className={profInfoCSS.profile_description}>
@@ -30,7 +30,7 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto}) => {
                 </div>
             </div>
         </div>
-    )
+    </>
 }
 
 export default ProfileInfo;
