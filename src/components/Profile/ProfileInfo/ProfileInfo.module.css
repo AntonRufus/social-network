@@ -114,13 +114,13 @@
     width: 172px;
 }
 
-.info_data span {
+.info_data {
     padding-left: 15px;
 }
 
 .info_data a {
     color: whitesmoke;
-    padding: 15px;
+    padding: 0;
 }
 
 .info_data a:hover {

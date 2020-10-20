@@ -22,7 +22,7 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto}) => {
                     <div className={profInfoCSS.info_block}>
                         <ProfileNameAndStatus profile={profile} status={status} updateStatus={updateStatus}/>
                         <div className={profInfoCSS.info_main}>
-                            <ProfileContacts profile={profile}/>
+                            <ProfileContacts profile={profile} />
                             <ProfileJob profile={profile}/>
                             <ProfileUserIdAndPhoto profile={profile}/>
                         </div>

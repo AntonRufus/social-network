@@ -1,5 +1,6 @@
 import React from 'react';
 import profInfoCSS from './ProfileInfo.module.css';
+// import ProfileDataWithHooks from "./ProfileDataWithHooks";
 
 const ProfileContacts = ({profile}) => {
     let aboutMe = profile.aboutMe;
@@ -33,9 +34,8 @@ const Contact = ({contactTitle, contactValue}) => {
     return <>
         <div className={profInfoCSS.info}>
             {contactTitle}:
-            <div className={profInfoCSS.info_data}>
-                <span>{contactValue === null ? no : contactValue}</span>
-            </div>
+                <span className={profInfoCSS.info_data}>{contactValue === null ? no : contactValue}</span>
+                {/*<ProfileDataWithHooks />*/}
         </div>
     </>
 }
