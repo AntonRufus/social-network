@@ -5,8 +5,7 @@ import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 const ProfileNameAndStatus = ({profile, status, updateStatus}) => {
     let no = 'no detailed information';
 
-    return (
-
+    return <>
         <div className={profInfoCSS.name}>
             <div className={profInfoCSS.info_name}>
                 Nickname:
@@ -18,8 +17,7 @@ const ProfileNameAndStatus = ({profile, status, updateStatus}) => {
                 <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>
             </div>
         </div>
-
-    )
+    </>
 }
 
 export default ProfileNameAndStatus;
