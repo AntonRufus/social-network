@@ -4,7 +4,7 @@ import ProfileInfo from "./ProfileInfo/ProfileInfo";
 import MyPostsContainer from "./MyPosts/MyPostsContainer";
 
 const Profile = ({profile, status, updateStatus, isOwner, savePhoto}) => {
-    return (
+    return <>
         <div className={profileCSS.profile}>
             <ProfileInfo savePhoto={savePhoto}
                          isOwner={isOwner}
@@ -13,7 +13,7 @@ const Profile = ({profile, status, updateStatus, isOwner, savePhoto}) => {
                          updateStatus={updateStatus}/>
             <MyPostsContainer/>
         </div>
-    )
+    </>
 }
 
 export default Profile;
