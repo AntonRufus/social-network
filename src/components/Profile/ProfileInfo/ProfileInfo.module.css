@@ -4,7 +4,7 @@
 .profile_description {
     display: grid;
     grid-template-columns: 10fr 30fr;
-    padding: 25px;
+    padding: 26px;
 }
 
 .bgc_photo {
