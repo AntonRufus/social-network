@@ -2,10 +2,10 @@ import React, {useState} from 'react';
 import profInfoCSS from './ProfileInfo.module.css';
 import Preloader from "../../common/Preloader/Preloader";
 import ProfileUserIdAndPhoto from "./ProfileUserIdAndPhoto";
-import ProfileNameAndStatus from "./ProfileNameAndStatus";
 import ProfileBgcPhoto from "./ProfileBgcPhoto";
 import ProfileAvatar from "./ProfileAvatar";
 import ProfileData from "./ProfileData";
+import ProfileDataForm from "./ProfileDataForm";
 
 const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto}) => {
     let [editMode, setEditMode] = useState(false);
@@ -21,26 +21,22 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto}) => {
                 <ProfileAvatar profile={profile} isOwner={isOwner} savePhoto={savePhoto}/>
                 <div className={profInfoCSS.info_main_block}>
                     <div className={profInfoCSS.info_block}>
-                        <ProfileNameAndStatus profile={profile} status={status} updateStatus={updateStatus}/>
-                        <div className={profInfoCSS.info_main}>
-                            {editMode
-                                ? <ProfileContactsForm profile={profile}/>
-                                : <ProfileData profile={profile}
-                                               isOwner={isOwner}
-                                               setEditMode={setEditMode}
-                                />
-                            }
-                            <ProfileUserIdAndPhoto profile={profile}/>
-                        </div>
+                        {editMode
+                            ? <ProfileDataForm profile={profile}
+                                               status={status}
+                                               updateStatus={updateStatus}/>
+                            : <ProfileData profile={profile}
+                                           isOwner={isOwner}
+                                           setEditMode={setEditMode}
+                                           status={status}
+                                           updateStatus={updateStatus}/>
+                        }
+                        <ProfileUserIdAndPhoto profile={profile}/>
                     </div>
                 </div>
             </div>
         </div>
     </>
-}
-
-const ProfileContactsForm = (profile) => {
-    return <div>form</div>;
 }
 
 export default ProfileInfo;

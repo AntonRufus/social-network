@@ -1,7 +1,7 @@
 import React from 'react';
 import profInfoCSS from './ProfileInfo.module.css';
 
-const ProfileContacts = ({profile, isOwner, goToEditMode}) => {
+const ProfileContacts = ({profile}) => {
     let facebook = profile.contacts.facebook;
     let website = profile.contacts.website;
     let vk = profile.contacts.vk;
@@ -12,9 +12,6 @@ const ProfileContacts = ({profile, isOwner, goToEditMode}) => {
     let mainLink = profile.contacts.mainLink
 
     return <>
-        {isOwner && <div>
-            <button onClick={goToEditMode}>edit</button>
-        </div>}
         <br/>
         <Contact contactTitle={'FB'} contactValue={facebook}/>
         <Contact contactTitle={'WebSite'} contactValue={website}/>

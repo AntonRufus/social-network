@@ -7,7 +7,6 @@ const ProfileNameAndStatus = ({profile, status, updateStatus}) => {
     let no = 'no detailed information';
     let aboutMe = profile.aboutMe;
 
-
     return <>
         <div className={profInfoCSS.name}>
             <div className={profInfoCSS.info_name}>
@@ -21,7 +20,6 @@ const ProfileNameAndStatus = ({profile, status, updateStatus}) => {
             </div>
             <Contact contactTitle={'About me'} contactValue={aboutMe}/>
         </div>
-
     </>
 }
 

@@ -11,6 +11,7 @@ const ProfileAvatar = ({profile, isOwner, savePhoto}) => {
 
     return <>
         <div className={profInfoCSS.avatar_block}>
+            <br/>
             <img className={profInfoCSS.avatar}
                 /*src={profile.photos.large
                     ? profile.photos.large
