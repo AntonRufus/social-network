@@ -51,7 +51,6 @@
 
 .name {
     color: whitesmoke;
-    font-weight: bold;
     padding: 10px 10px 20px 10px;
 }
 
@@ -98,6 +97,7 @@
 
 .info_name {
     display: grid;
+    font-weight: bold;
     grid-template-columns: 2fr 10fr;
     padding: 5px;
 }

@@ -17,6 +17,8 @@ const MyPosts = React.memo((props) => {
 
     let addNewPost = (values) => {
         props.addPost(values.newPostText);
+        values.newPostText = '';
+        if (values.newPostText === '') values.newPostText = 'Empty post';
     }
 
     return (

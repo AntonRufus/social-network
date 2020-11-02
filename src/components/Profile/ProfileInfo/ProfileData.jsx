@@ -1,43 +1,23 @@
 import React from 'react';
-import profInfoCSS from './ProfileInfo.module.css';
-// import ProfileDataWithHooks from "./ProfileDataWithHooks";
+import ProfileJob from "./ProfileJob";
+import ProfileContacts from "./ProfileContacts";
 
-const ProfileContacts = ({profile}) => {
-    let aboutMe = profile.aboutMe;
-    let facebook = profile.contacts.facebook;
-    let website = profile.contacts.website;
-    let vk = profile.contacts.vk;
-    let twitter = profile.contacts.twitter;
-    let instagram = profile.contacts.instagram;
-    let youtube = profile.contacts.youtube;
-    let github = profile.contacts.github;
-    let mainLink = profile.contacts.mainLink
-
+const ProfileData = ({profile, isOwner, setEditMode}) => {
     return <>
-        <Contact contactTitle={'About me'} contactValue={aboutMe}/>
-        <br/>
-        <Contact contactTitle={'FB'} contactValue={facebook}/>
-        <Contact contactTitle={'WebSite'} contactValue={website}/>
-        <Contact contactTitle={'VK'} contactValue={vk}/>
-        <Contact contactTitle={'Twitter'} contactValue={twitter}/>
-        <Contact contactTitle={'Instagram'} contactValue={instagram}/>
-        <Contact contactTitle={'YouTube'} contactValue={youtube}/>
-        <Contact contactTitle={'GitHub'} contactValue={github}/>
-        <Contact contactTitle={'Main Link'} contactValue={mainLink}/>
-        <br/>
+        <ProfileContacts profile={profile}
+                         isOwner={isOwner}
+                         goToEditMode={() => {
+                             setEditMode(true);
+                         }}
+        />
+
+        <ProfileJob profile={profile}
+                    isOwner={isOwner}
+                    goToEditMode={() => {
+                        setEditMode(true);
+                    }}
+        />
     </>
 }
 
-const Contact = ({contactTitle, contactValue}) => {
-    let no = 'no detailed information';
-
-    return <>
-        <div className={profInfoCSS.info}>
-            {contactTitle}:
-                <span className={profInfoCSS.info_data}>{contactValue === null ? no : contactValue}</span>
-                {/*<ProfileDataWithHooks />*/}
-        </div>
-    </>
-}
-
-export default ProfileContacts;
+export default ProfileData;

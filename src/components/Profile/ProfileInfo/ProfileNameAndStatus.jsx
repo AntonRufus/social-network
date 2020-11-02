@@ -1,9 +1,12 @@
 import React from 'react';
 import profInfoCSS from './ProfileInfo.module.css';
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
+import {Contact} from "./ProfileContacts";
 
 const ProfileNameAndStatus = ({profile, status, updateStatus}) => {
     let no = 'no detailed information';
+    let aboutMe = profile.aboutMe;
+
 
     return <>
         <div className={profInfoCSS.name}>
@@ -16,7 +19,9 @@ const ProfileNameAndStatus = ({profile, status, updateStatus}) => {
             <div className={profInfoCSS.status_block}>
                 <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>
             </div>
+            <Contact contactTitle={'About me'} contactValue={aboutMe}/>
         </div>
+
     </>
 }
 
