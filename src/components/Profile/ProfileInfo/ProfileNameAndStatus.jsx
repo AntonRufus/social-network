@@ -10,7 +10,7 @@ const ProfileNameAndStatus = ({profile, status, updateStatus}) => {
     return <>
         <div className={profInfoCSS.name}>
             <div className={profInfoCSS.info_name}>
-                Nickname:
+                Full name:
                 <div className={profInfoCSS.info_data}>
                     <span>{profile.fullName === null ? no : profile.fullName}</span>
                 </div>

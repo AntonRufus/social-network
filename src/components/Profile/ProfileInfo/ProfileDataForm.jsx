@@ -4,9 +4,7 @@ import {createField, Input, Textarea} from "../../common/FormsControls/FormsCont
 import {reduxForm} from "redux-form";
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 
-const ProfileDataForm = ({profile, isOwner, setEditMode, status, updateStatus}) => {
-    let no = 'no detailed information';
-
+const ProfileDataForm = ({isOwner, setEditMode, status, updateStatus}) => {
     return <form className={profInfoCSS.form}>
         {!isOwner && <div>
             <button className={profInfoCSS.buttonEdit} onClick={() => {
@@ -17,15 +15,15 @@ const ProfileDataForm = ({profile, isOwner, setEditMode, status, updateStatus}) 
         </div>}
         <div className={profInfoCSS.name}>
             <div className={profInfoCSS.info_name}>
-                Nickname:
+                Full name:
                 <div className={profInfoCSS.info_data}>
-                    <span>{profile.fullName === null ? no : profile.fullName}</span>
+                    <span>{createField('text', 'Full name', 'full-name', [], Input)}</span>
                 </div>
             </div>
             <div className={profInfoCSS.status_block}>
                 <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>
             </div>
-            <Contact contactTitle={'About me'} contactValue={createField('text', 'About me', 'aboutme', [], Input)}/>
+            <Contact contactTitle={'About me'} contactValue={createField('text', 'About me', 'about-me', [], Input)}/>
         </div>
         <br/>
         <div>
@@ -37,21 +35,21 @@ const ProfileDataForm = ({profile, isOwner, setEditMode, status, updateStatus}) 
                      contactValue={createField('text', 'Instagram', 'instagram', [], Input)}/>
             <Contact contactTitle={'YouTube'} contactValue={createField('text', 'YouTube', 'youtube', [], Input)}/>
             <Contact contactTitle={'GitHub'} contactValue={createField('text', 'GitHub', 'github', [], Input)}/>
-            <Contact contactTitle={'Main Link'} contactValue={createField('text', 'Main Link', 'mainlink', [], Input)}/>
+            <Contact contactTitle={'Main Link'} contactValue={createField('text', 'Main Link', 'main-link', [], Input)}/>
         </div>
         <br/>
         <div className={profInfoCSS.info}>
             Looking for a job:
             <div className={profInfoCSS.info_data}>
                     <span>
-                        {createField('checkbox', '', 'lookingForAJob', [], Input)}
+                        {createField('checkbox', '', 'looking-for-a-job', [], Input)}
                     </span>
             </div>
         </div>
         <div className={profInfoCSS.info}>
             My skills:
             <div className={profInfoCSS.info_data}>
-                <span>{createField('text', 'My skills', 'My-skills', [], Textarea)}</span>
+                <span>{createField('text', 'My skills', 'my-skills', [], Textarea)}</span>
             </div>
         </div>
         <br/>
