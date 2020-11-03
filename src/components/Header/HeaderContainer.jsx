@@ -4,7 +4,7 @@ import headCSS from './Header.module.css';
 import Preloader from "../common/Preloader/Preloader";
 import {logout} from "../../redux/auth_reducer";
 import {connect} from "react-redux";
-import Redirect from "react-router-dom/es/Redirect";
+import {Redirect} from "react-router-dom";
 
 class HeaderContainer extends Component {
     render() {

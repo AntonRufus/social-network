@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import paginatorCSS from './Paginator.module.css';
-import cn from 'classnames';
+// import cn from 'classnames';
 
 let Paginator = ({totalItemsCount, pageSize, currentPage, onPageChanged, portionSize = 10}) => {
     let pagesCount = Math.ceil(totalItemsCount / pageSize);
@@ -13,8 +13,6 @@ let Paginator = ({totalItemsCount, pageSize, currentPage, onPageChanged, portion
     let [portionNumber, setPortionNumber] = useState(1);
     let leftPortionPageNumber = (portionNumber - 1) * portionSize + 1;
     let rightPortionPageNumber = portionNumber * portionSize;
-
-    //Make buttons and page numbers look nice
 
     return <div className={paginatorCSS.pages_buttons}>
         {portionNumber > 1

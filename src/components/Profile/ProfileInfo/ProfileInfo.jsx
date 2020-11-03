@@ -7,11 +7,17 @@ import ProfileAvatar from "./ProfileAvatar";
 import ProfileData from "./ProfileData";
 import ProfileDataForm from "./ProfileDataForm";
 
-const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto}) => {
+const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto, saveProfile}) => {
     let [editMode, setEditMode] = useState(false);
 
     if (!profile) {
         return <Preloader/>
+    }
+
+    const onSubmit = (formData) => {
+        saveProfile(formData);
+        console.log(formData);
+
     }
 
     return <>
@@ -24,7 +30,9 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto}) => {
                         {editMode
                             ? <ProfileDataForm profile={profile}
                                                status={status}
-                                               updateStatus={updateStatus}/>
+                                               updateStatus={updateStatus}
+                                               setEditMode={setEditMode}
+                                               onSubmit={onSubmit}/>
                             : <ProfileData profile={profile}
                                            isOwner={isOwner}
                                            setEditMode={setEditMode}

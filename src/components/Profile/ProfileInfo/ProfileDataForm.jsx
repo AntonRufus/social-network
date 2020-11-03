@@ -4,12 +4,13 @@ import {createField, Input, Textarea} from "../../common/FormsControls/FormsCont
 import {reduxForm} from "redux-form";
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 
-const ProfileDataForm = ({isOwner, setEditMode, status, updateStatus}) => {
-    return <form className={profInfoCSS.form}>
+const ProfileDataForm = ({isOwner, status, updateStatus, handleSubmit, profile, setEditMode}) => {
+    return <form onSubmit={handleSubmit} className={profInfoCSS.form}>
         {!isOwner && <div>
-            <button className={profInfoCSS.buttonEdit} onClick={() => {
-                setEditMode(false);
-            }}>
+            <button className={profInfoCSS.buttonEdit}>
+                {/*<button className={profInfoCSS.buttonEdit} onClick={() => {
+                    setEditMode(false);
+                }}>*/}
                 save
             </button>
         </div>}
@@ -17,13 +18,13 @@ const ProfileDataForm = ({isOwner, setEditMode, status, updateStatus}) => {
             <div className={profInfoCSS.info_name}>
                 Full name:
                 <div className={profInfoCSS.info_data}>
-                    <span>{createField('text', 'Full name', 'full-name', [], Input)}</span>
+                    <span>{createField('text', 'Full name', 'FullName', [], Input)}</span>
                 </div>
             </div>
             <div className={profInfoCSS.status_block}>
                 <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>
             </div>
-            <Contact contactTitle={'About me'} contactValue={createField('text', 'About me', 'about-me', [], Input)}/>
+            <Contact contactTitle={'About me'} contactValue={createField('text', 'About me', 'AboutMe', [], Input)}/>
         </div>
         <br/>
         <div>
@@ -35,21 +36,22 @@ const ProfileDataForm = ({isOwner, setEditMode, status, updateStatus}) => {
                      contactValue={createField('text', 'Instagram', 'instagram', [], Input)}/>
             <Contact contactTitle={'YouTube'} contactValue={createField('text', 'YouTube', 'youtube', [], Input)}/>
             <Contact contactTitle={'GitHub'} contactValue={createField('text', 'GitHub', 'github', [], Input)}/>
-            <Contact contactTitle={'Main Link'} contactValue={createField('text', 'Main Link', 'main-link', [], Input)}/>
+            <Contact contactTitle={'Main Link'}
+                     contactValue={createField('text', 'Main Link', 'MainLink', [], Input)}/>
         </div>
         <br/>
         <div className={profInfoCSS.info}>
             Looking for a job:
             <div className={profInfoCSS.info_data}>
                     <span>
-                        {createField('checkbox', '', 'looking-for-a-job', [], Input)}
+                        {createField('checkbox', '', 'LookingForAJob', [], Input)}
                     </span>
             </div>
         </div>
         <div className={profInfoCSS.info}>
             My skills:
             <div className={profInfoCSS.info_data}>
-                <span>{createField('text', 'My skills', 'my-skills', [], Textarea)}</span>
+                <span>{createField('text', 'My skills', 'LookingForAJobDescription', [], Textarea)}</span>
             </div>
         </div>
         <br/>
