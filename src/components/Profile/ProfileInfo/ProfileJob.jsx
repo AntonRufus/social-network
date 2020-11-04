@@ -13,7 +13,7 @@ const ProfileJob = ({profile}) => {
             Looking for a job:
             <div className={profInfoCSS.info_data}>
                     <span>
-                        {lookingForAJob === true ? 'true' : 'false'}
+                        {lookingForAJob === true ? 'yes' : 'no'}
                         <img
                             src={lookingForAJob === true ? booleanPhotoTrue : booleanPhotoFalse}
                             className={profInfoCSS.booleanPhoto} alt='boolean'/>
