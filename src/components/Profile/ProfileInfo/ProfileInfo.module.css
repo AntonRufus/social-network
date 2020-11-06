@@ -181,3 +181,21 @@
 .form input{
     height: 12px;
 }
+
+.form_error {
+    text-align: center;
+    border: 2px solid whitesmoke;
+    border-radius: 5px;
+    background-color: black;
+    color: coral;
+    padding: 4px;
+    width: 180px;
+    margin: 2px 2px 2px 135px;
+}
+
+.form_error :hover {
+    padding: 5.5px;
+    border: 1px solid wheat;
+    color: whitesmoke;
+    font-weight: bold;
+}

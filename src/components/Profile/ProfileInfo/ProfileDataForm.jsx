@@ -3,7 +3,6 @@ import profInfoCSS from "./ProfileInfo.module.css";
 import {createField, Input, Textarea} from "../../common/FormsControls/FormsControls";
 import {reduxForm} from "redux-form";
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
-import loginCSS from "../../Login/Login.module.css";
 
 const ProfileDataForm = ({isOwner, status, updateStatus, handleSubmit, error, profile}) => {
     return <form onSubmit={handleSubmit} className={profInfoCSS.form}>
@@ -11,7 +10,7 @@ const ProfileDataForm = ({isOwner, status, updateStatus, handleSubmit, error, pr
             <button className={profInfoCSS.buttonEdit}>
                 save
             </button>
-            {error && <div className={loginCSS.form_summery_error}>{error}</div>}
+            {error && <div className={profInfoCSS.form_error}>{error}</div>}
         </div>}
         <div className={profInfoCSS.name}>
             <div className={profInfoCSS.info_name}>
