@@ -25,4 +25,12 @@ const Login = ({login, isAuth}) => {
     </>
 }
 
-export default connect(null, {login})(Login);
+const mapStateToProps = (state) => ({
+    isAuth: state.auth.isAuth,
+    captchaUrl: state.auth.captchaUrl,
+})
+
+// it was without mapStateToProps
+// export default connect(null, {login})(Login);
+
+export default connect(mapStateToProps, {login})(Login);
