@@ -1,4 +1,5 @@
-import {authAPI as securityAPI, authAPI} from "../api/api";
+import {authAPI} from "../api/api";
+import {securityAPI} from "../api/api";
 import {stopSubmit} from "redux-form";
 
 const SET_USER_DATA = 'social-network/auth/SET_USER_DATA';
@@ -17,11 +18,11 @@ let initialState = {
 const authReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_USER_DATA:
+        case GET_CAPTCHA_URL_SUCCESS:
             return {
                 ...state,
                 ...action.payload,
             }
-
         case TOGGLE_IS_FETCHING:
             return {
                 ...state,
@@ -41,7 +42,7 @@ export const toggleIsFetching = (isFetchingAuth) => ({type: TOGGLE_IS_FETCHING, 
 
 export const getCaptchaUrlSuccess = (captchaUrl) => ({
     type: GET_CAPTCHA_URL_SUCCESS,
-    payload: {captchaUrl}
+    payload: {captchaUrl},
 });
 
 export const getAuthUserData = () => async (dispatch) => {
@@ -67,8 +68,8 @@ export const getAuthUserData = () => (dispatch) => {
 };
 */
 
-export const login = (email, password, rememberMe) => async (dispatch) => {
-    const response = await authAPI.login(email, password, rememberMe);
+export const login = (email, password, rememberMe, captcha) => async (dispatch) => {
+    const response = await authAPI.login(email, password, rememberMe, captcha);
     if (response.data.resultCode === 0) {
         // success get auth data
         dispatch(getAuthUserData());
@@ -84,7 +85,7 @@ export const login = (email, password, rememberMe) => async (dispatch) => {
 export const getCaptchaUrl = () => async (dispatch) => {
     const response = await securityAPI.getCaptchaUrl();
     const captchaUrl = response.data.url;
-    dispatch(stopSubmit(getCaptchaUrlSuccess(captchaUrl)));
+    dispatch(getCaptchaUrlSuccess(captchaUrl));
 };
 
 /*

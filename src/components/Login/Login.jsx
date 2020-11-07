@@ -5,10 +5,10 @@ import LoginReduxForm from "./LoginForm";
 import {connect} from "react-redux";
 import {login} from "../../redux/auth_reducer";
 
-const Login = ({login, isAuth}) => {
+const Login = ({login, isAuth, captchaUrl}) => {
     const onSubmit = async (formData) => {
         console.log(formData);
-        login(formData.email, formData.password, formData.rememberMe);
+        login(formData.email, formData.password, formData.rememberMe, formData.captcha);
     }
 
     return <>
@@ -16,7 +16,7 @@ const Login = ({login, isAuth}) => {
             {!isAuth
                 ? <div className={loginCSS.login_form}>
                     <h1>Login</h1>
-                    <LoginReduxForm onSubmit={onSubmit}/>
+                    <LoginReduxForm captchaUrl={captchaUrl} onSubmit={onSubmit}/>
                 </div>
                 : <div><Redirect to='/profile'/></div>
             }

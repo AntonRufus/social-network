@@ -6,7 +6,7 @@ import {maxLengthCreator, requiredField} from "../../utils/validators/validators
 
 const maxLength = maxLengthCreator(50);
 
-const LoginFrom = ({handleSubmit, error}) => {
+const LoginFrom = ({handleSubmit, error, captchaUrl}) => {
     return (
         <form onSubmit={handleSubmit}>
             {createField('text', ' Enter email', 'email', [requiredField, maxLength], Input)}
@@ -14,6 +14,9 @@ const LoginFrom = ({handleSubmit, error}) => {
             <div className={loginCSS.checkbox}>
                 {createField('checkbox', null, 'rememberMe', [maxLength], InputCheckbox)}
             </div>
+            {captchaUrl && <img src={captchaUrl} alt={''}/>}
+            {captchaUrl && createField('input', 'Symbols from image', 'captcha', [maxLength], Input)}
+
             {error && <div className={loginCSS.form_summery_error}>{error}</div>}
             <div>
                 <button>login</button>
