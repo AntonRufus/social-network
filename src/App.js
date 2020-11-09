@@ -1,6 +1,7 @@
 import React from 'react';
 import appCSS from './App.module.css';
-import {HashRouter, Route, withRouter} from "react-router-dom";
+import {BrowserRouter, Route, withRouter} from "react-router-dom";
+// import {HashRouter, Switch} from "react-router-dom";
 import {connect, Provider} from "react-redux";
 import {compose} from "redux";
 import HeaderContainer from "./components/Header/HeaderContainer";
@@ -38,6 +39,10 @@ class App extends React.Component {
                 <NavBarContainer/>
             </div>
             <div className={appCSS.app_wrapper_content}>
+                {/*<Switch>*/}
+                {/*<div className={appCSS.content_wrapper}>
+                        <Route exact path='/' render={withSuspense(ProfileContainer)}/>
+                    </div>*/}
                 <div className={appCSS.content_wrapper}>
                     <Route path='/profile/:userId?' render={withSuspense(ProfileContainer)}/>
                 </div>
@@ -65,6 +70,10 @@ class App extends React.Component {
                 <div className={appCSS.content_wrapper}>
                     <Route path='/login' render={withSuspense(Login)}/>
                 </div>
+                {/*<div className={appCSS.content_wrapper}>
+                        <Route path='*' render={() => <div>404 not found</div>}/>
+                    </div>*/}
+                {/*</Switch>*/}
             </div>
         </div>
     }
@@ -77,7 +86,8 @@ const mapStateToProps = (state) => ({initialized: state.app.initialized});
 let AppContainer = compose(withRouter, connect(mapStateToProps, {initializeApp}))(App);
 
 const NetworkApp = () => {
-    return <HashRouter>
+    return <BrowserRouter>
+        {/*return <HashRouter>*/}
         {/*return <HashRouter basename={process.env.PUBLIC_URL}>*/}
         {/*return <BrowserRouter basename={process.env.PUBLIC_URL}>*/}
         <Provider store={store}>
@@ -85,7 +95,8 @@ const NetworkApp = () => {
         </Provider>
         {/*</BrowserRouter>*/}
         {/*</HashRouter>*/}
-    </HashRouter>
+        {/*</HashRouter>*/}
+    </BrowserRouter>
 }
 
 export default NetworkApp;
