@@ -97,14 +97,14 @@ const mapStateToProps = (state) => ({initialized: state.app.initialized});
 let AppContainer = compose(withRouter, connect(mapStateToProps, {initializeApp}))(App);
 
 const NetworkApp = () => {
-    // return <BrowserRouter basename={process.env.PUBLIC_URL}>>
     // return <HashRouter basename={process.env.PUBLIC_URL}>
-    return <HashRouter>
+    // return <HashRouter>
+    // return <BrowserRouter>
+    return <BrowserRouter basename={process.env.PUBLIC_URL}>>
         <Provider store={store}>
             <AppContainer/>
         </Provider>
-    </HashRouter>
-    {/*</BrowserRouter>*/}
+    </BrowserRouter>
 }
 
 export default NetworkApp;
