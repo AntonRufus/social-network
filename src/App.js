@@ -1,7 +1,7 @@
 import React from 'react';
 import appCSS from './App.module.css';
 import {BrowserRouter, Redirect, Route, withRouter} from "react-router-dom";
-// import {HashRouter, Switch} from "react-router-dom";
+import {HashRouter, Switch} from "react-router-dom";
 import {connect, Provider} from "react-redux";
 import {compose} from "redux";
 import HeaderContainer from "./components/Header/HeaderContainer";
@@ -97,17 +97,14 @@ const mapStateToProps = (state) => ({initialized: state.app.initialized});
 let AppContainer = compose(withRouter, connect(mapStateToProps, {initializeApp}))(App);
 
 const NetworkApp = () => {
-    return <BrowserRouter basename={process.env.PUBLIC_URL}>>
-        {/*return <HashRouter>*/}
-        {/*return <HashRouter basename={process.env.PUBLIC_URL}>*/}
-        {/*return <BrowserRouter basename={process.env.PUBLIC_URL}>*/}
+    // return <BrowserRouter basename={process.env.PUBLIC_URL}>>
+    // return <HashRouter basename={process.env.PUBLIC_URL}>
+    return <HashRouter>
         <Provider store={store}>
             <AppContainer/>
         </Provider>
-        {/*</BrowserRouter>*/}
-        {/*</HashRouter>*/}
-        {/*</HashRouter>*/}
-    </BrowserRouter>
+    </HashRouter>
+    {/*</BrowserRouter>*/}
 }
 
 export default NetworkApp;
