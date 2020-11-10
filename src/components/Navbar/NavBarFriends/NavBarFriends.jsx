@@ -1,6 +1,7 @@
 import React from 'react';
 import navFrCSS from './NavBarFriends.module.css'
 import {NavLink} from "react-router-dom";
+import classNames from 'classnames';
 
 const NavBarFriends = ({id, url, name}) => {
     let path = '/dialogs/' + id;
@@ -12,7 +13,8 @@ const NavBarFriends = ({id, url, name}) => {
                     <img src={url} alt=""/>
                 </NavLink>
             </div>
-            <div className={navFrCSS.avatar_name + ' ' + navFrCSS.avatar_active}>
+            {/*<div className={navFrCSS.avatar_name + ' ' + navFrCSS.avatar_active}>*/}
+            <div className={classNames(navFrCSS.avatar_name, navFrCSS.avatar_active)}>
                 <NavLink to={path}>
                     {name}
                 </NavLink>

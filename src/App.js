@@ -1,6 +1,6 @@
 import React from 'react';
 import appCSS from './App.module.css';
-import {BrowserRouter, Route, withRouter} from "react-router-dom";
+import {BrowserRouter, Redirect, Route, withRouter} from "react-router-dom";
 // import {HashRouter, Switch} from "react-router-dom";
 import {connect, Provider} from "react-redux";
 import {compose} from "redux";
@@ -22,8 +22,19 @@ const FriendsContainer = React.lazy(() => import('./components/Friends/FriendsCo
 const Login = React.lazy(() => import('./components/Login/Login'));
 
 class App extends React.Component {
+    catchAllUnhandledErrors = (reason, promiseRejectionEvent) => {
+        console.error(promiseRejectionEvent);
+        console.error(reason);
+        alert('Some error occurred');
+    }
+
     componentDidMount() {
         this.props.initializeApp();
+        window.addEventListener('unhandledrejection', this.catchAllUnhandledErrors);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('unhandledrejection', this.catchAllUnhandledErrors);
     }
 
     render() {
@@ -40,9 +51,9 @@ class App extends React.Component {
             </div>
             <div className={appCSS.app_wrapper_content}>
                 {/*<Switch>*/}
-                {/*<div className={appCSS.content_wrapper}>
-                        <Route exact path='/' render={withSuspense(ProfileContainer)}/>
-                    </div>*/}
+                <div className={appCSS.content_wrapper}>
+                    <Route exact path='/' render={() => <Redirect to={'/profile'}/>}/>
+                </div>
                 <div className={appCSS.content_wrapper}>
                     <Route path='/profile/:userId?' render={withSuspense(ProfileContainer)}/>
                 </div>
