@@ -102,6 +102,7 @@ const NetworkApp = () => {
     // return <HashRouter basename={process.env.PUBLIC_URL}>
     // return <BrowserRouter basename={process.env.PUBLIC_URL}>>
     // return <BrowserRouter>
+    // if <BrowserRouter> then after reloaded the page -> error /**/
     return <HashRouter>
         <Provider store={store}>
             <AppContainer/>

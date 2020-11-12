@@ -2,7 +2,8 @@ import {getAuthUserData} from "./auth_reducer";
 
 const INITIALIZED_SUCCESS = 'INITIALIZED_SUCCESS';
 
-let initialState = {initialized: false, globalError: null};
+let initialState = {initialized: false/*, globalError: null*/};
+//show up on the screen error message
 
 const appReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -10,6 +11,7 @@ const appReducer = (state = initialState, action) => {
             return {
                 ...state,
                 initialized: true,
+                // globalError: ???
             }
         default:
             return state;

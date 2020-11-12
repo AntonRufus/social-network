@@ -1,5 +1,4 @@
 import {profileAPI, usersAPI} from "../api/api";
-import React from "react";
 import {stopSubmit} from "redux-form";
 // import antPortrait from './../assets/images/antPortrait.jpg';
 
@@ -79,7 +78,6 @@ const profileReducer = (state = initialState, action) => {
                 status: action.status,
             }
         case SAVE_PHOTO_SUCCESS:
-            debugger;
             return {
                 ...state,
                 profile: {...state.profile, photos: action.photos},
@@ -106,10 +104,15 @@ export const getStatus = (userId) => async (dispatch) => {
 };
 
 export const updateStatus = (status) => async (dispatch) => {
-    const response = await profileAPI.updateStatus(status);
-    if (response.data.resultCode === 0) {
-        dispatch(setStatus(status));
-    }
+    // try {
+        const response = await profileAPI.updateStatus(status);
+        if (response.data.resultCode === 0) {
+            dispatch(setStatus(status));
+        }
+    // } catch (error) {
+        //catch an error
+        //dispatch an error and display it as a message
+    // }
 };
 
 export const savePhoto = (file) => async (dispatch) => {
