@@ -13,8 +13,8 @@ nav {
 }
 
 .avatars_top div:hover {
-    margin-top: 5px;
-    transition-duration: 0.5s;
+    margin-top: 1px;
+    transition-duration: .4s;
 }
 
 .avatar_block {
@@ -52,6 +52,6 @@ nav {
 }
 
 .settings a:hover, .friends a:hover {
-    margin-right: 25px;
-    transition-duration: 1s;
+    margin-right: 5px;
+    transition-duration: .5s;
 }

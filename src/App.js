@@ -104,10 +104,10 @@ const NetworkApp = () => {
     // return <BrowserRouter>
     // if <BrowserRouter> then after reloaded the page -> error /**/
     return <HashRouter>
-        <Provider store={store}>
-            <AppContainer/>
-        </Provider>
-    </HashRouter>
+                <Provider store={store}>
+                    <AppContainer/>
+                </Provider>
+            </HashRouter>
 }
 
 export default NetworkApp;

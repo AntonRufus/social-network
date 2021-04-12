@@ -7,7 +7,7 @@ import {login} from "../../redux/auth_reducer";
 
 const Login = ({login, isAuth, captchaUrl}) => {
     const onSubmit = async (formData) => {
-        console.log(formData);
+        // console.log(formData);
         login(formData.email, formData.password, formData.rememberMe, formData.captcha);
     }
 

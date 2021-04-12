@@ -17,6 +17,6 @@
 
 .item a:hover {
     color: gold;
-    margin-left: 25px;
-    transition-duration: 1s;
+    margin-left: 5px;
+    transition-duration: .5s;
 }
