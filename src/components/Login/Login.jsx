@@ -15,6 +15,10 @@ const Login = ({login, isAuth, captchaUrl}) => {
         <div className={loginCSS.login}>
             {!isAuth
                 ? <div className={loginCSS.login_form}>
+                    <div className={loginCSS.text}>
+                        <div>For test purpose login: <b>free@samuraijs.com</b></div>
+                        <div> and password: <b>free</b></div>
+                    </div>
                     <h1>Login</h1>
                     <LoginReduxForm captchaUrl={captchaUrl} onSubmit={onSubmit}/>
                 </div>

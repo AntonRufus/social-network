@@ -166,16 +166,17 @@
     border: 1px solid #303030;
     background-color: #303030;
     color: whitesmoke;
-    font-size: 9px;
+    /*font-size: 9px;*/
     transition-duration: 0.2s;
 }
 
 .buttonEdit:hover {
     color: wheat;
-    font-size: 100%;
+    /*font-size: 100%;*/
     transition-duration: 0.2s;
     border-radius: 3px;
     font-weight: bold;
+    text-decoration: underline;
 }
 
 .form input{
