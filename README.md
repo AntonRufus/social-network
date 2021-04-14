@@ -1,10 +1,12 @@
-A large project to develop a social network from scratch based on React and Redux.
+# Social network
 
-https://antonrufus.github.io/social-network/
+## A large project to develop a social network from scratch based on React and Redux.
 
-Tech stach:
+#### https://antonrufus.github.io/social-network/
 
-    React:
+## Tech stach:
+
+   ### React:
      - HOC
      - Hooks
      - Jest
@@ -13,23 +15,23 @@ Tech stach:
      - React.lazy
      - React.memo
  
-    Redux:
+   ### Redux:
      - Redux-ducks
      - Redux-form
      - Redux-thunk
      - Reselect
      - Selectors
     
-    REST API:
+   ### REST API:
      - Axios
     
-    CSS:
+   ### CSS:
      - CSS modules
      - Grid
 
-Feel free to contact me via LinkedIn: 
+## Feel free to contact me via LinkedIn: 
 
-https://www.linkedin.com/in/anton-zhyvotovskyi/
+#### https://www.linkedin.com/in/anton-zhyvotovskyi/
 
 
 --------
