@@ -4,7 +4,7 @@
 
 #### https://antonrufus.github.io/social-network/
 
-## Tech stach:
+## Tech stack:
 
    ### React:
      - HOC
