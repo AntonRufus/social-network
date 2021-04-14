@@ -27,14 +27,14 @@ Tech stach:
      - CSS modules
      - Grid
 
-Feel fre to contact me via LinkedIn: 
+Feel free to contact me via LinkedIn: 
 
 https://www.linkedin.com/in/anton-zhyvotovskyi/
 
 
 --------
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
