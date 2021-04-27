@@ -3,26 +3,29 @@
 
 .form_control .error textarea,
 .form_control .error input {
-    border: 2px solid red;
-    margin-bottom: -20px;
+  border: 2px solid red;
+  margin-bottom: -20px;
 }
 
 .form_control span {
-    color: red;
-    margin-left: 35px;
+  color: red;
+  margin-left: 35px;
 }
 
 .inputCheckbox .not_remember {
-    color: red;
-    margin-top: -5px;
-    padding-top: 2px;
+  color: red;
+  margin-top: -5px;
+  padding-top: 2px;
 }
 
 .inputCheckbox .remember {
-    color: whitesmoke;
+  color: whitesmoke;
 }
 
 .inputCheckbox span {
-    padding-top: 2px;
-    padding-left: 4px;
+  padding-top: 2px;
+  padding-left: 4px;
+}
+.inputCheckbox {
+  margin-left: -130px;
 }

@@ -1,99 +1,124 @@
 .login {
-    font-size: 100%;
-    min-height: 320px;
-    text-align: center;
-    padding-top: 200px;
-    padding-bottom: 330px;
+  font-size: 100%;
+  min-height: 320px;
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 330px;
 }
 
 .login a {
-    text-decoration: none;
-    color: whitesmoke;
+  text-decoration: none;
+  color: whitesmoke;
 }
 
 .login a:hover {
-    color: gold;
-    border: 2px solid goldenrod;
-    border-radius: 5px;
-    padding: 55px;
-    background-color: black;
+  color: gold;
+  border: 2px solid goldenrod;
+  border-radius: 5px;
+  padding: 55px;
+  background-color: black;
 }
 
 .login_form {
-    border: 1px solid whitesmoke;
-    border-radius: 5px;
-    color: whitesmoke;
-    margin-left: 35%;
-    width: 400px;
-    padding: 25px;
-    background-color: #211d22;
+  border: 1px solid whitesmoke;
+  border-radius: 5px;
+  color: whitesmoke;
+  margin-left: 35%;
+  width: 400px;
+  padding: 25px;
+  background-color: #211d22;
 }
 
 .login_form:hover {
-    background-color: #191a28;
+  background-color: #191a28;
 }
 
 .login_form h1 {
-    margin: 0 0 5px 0;
-    padding-bottom: 10px;
+  margin: 0 0 5px 0;
+  padding-bottom: 10px;
 }
 
 .login_form h1:hover {
-    text-decoration: underline;
-    color: whitesmoke;
+  text-decoration: underline;
+  color: whitesmoke;
 }
 
 .login_form div {
-    padding-top: 5px;
+  padding-top: 5px;
 }
 
 .login_form input {
-    padding-left: 5px;
-    border-radius: 5px;
+  padding-left: 5px;
+  border-radius: 5px;
 }
 
 .login_form input:hover {
-    border-color: gold;
+  border-color: gold;
 }
 
 .login_form button {
-    margin-top: 5px;
-    margin-left: 0;
-    width: 125px;
-    border-radius: 5px;
+  margin-top: 5px;
+  margin-left: 0;
+  width: 125px;
+  border-radius: 5px;
 }
 
 .login_form button:hover {
-    background-color: white;
-    border-color: gold;
+  background-color: white;
+  border-color: gold;
 }
 
 .checkbox {
-    margin-left: 125px;
-    display: flex;
-    margin-bottom: 3px;
+  margin-left: 125px;
+  display: flex;
+  margin-bottom: 3px;
 }
 
 .form_summery_error {
-    border: 2px solid whitesmoke;
-    border-radius: 5px;
-    background-color: black;
-    color: coral;
-    padding: 4px;
-    width: 123px;
-    margin: 2px 2px 2px 135px;
+  border: 2px solid whitesmoke;
+  border-radius: 5px;
+  background-color: black;
+  color: coral;
+  padding: 4px;
+  width: 123px;
+  margin: 2px 2px 2px 135px;
 }
 
 .form_summery_error:hover {
-    padding: 5.5px;
-    border: 1px solid wheat;
-    color: whitesmoke;
-    font-weight: bold;
+  padding: 5.5px;
+  border: 1px solid wheat;
+  color: whitesmoke;
+  font-weight: bold;
 }
 
 .login_form .text {
-    text-align: right;
-    font-size: 75%;
-    margin-top: -20px;
-    margin-bottom: 20px;
+  text-align: right;
+  font-size: 75%;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+  .login_form {
+    text-align: center;
+    width: 250px;
+    padding: 20px 5px;
+  }
+  .checkbox {
+    /* margin-left: 125px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3px;
+  }
+  .login {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .login_form {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
 }
