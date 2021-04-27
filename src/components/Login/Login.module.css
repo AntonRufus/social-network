@@ -98,11 +98,12 @@
   margin-bottom: 20px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
   .login_form {
     text-align: center;
     width: 250px;
     padding: 20px 5px;
+    margin-left: 25%;
   }
   .checkbox {
     /* margin-left: 125px; */
