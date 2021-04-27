@@ -10,6 +10,8 @@
 .form_control span {
   color: red;
   margin-left: 35px;
+  z-index: 100;
+  position: relative;
 }
 
 .inputCheckbox .not_remember {
@@ -26,6 +28,9 @@
   padding-top: 2px;
   padding-left: 4px;
 }
-.inputCheckbox {
-  margin-left: -130px;
+
+@media only screen and (max-width: 1000px) {
+  .inputCheckbox {
+    margin-left: -130px;
+  }
 }
