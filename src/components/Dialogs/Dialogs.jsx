@@ -18,9 +18,10 @@ const Dialogs = ({ dialogsPage, sendMessageOut, ...props }) => {
     ));
 
     let addNewMessage = (values) => {
+        if (values.newMessageBody === '') return;
         props.sendMessage(values.newMessageBody);
         values.newMessageBody = '';
-        if (values.newMessageBody === '') values.newMessageBody = 'Empty message';
+        // if (values.newMessageBody === '') values.newMessageBody = 'Empty message';
     };
 
     return (
