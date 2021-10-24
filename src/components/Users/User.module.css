@@ -29,8 +29,8 @@
 }
 
 .follow_button:hover button {
-    background-color: whitesmoke;
-    font-weight: bold;
+    background-color: rgb(214, 214, 214);
+    /* font-weight: bold; */
     border-radius: 5px;
     border-color: whitesmoke;
 }
@@ -59,6 +59,6 @@
     padding: 14px;
 }
 
-.status{
+.status {
     max-width: 250px;
 }

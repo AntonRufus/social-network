@@ -31,3 +31,21 @@ body {
     background: #303030;
 }
 
+body::-webkit-scrollbar {
+    width: 12px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: #211d22; /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--color-primary-dark); /* color of the scroll thumb */
+    border-radius: 20px; /* roundness of the scroll thumb */
+    border: 3px solid #322f33; /* creates padding around scroll thumb */
+}
+
+::selection {
+    background-color: transparent;
+    color: goldenrod;
+}

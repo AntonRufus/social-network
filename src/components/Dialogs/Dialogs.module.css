@@ -55,11 +55,13 @@
 }
 
 .messages_out_items textarea {
-    border: 2px solid whitesmoke;
+    border: 3.5px solid whitesmoke;
+    height: 100px;
     width: 300px;
+    margin-bottom: -9px;
 }
 .messages_out_items textarea:hover {
-    border: 2px solid gold;
+    border-color: gold;
     border-radius: 5px;
     background-color: antiquewhite;
 }

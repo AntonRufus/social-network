@@ -1,6 +1,6 @@
 .my_posts_main {
     padding: 10px;
-    background: #3A3A3A;
+    background: #3a3a3a;
 }
 
 .my_posts_label {
@@ -26,10 +26,12 @@ h3:hover {
     padding: 5px;
     wrap-option: wrap;
     overflow-wrap: break-word;
+    border: 2px solid black;
+    margin-bottom: -5.4px;
 }
 
 .textarea textarea:hover {
-    border: 2px solid gold;
+    border-color: gold;
     border-radius: 5px;
     background-color: antiquewhite;
 }
@@ -41,6 +43,7 @@ h3:hover {
 .buttons .button {
     margin: 5px 90px 5px 5px;
     background-color: #999;
+    border: 1px solid black;
 }
 
 .buttons .button:hover {
@@ -68,10 +71,11 @@ h3:hover {
 
 .post_button {
     margin-top: 10px;
+    border: 1px solid transparent;
 }
 
 .post_button:hover {
-    border: 3px solid gold;
+    border-color: gold;
     border-radius: 3px;
     background-color: #fff;
 }

@@ -1,25 +1,26 @@
 import React from 'react';
 import postsCSS from './MyPosts.module.css';
-import Post from "./Post/MyPost";
-import AddPostFormRedux from "./PostForm";
+import Post from './Post/MyPost';
+import AddPostFormRedux from './PostForm';
 
 const MyPosts = React.memo((props) => {
     let postsElements = [...props.posts]
         .reverse()
-        .map(post =>
-            <Post message={post.message}
-                  likesCount={post.likesCount}
-                  dislikesCount={post.dislikesCount}
-                  url={post.url}
-                  key={post.id}
+        .map((post) => (
+            <Post
+                message={post.message}
+                likesCount={post.likesCount}
+                dislikesCount={post.dislikesCount}
+                url={post.url}
+                key={post.id}
             />
-        );
+        ));
 
     let addNewPost = (values) => {
         props.addPost(values.newPostText);
         values.newPostText = '';
         if (values.newPostText === '') values.newPostText = 'Empty post';
-    }
+    };
 
     return (
         <div className={postsCSS.my_posts_main}>
@@ -27,13 +28,11 @@ const MyPosts = React.memo((props) => {
                 <h3>MY POSTS</h3>
             </div>
             <div className={postsCSS.textarea}>
-                <AddPostFormRedux onSubmit={addNewPost}/>
+                <AddPostFormRedux onSubmit={addNewPost} />
             </div>
-            <div className={postsCSS.posts_block}>
-                {postsElements}
-            </div>
+            <div className={postsCSS.posts_block}>{postsElements}</div>
         </div>
-    )
+    );
 });
 
 export default MyPosts;

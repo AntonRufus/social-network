@@ -1,5 +1,5 @@
-import {profileAPI, usersAPI} from "../api/api";
-import {stopSubmit} from "redux-form";
+import { profileAPI, usersAPI } from '../api/api';
+import { stopSubmit } from 'redux-form';
 // import antPortrait from './../assets/images/antPortrait.jpg';
 
 const ADD_POST = 'ADD-POST';
@@ -37,14 +37,15 @@ let initialState = {
             likesCount: 150,
             dislikesCount: 15,
             url: 'https://avatars.mds.yandex.net/get-pdb/1590269/e908d30d-87d8-47e8-9c56-c5d92fd9ff79/s375'
-        },
+        }
     ],
     likesCountDefault: 10,
     dislikesCountDefault: 1,
-    urlDefault: 'https://www.akibanation.com/wp-content/uploads/2016/07/Kon.BLEACH.full_.170410-150x150.jpg',
+    urlDefault:
+        'https://images.unsplash.com/photo-1634988115790-d00c024dfac0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80',
     // urlDefault: antPortrait,
     profile: null,
-    status: 'default status',
+    status: 'default status'
 };
 
 const profileReducer = (state = initialState, action) => {
@@ -55,43 +56,43 @@ const profileReducer = (state = initialState, action) => {
                 message: action.newPostText,
                 likesCount: state.likesCountDefault,
                 dislikesCount: state.dislikesCountDefault,
-                url: state.urlDefault,
+                url: state.urlDefault
             };
             return {
                 ...state,
-                posts: [...state.posts, newPost],
-            }
+                posts: [...state.posts, newPost]
+            };
         }
         case DELETE_POST:
             return {
                 ...state,
-                posts: state.posts.filter(p => p.id !== action.postId)
-            }
+                posts: state.posts.filter((p) => p.id !== action.postId)
+            };
         case SET_USER_PROFILE:
             return {
                 ...state,
-                profile: action.profile,
-            }
+                profile: action.profile
+            };
         case SET_STATUS:
             return {
                 ...state,
-                status: action.status,
-            }
+                status: action.status
+            };
         case SAVE_PHOTO_SUCCESS:
             return {
                 ...state,
-                profile: {...state.profile, photos: action.photos},
-            }
+                profile: { ...state.profile, photos: action.photos }
+            };
         default:
             return state;
     }
 };
 
-export const addPost = (newPostText) => ({type: ADD_POST, newPostText});
-export const deletePost = (postId) => ({type: DELETE_POST, postId});
-export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile});
-export const setStatus = (status) => ({type: SET_STATUS, status});
-export const savePhotoSuccess = (photos) => ({type: SAVE_PHOTO_SUCCESS, photos});
+export const addPost = (newPostText) => ({ type: ADD_POST, newPostText });
+export const deletePost = (postId) => ({ type: DELETE_POST, postId });
+export const setUserProfile = (profile) => ({ type: SET_USER_PROFILE, profile });
+export const setStatus = (status) => ({ type: SET_STATUS, status });
+export const savePhotoSuccess = (photos) => ({ type: SAVE_PHOTO_SUCCESS, photos });
 
 export const getUserProfile = (userId) => async (dispatch) => {
     const response = await usersAPI.getProfile(userId);
@@ -105,13 +106,13 @@ export const getStatus = (userId) => async (dispatch) => {
 
 export const updateStatus = (status) => async (dispatch) => {
     // try {
-        const response = await profileAPI.updateStatus(status);
-        if (response.data.resultCode === 0) {
-            dispatch(setStatus(status));
-        }
+    const response = await profileAPI.updateStatus(status);
+    if (response.data.resultCode === 0) {
+        dispatch(setStatus(status));
+    }
     // } catch (error) {
-        //catch an error
-        //dispatch an error and display it as a message
+    //catch an error
+    //dispatch an error and display it as a message
     // }
 };
 
@@ -128,7 +129,7 @@ export const saveProfile = (profile) => async (dispatch, getState) => {
     if (response.data.resultCode === 0) {
         dispatch(getUserProfile(userId));
     } else {
-        dispatch(stopSubmit('edit-profile', {_error: response.data.messages[0]}));
+        dispatch(stopSubmit('edit-profile', { _error: response.data.messages[0] }));
         return Promise.reject(response.data.messages[0]);
         // dispatch(stopSubmit('edit-profile', {'contacts':{'facebook': response.data.messages[0]}}));
     }
